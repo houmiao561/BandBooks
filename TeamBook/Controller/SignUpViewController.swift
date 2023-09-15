@@ -25,7 +25,7 @@ class SingUpViewController: UIViewController{
                 }
             }
         }
-        self.navigationController!.popToRootViewController(animated: true)
+        performSegue(withIdentifier: "SignUpToLogIn", sender: self)
     }
     
     

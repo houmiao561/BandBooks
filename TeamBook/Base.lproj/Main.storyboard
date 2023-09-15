@@ -104,6 +104,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="eqL-JC-zA4" id="Z0t-dI-EYm"/>
                         <outlet property="passwordTextField" destination="nmM-rC-RFm" id="Is5-5y-oxo"/>
+                        <segue destination="KOh-aV-Bqk" kind="show" identifier="SignUpToLogIn" id="dsS-1Y-olN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRY-4L-CaC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -124,9 +125,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iss-vE-PnL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2141.2213740458014" y="423.94366197183103"/>
+            <point key="canvasLocation" x="3353" y="88"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dsS-1Y-olN"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
