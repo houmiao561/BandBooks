@@ -9,5 +9,8 @@ import UIKit
 import Realm
 import Firebase
 class SingUpViewController: UIViewController{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
 }
