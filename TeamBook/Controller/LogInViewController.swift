@@ -20,13 +20,12 @@ class LogInController: UIViewController{
     @IBAction func logInButton(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: LogInEmailTextField.text!, password: LogInPasswordTextField.text!) { (user, error) in
             if let error = error {
-                print("登录失败")
+                print("登录失败\(error)")
             } else if let user = user {
                 print("登录成功，用户 ID：\(user.user.uid)")
             }
         }
         if let user = Auth.auth().currentUser{
-            let uid = user.uid
             let email = user.email
             if email == "123@hm.com"{
                 performSegue(withIdentifier: "LogInToMain", sender: self)
