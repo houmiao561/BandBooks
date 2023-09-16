@@ -109,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRY-4L-CaC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2213" y="-188"/>
+            <point key="canvasLocation" x="1953" y="-646"/>
         </scene>
         <!--LogInViewController-->
         <scene sceneID="fFJ-dk-MDk">
@@ -146,32 +146,64 @@
                     </view>
                     <navigationItem key="navigationItem" id="B7j-UJ-ybu"/>
                     <connections>
-                        <segue destination="XLP-3k-Zb8" kind="show" identifier="LogInToMain" id="25R-lQ-a4h"/>
+                        <outlet property="LogInEmailTextField" destination="cRD-Z8-8HL" id="SXn-TD-f2Q"/>
+                        <outlet property="LogInPasswordTextField" destination="8df-hO-8r8" id="HvG-pY-OdD"/>
+                        <segue destination="DWN-JH-iay" kind="show" identifier="LogInToMain1" id="4nj-bl-Qc8"/>
+                        <segue destination="W8j-Sk-Gkk" kind="show" identifier="LogInToMain" id="HLm-M8-TqO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iss-vE-PnL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3037" y="370"/>
+            <point key="canvasLocation" x="2553" y="4"/>
         </scene>
         <!--Main Croller-->
-        <scene sceneID="A5h-ta-Q8d">
+        <scene sceneID="o1H-7v-5vI">
             <objects>
-                <viewController id="XLP-3k-Zb8" customClass="MainCroller" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GbK-lO-uKx">
+                <tableViewController id="W8j-Sk-Gkk" customClass="MainCroller" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8A7-aG-FKy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="T9t-y4-0BS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainCell" rowHeight="100" id="dd2-o1-146" customClass="MainCell" customModule="TeamBook">
+                                <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dd2-o1-146" id="WOx-0O-gu1" customClass="MainCell" customModule="TeamBook">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="W8j-Sk-Gkk" id="LY2-In-7jl"/>
+                            <outlet property="delegate" destination="W8j-Sk-Gkk" id="qhM-04-Sdq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="vIb-u6-i4d"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nj3-B8-OT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3543" y="-228"/>
+        </scene>
+        <!--Main Controller1-->
+        <scene sceneID="cPK-jV-hQt">
+            <objects>
+                <viewController id="DWN-JH-iay" customClass="MainController1" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IJp-lR-0gd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qAs-Vi-orl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ih8-FY-YH5"/>
+                    <navigationItem key="navigationItem" id="jxv-Dl-Ceg"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EmC-zb-wy8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQl-7O-rHS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3854" y="370"/>
+            <point key="canvasLocation" x="3543" y="445"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="s8X-cK-j19"/>
+        <segue reference="dsS-1Y-olN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">

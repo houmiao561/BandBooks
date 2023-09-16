@@ -8,6 +8,8 @@
 import UIKit
 import Realm
 import Firebase
+import FirebaseAuth
+
 class SingUpViewController: UIViewController{
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -17,8 +19,8 @@ class SingUpViewController: UIViewController{
     }
     
     @IBAction func signUpButton(_ sender: UIButton) {
-        if let emialText = emailTextField.text, let passwordText = passwordTextField.text{
-            Auth.auth().createUser(withEmail: emialText, password: passwordText){ _ ,error in
+        if let realEmialText = emailTextField.text, let realPasswordText = passwordTextField.text{
+            Auth.auth().createUser(withEmail: realEmialText, password: realPasswordText){ _ ,error in
                 if let e = error{print("123")}
                 else{
                     print("321")
