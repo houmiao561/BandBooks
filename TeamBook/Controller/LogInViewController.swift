@@ -13,4 +13,7 @@ class LogInController: UIViewController{
         super.viewDidLoad()
     }
     
+    @IBAction func logInButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "LogInToMain", sender: self)
+    }
 }
