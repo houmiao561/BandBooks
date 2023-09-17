@@ -6,7 +6,7 @@
 //
 
 import UIKit
-class MainCroller: UITableViewController{
+class MainCrotroller: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
