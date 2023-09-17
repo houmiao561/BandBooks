@@ -12,6 +12,14 @@ class MainCrotroller: UITableViewController{
         super.viewDidLoad()
         tableView.register (UINib (nibName:"MainCell", bundle: nil),forCellReuseIdentifier: "MainCell")
     }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+            // 返回每个section的标题
+        return "Section \(section + 1)"
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }

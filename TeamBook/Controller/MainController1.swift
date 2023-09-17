@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Photos
 
 
 class MainController1: UIViewController{

@@ -16,10 +16,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44u-oM-9y9">
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xgY-Wi-ZgP">
                         <rect key="frame" x="293" y="10" width="80" height="80"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="44u-oM-9y9">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="9e9-rS-uvf"/>
+                            <constraint firstAttribute="height" constant="80" id="BV8-qv-ocH"/>
+                        </constraints>
+                    </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="123" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txI-pj-2kf">
                         <rect key="frame" x="20" y="10" width="272" height="80"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -28,21 +36,17 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="xgY-Wi-ZgP" secondAttribute="bottom" constant="10" id="JXL-b2-QTg"/>
+                    <constraint firstAttribute="trailing" secondItem="xgY-Wi-ZgP" secondAttribute="trailing" constant="20" id="LYM-m8-0py"/>
+                    <constraint firstItem="xgY-Wi-ZgP" firstAttribute="top" secondItem="MmJ-3a-rWD" secondAttribute="top" constant="10" id="cxE-De-DJc"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="MainCellImage" destination="44u-oM-9y9" id="xcx-GD-xil"/>
                 <outlet property="MainCellLabel" destination="txI-pj-2kf" id="Iyr-Wo-Gen"/>
             </connections>
             <point key="canvasLocation" x="734" y="18"/>
-        </tableViewCell>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="iGV-TA-jM4">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iGV-TA-jM4" id="m7b-ow-bRT">
-                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                <autoresizingMask key="autoresizingMask"/>
-            </tableViewCellContentView>
-            <point key="canvasLocation" x="-240" y="-155"/>
         </tableViewCell>
     </objects>
 </document>
