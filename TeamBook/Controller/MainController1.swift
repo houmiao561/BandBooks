@@ -18,6 +18,7 @@ class MainController1: UIViewController{
         super.viewDidLoad()
         
         tableView.register (UINib (nibName:"MainController1Cell", bundle: nil),forCellReuseIdentifier: "MainController1Cell")
+        tableView.register (UINib (nibName:"MainCell", bundle: nil),forCellReuseIdentifier: "MainCell")
         tableView.rowHeight = 100.0
         
         imagePicker.delegate = self
@@ -85,7 +86,12 @@ extension MainController1: UITableViewDelegate,UITableViewDataSource{
         return 2
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MainController1Cell",for: indexPath)
+        let cell: UITableViewCell
+        if indexPath.row == 0{
+            cell = tableView.dequeueReusableCell(withIdentifier: "MainController1Cell",for: indexPath) as! MainController1Cell
+        }else{
+            cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainCell
+        }
         return cell
     }
 }
