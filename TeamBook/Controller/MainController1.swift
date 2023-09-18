@@ -11,14 +11,45 @@ import FirebaseStorage
 class MainController1: UIViewController{
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var tableView: UITableView!
     var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.register (UINib (nibName:"MainController1Cell", bundle: nil),forCellReuseIdentifier: "MainController1Cell")
+        tableView.rowHeight = 100.0
+        
         imagePicker.delegate = self
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        downloadImage()
+    }
+    @IBAction func addPhotoButton(_ sender: UIButton) {
+        self.imagePicker.sourceType = .photoLibrary //sourceType表示打开imagePicker的方式，这个方式为photoLibrary，打开相册
+        self.present(self.imagePicker, animated: true, completion:nil)
+    }
+}
+
+
+extension MainController1: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func uploadToCloud(fileURL:URL){
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let localFile = fileURL
+        let photoRef = storageRef.child("UploadPhotoOne")
+        let uploadTesk = photoRef.putFile(from: localFile, metadata: nil) { (metedata,error) in
+            guard metedata != nil else {
+                print("func uploadToCloud error!!!")
+                return
+            }
+            print("func uploadToCloud")
+        }
     }
     
-    @IBAction func downloadImage(_ sender: UIButton) {
+    func downloadImage(){
         let storage = Storage.storage()
         // 创建 StorageReference，指向要下载的图像
         let storageRef = storage.reference().child("UploadPhotoOne")
@@ -38,11 +69,6 @@ class MainController1: UIViewController{
         }
     }
     
-    @IBAction func addPhotoButton(_ sender: UIButton) {
-        self.imagePicker.sourceType = .photoLibrary //sourceType表示打开imagePicker的方式，这个方式为photoLibrary，打开相册
-        self.present(self.imagePicker, animated: true, completion:nil)
-    }
-    
     //选择一张照片后这个函数被触发
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {//如果能从info中获取到url，就uploadToCloud
         if let url = info[UIImagePickerController.InfoKey.imageURL] as? URL{
@@ -52,25 +78,14 @@ class MainController1: UIViewController{
         imagePicker.dismiss(animated: true,completion: nil)//关闭imagePicker
     }
     
-    func uploadToCloud(fileURL:URL){
-        let storage = Storage.storage()
-        //let data = Data()
-        let storageRef = storage.reference()
-        let localFile = fileURL
-        let photoRef = storageRef.child("UploadPhotoOne")
-        let uploadTesk = photoRef.putFile(from: localFile, metadata: nil) { (metedata,error) in
-            guard metedata != nil else {
-                print("func uploadToCloud error!!!")
-                return
-            }
-            print("func uploadToCloud")
-        }
+}
+
+extension MainController1: UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
     }
-
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MainController1Cell",for: indexPath)
+        return cell
+    }
 }
-
-
-extension MainController1: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-}
-
