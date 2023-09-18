@@ -9,7 +9,6 @@ import UIKit
 import FirebaseStorage
 
 class MainController1: UIViewController{
-    @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var tableView: UITableView!
     var imagePicker = UIImagePickerController()
@@ -19,8 +18,8 @@ class MainController1: UIViewController{
         
         tableView.register (UINib (nibName:"MainController1Cell", bundle: nil),forCellReuseIdentifier: "MainController1Cell")
         tableView.register (UINib (nibName:"MainCell", bundle: nil),forCellReuseIdentifier: "MainCell")
-        tableView.rowHeight = 100.0
-        
+        tableView.register (UINib (nibName:"MainController1ImageCell", bundle: nil),forCellReuseIdentifier: "MainController1ImageCell")
+
         imagePicker.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
@@ -63,7 +62,10 @@ extension MainController1: UIImagePickerControllerDelegate, UINavigationControll
                 if let image = UIImage(data: data) {
                     // 在主线程上更新UI
                     DispatchQueue.main.async {
-                        self?.imageView.image = image
+                        if let firstCell = self?.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? MainController1ImageCell {
+                            firstCell.MainController1ImageCell.image = image
+                            firstCell.MainController1ImageCell.contentMode = .scaleAspectFit
+                        }
                     }
                 }
             }
@@ -83,15 +85,28 @@ extension MainController1: UIImagePickerControllerDelegate, UINavigationControll
 
 extension MainController1: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 100
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell
         if indexPath.row == 0{
+            cell = tableView.dequeueReusableCell(withIdentifier: "MainController1ImageCell", for: indexPath)
+        }else if indexPath.row == 1{
             cell = tableView.dequeueReusableCell(withIdentifier: "MainController1Cell",for: indexPath) as! MainController1Cell
         }else{
             cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainCell
         }
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 350.0
+        } else {
+            return 100.0
+        }
+    }
+
 }
