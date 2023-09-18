@@ -16,27 +16,27 @@
                 <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ct6-Ph-tdI">
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ct6-Ph-tdI">
                         <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JAk-7I-lor">
                                 <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="3BW-fj-sBV"/>
-                                    <constraint firstAttribute="height" constant="350" id="gfj-if-TUv"/>
-                                </constraints>
                             </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="JAk-7I-lor" secondAttribute="bottom" id="8CW-c5-MfE"/>
-                            <constraint firstAttribute="trailing" secondItem="JAk-7I-lor" secondAttribute="trailing" id="BgL-AI-NMT"/>
-                            <constraint firstItem="JAk-7I-lor" firstAttribute="leading" secondItem="Ct6-Ph-tdI" secondAttribute="leading" id="SiK-pQ-Zot"/>
-                            <constraint firstAttribute="height" constant="350" id="kR7-Oz-n7l"/>
-                            <constraint firstAttribute="width" constant="350" id="pFf-mg-g5v"/>
-                            <constraint firstItem="JAk-7I-lor" firstAttribute="top" secondItem="Ct6-Ph-tdI" secondAttribute="top" id="teR-tv-Zgl"/>
+                            <constraint firstItem="JAk-7I-lor" firstAttribute="leading" secondItem="Ct6-Ph-tdI" secondAttribute="leading" id="S2L-2K-pB8"/>
+                            <constraint firstItem="JAk-7I-lor" firstAttribute="top" secondItem="Ct6-Ph-tdI" secondAttribute="top" id="eMR-cZ-zFh"/>
+                            <constraint firstAttribute="trailing" secondItem="JAk-7I-lor" secondAttribute="trailing" id="h9a-9O-8fO"/>
+                            <constraint firstAttribute="bottom" secondItem="JAk-7I-lor" secondAttribute="bottom" id="v2k-JT-fyR"/>
                         </constraints>
                     </stackView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Ct6-Ph-tdI" firstAttribute="leading" secondItem="yhc-FK-at5" secondAttribute="leading" id="3rM-1w-wFz"/>
+                    <constraint firstAttribute="bottom" secondItem="Ct6-Ph-tdI" secondAttribute="bottom" id="W5V-Wt-x3n"/>
+                    <constraint firstItem="Ct6-Ph-tdI" firstAttribute="top" secondItem="yhc-FK-at5" secondAttribute="top" id="ZDG-hq-AH8"/>
+                    <constraint firstAttribute="trailing" secondItem="Ct6-Ph-tdI" secondAttribute="trailing" id="a7r-Wt-dAk"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="MainController1ImageCell" destination="JAk-7I-lor" id="bha-IC-ogI"/>

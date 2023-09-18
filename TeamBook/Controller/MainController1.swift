@@ -23,6 +23,8 @@ class MainController1: UIViewController{
         imagePicker.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.showsVerticalScrollIndicator = false
+
         
         downloadImage()
     }
