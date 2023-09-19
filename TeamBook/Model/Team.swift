@@ -7,6 +7,6 @@
 
 import Foundation
 import RealmSwift
-class Item: Object {
-    @objc dynamic var title: String = "qqqqqq"
+class Team: Object {
+    @objc dynamic var teamName: String = ""
 }

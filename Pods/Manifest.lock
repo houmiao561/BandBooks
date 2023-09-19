@@ -644,6 +644,9 @@ PODS:
     - FirebaseAnalytics (~> 10.14.0)
   - Firebase/CoreOnly (10.14.0):
     - FirebaseCore (= 10.14.0)
+  - Firebase/Database (10.14.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 10.14.0)
   - Firebase/Firestore (10.14.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 10.14.0)
@@ -685,6 +688,9 @@ PODS:
     - FirebaseCore (~> 10.0)
   - FirebaseCoreInternal (10.14.0):
     - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseDatabase (10.14.0):
+    - FirebaseCore (~> 10.0)
+    - leveldb-library (~> 1.22)
   - FirebaseFirestore (10.14.0):
     - abseil/algorithm (~> 1.20220623.0)
     - abseil/base (~> 1.20220623.0)
@@ -835,6 +841,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
+  - Firebase/Database
   - Firebase/Firestore
   - Firebase/Storage
   - FirebaseUI/Storage
@@ -853,6 +860,7 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseCoreExtension
     - FirebaseCoreInternal
+    - FirebaseDatabase
     - FirebaseFirestore
     - FirebaseInstallations
     - FirebaseStorage
@@ -882,6 +890,7 @@ SPEC CHECKSUMS:
   FirebaseCore: 6fc17ac9f03509d51c131298aacb3ee5698b4f02
   FirebaseCoreExtension: d3f1ea3725fb41f56e8fbfb29eeaff54e7ffb8f6
   FirebaseCoreInternal: d558159ee6cc4b823c2296ecc193de9f6d9a5bb3
+  FirebaseDatabase: fa6f8e2747c3f168e6996a5fca6daf5c11ebd11b
   FirebaseFirestore: 808dd08cbc1c7be9052055f62ab312fdae611e37
   FirebaseInstallations: cae95cab0f965ce05b805189de1d4c70b11c76fb
   FirebaseStorage: e97b4bdd84b21ec060d5737a9c4f8f8fc6a0d041
@@ -900,6 +909,6 @@ SPEC CHECKSUMS:
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   SDWebImage: ebdbcebc7933a45226d9313bd0118bc052ad458b
 
-PODFILE CHECKSUM: 481b2ef7cfb2623b553936a24223b59a5806bbec
+PODFILE CHECKSUM: a2ed27b549406aaaf91ad4076d3596c833ea8522
 
 COCOAPODS: 1.12.1
