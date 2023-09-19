@@ -12,6 +12,8 @@ class MainController1: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     var imagePicker = UIImagePickerController()
+    var data = ["Item 1", "Item 2", "Item 3"]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,25 @@ class MainController1: UIViewController{
         
         downloadImage()
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            // 用户点击了单元格，弹出一个 UIAlertController，让用户输入文本
+            let alertController = UIAlertController(title: "Add Text", message: nil, preferredStyle: .alert)
+            alertController.addTextField { (textField) in
+                textField.placeholder = "Enter text"
+            }
+            let addAction = UIAlertAction(title: "Add", style: .default) { [weak self] (_) in
+                if let textField = alertController.textFields?.first, let text = textField.text {
+                    // 将输入的文本添加到数据源中
+                    self?.data.append(text)
+                    // 刷新表格视图以显示新的文本
+                    self?.tableView.reloadData()
+                }
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alertController.addAction(addAction)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+        }
     @IBAction func addPhotoButton(_ sender: UIButton) {
         self.imagePicker.sourceType = .photoLibrary //sourceType表示打开imagePicker的方式，这个方式为photoLibrary，打开相册
         self.present(self.imagePicker, animated: true, completion:nil)
@@ -87,7 +108,7 @@ extension MainController1: UIImagePickerControllerDelegate, UINavigationControll
 
 extension MainController1: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return 20
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell
@@ -100,9 +121,9 @@ extension MainController1: UITableViewDelegate,UITableViewDataSource{
         }
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
             return 350.0

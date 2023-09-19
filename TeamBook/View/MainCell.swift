@@ -14,6 +14,7 @@ class MainCell: UITableViewCell{
     override func awakeFromNib() {
         super.awakeFromNib()
         //和viewdidload一个性质的初始化
+        contentView.backgroundColor = UIColor.clear
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -30,7 +30,7 @@ class LogInController: UIViewController{
             if email == "123@hm.com"{
                 performSegue(withIdentifier: "LogInToMain", sender: self)
             }else{
-                performSegue(withIdentifier: "LogInToMain1", sender: self)
+                performSegue(withIdentifier: "LogInToMain0", sender: self)
             }
         }
         

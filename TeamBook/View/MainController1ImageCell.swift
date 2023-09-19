@@ -11,5 +11,6 @@ class MainController1ImageCell: UITableViewCell{
     override func awakeFromNib() {
         super.awakeFromNib()
         //self.MainController1ImageCell.contentMode = .scaleAspectFit
+        contentView.backgroundColor = UIColor.clear
     }
 }

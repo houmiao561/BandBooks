@@ -12,5 +12,6 @@ class MainController1Cell: UITableViewCell{
     override func awakeFromNib() {
         super.awakeFromNib()
         //和viewdidload一个性质的初始化
+        contentView.backgroundColor = UIColor.clear
     }
 }
