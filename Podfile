@@ -8,5 +8,6 @@ pod 'Firebase/Storage'
 pod 'Realm'
 pod 'Firebase/Analytics'
 pod 'FirebaseUI/Storage'
+pod 'RealmSwift'
 
 end

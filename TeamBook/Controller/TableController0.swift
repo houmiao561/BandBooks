@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TableController0: UITableViewController {
     
-    var data = ["Item 1", "Item 2", "Item 3"]
-    
+    let realm = try! Realm()
+    var items : Results<Item>?
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -18,98 +20,59 @@ class TableController0: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return items?.count ?? 1
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell",for: indexPath)
-        let text = data[indexPath.row]
-        cell.textLabel?.text = text
+        if let item = items?[indexPath.row]{
+            cell.textLabel?.text = item.title
+        }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // 用户点击了单元格，弹出一个 UIAlertController，让用户输入文本
-        let alertController = UIAlertController(title: "Add Text", message: nil, preferredStyle: .alert)
-        alertController.addTextField { (textField) in
-            textField.placeholder = "Enter text"
-        }
-        let addAction = UIAlertAction(title: "Add", style: .default) { [weak self] (_) in
-            if let textField = alertController.textFields?.first, let text = textField.text {
-                // 将输入的文本添加到数据源中
-                self?.data.append(text)
-                // 插入新的行以显示新的文本
-                let indexPath = IndexPath(row: self!.data.count - 1, section: 0)
-                tableView.insertRows(at: [indexPath], with: .automatic)
-            }
-        }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        alertController.addAction(addAction)
-        alertController.addAction(cancelAction)
-        present(alertController, animated: true, completion: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    @IBAction func addButton(_ sender: Any) {
+        let alertController = UIAlertController(title: "Add Text", message: nil, preferredStyle: .alert)
+        // 添加文本输入框
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Enter text"
+        }
+        
+        // 添加确认按钮
+        let confirmAction = UIAlertAction(title: "Add", style: .default) { (_) in
+            if let text = alertController.textFields?.first?.text {
+                do {
+                    try self.realm.write {
+                        let newItem = Item()
+                        newItem.title = text
+                        self.realm.add(newItem)
+                    }
+                    // 更新数据源
+                    self.items = self.realm.objects(Item.self)
+                    self.tableView.reloadData()
+                } catch {
+                    print("Error saving data to Realm: \(error.localizedDescription)")
+                }
+            }
+        }
+        // 添加取消按钮
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        // 将按钮添加到 UIAlertController
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        // 弹出 UIAlertController
+        present(alertController, animated: true, completion: nil)
+        
+        
+        if let realmURL = Realm.Configuration.defaultConfiguration.fileURL {
+            print("Realm file location: \(realmURL)")
+        }
+        
+
+    }
+
 }
-
-
-
-
-
-
-
-/*
- override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
- let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
- 
- // Configure the cell...
- 
- return cell
- }
- */
-
-/*
- // Override to support conditional editing of the table view.
- override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
- // Return false if you do not want the specified item to be editable.
- return true
- }
- */
-
-/*
- // Override to support editing the table view.
- override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
- if editingStyle == .delete {
- // Delete the row from the data source
- tableView.deleteRows(at: [indexPath], with: .fade)
- } else if editingStyle == .insert {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
- 
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
- // Return false if you do not want the item to be re-orderable.
- return true
- }
- */
-
-/*
- // MARK: - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- // Get the new view controller using segue.destination.
- // Pass the selected object to the new view controller.
- }
- */
-
 

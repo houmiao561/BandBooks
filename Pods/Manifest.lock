@@ -825,6 +825,8 @@ PODS:
   - Realm (10.42.1):
     - Realm/Headers (= 10.42.1)
   - Realm/Headers (10.42.1)
+  - RealmSwift (10.42.1):
+    - Realm (= 10.42.1)
   - RecaptchaInterop (100.0.0)
   - SDWebImage (5.18.1):
     - SDWebImage/Core (= 5.18.1)
@@ -837,6 +839,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - FirebaseUI/Storage
   - Realm
+  - RealmSwift
 
 SPEC REPOS:
   trunk:
@@ -864,6 +867,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - Realm
+    - RealmSwift
     - RecaptchaInterop
     - SDWebImage
 
@@ -892,9 +896,10 @@ SPEC CHECKSUMS:
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
   Realm: f433b80a05f68575e88364d6fcc6234965ccc5af
+  RealmSwift: 757e1416e2314f7e1543abdb2aa65b311d7b6545
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   SDWebImage: ebdbcebc7933a45226d9313bd0118bc052ad458b
 
-PODFILE CHECKSUM: 42547f6a5cfcc805d432b5257955b4171d308268
+PODFILE CHECKSUM: 481b2ef7cfb2623b553936a24223b59a5806bbec
 
 COCOAPODS: 1.12.1
