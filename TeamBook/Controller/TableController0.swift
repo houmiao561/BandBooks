@@ -54,7 +54,11 @@ class TableController0: UITableViewController {
             if let indexPath = tableView.indexPathForRow(at: point) {
                 let alertController = UIAlertController(title: "Delete Item",message: "Are you sure you want to delete this item?",preferredStyle: .alert)
                 let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (_) in
-                    self.deleteItem(at: indexPath)
+                    let teamSelectionToDelete = self.FirebaseDataArray[indexPath.row]
+                    self.deleteItemFromRealm(at: indexPath)
+                    self.deleteFromFirebase(teamSelection: teamSelectionToDelete)
+                    self.FirebaseDataArray.remove(at: indexPath.row)
+                    self.tableView.reloadData()
                 }
                 let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
                 
@@ -62,11 +66,12 @@ class TableController0: UITableViewController {
                 alertController.addAction(cancelAction)
                 
                 present(alertController, animated: true, completion: nil)
+                
             }
         }
     }
 
-    func deleteItem(at indexPath: IndexPath) {
+    func deleteItemFromRealm(at indexPath: IndexPath) {
         // 获取要删除的对象，假设您的数据源是 Realm 中的 Results<Item>
 //        if let teamToDelete = teams?[indexPath.row] {
 //            do {
@@ -85,6 +90,32 @@ class TableController0: UITableViewController {
 //                print("Error deleting item from Realm: \(error.localizedDescription)")
 //            }
 //        }
+    }
+    func deleteFromFirebase(teamSelection: String) {
+        let collectionRef = db.collection("collectionName") // 替换为您的集合名称
+        
+        // 查询包含指定 "teamSelection" 值的文档
+        collectionRef.whereField("teamSelection", isEqualTo: teamSelection).getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print("Error querying Firestore: \(error.localizedDescription)")
+            } else {
+                guard let documents = querySnapshot?.documents else {
+                    print("No documents found with the specified teamSelection")
+                    return
+                }
+                
+                // 删除匹配的文档（可能有多个匹配的文档）
+                for document in documents {
+                    document.reference.delete { (error) in
+                        if let error = error {
+                            print("Error deleting document: \(error.localizedDescription)")
+                        } else {
+                            print("Document deleted successfully")
+                        }
+                    }
+                }
+            }
+        }
     }
 
     func sendToFirebase(with whichTeam: String){
