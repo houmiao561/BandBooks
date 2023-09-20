@@ -8,12 +8,19 @@
 import UIKit
 import RealmSwift
 import Firebase
+import FirebaseFirestore
 
 class TableController0: UITableViewController {
     
     let realm = try! Realm()
     var teams : Results<Team>?
+    var data = [String]()           //为了realm
+    var teamsSelection: [TeamsSelection] = []
+    let db = Firestore.firestore()
+    var dataArray = [String]()      //为了firebase
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -22,17 +29,17 @@ class TableController0: UITableViewController {
         tableView.reloadData()
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         tableView.addGestureRecognizer(longPressGesture)
+        downloadFromFirebase()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return teams?.count ?? 1
+        //return data.count
+        return dataArray.count
         
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell",for: indexPath)
-        if let team = teams?[indexPath.row]{
-            cell.textLabel?.text = team.teamName
-        }
+        cell.textLabel?.text = dataArray[indexPath.row]
         return cell
     }
     
@@ -45,14 +52,10 @@ class TableController0: UITableViewController {
             // 获取长按点所在的IndexPath
             let point = gestureRecognizer.location(in: tableView)
             if let indexPath = tableView.indexPathForRow(at: point) {
-                // 处理长按操作，例如弹出确认删除的提示框
-                let alertController = UIAlertController(title: "Delete Item", message: "Are you sure you want to delete this item?", preferredStyle: .alert)
-                
+                let alertController = UIAlertController(title: "Delete Item",message: "Are you sure you want to delete this item?",preferredStyle: .alert)
                 let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (_) in
-                    // 执行删除操作
                     self.deleteItem(at: indexPath)
                 }
-                
                 let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
                 
                 alertController.addAction(deleteAction)
@@ -84,7 +87,39 @@ class TableController0: UITableViewController {
         }
     }
 
+    func sendToFirebase(with whichTeam: String){
+        let collectionRef = db.collection("your_collection_name") // 替换为您的集合名称
+        collectionRef.addDocument(data: ["teamSelection":whichTeam]) { (error) in
+               if let error = error {
+                   print("Error saving data to Firestore: \(error.localizedDescription)")
+               } else {
+                   print("Data saved to Firestore successfully")
+               }
+           }
+    }
+    
+    func downloadFromFirebase(){
+        let collectionRef = db.collection("your_collection_name") // 替换为您的集合名称
 
+        collectionRef.getDocuments { (querySnapshot, error) in
+                if let error = error {
+                    print("Error retrieving data from Firestore: \(error.localizedDescription)")
+                    return
+                }
+
+                // 处理查询结果并将数据存储到 dataArray 中
+                if let documents = querySnapshot?.documents {
+                    for document in documents {
+                        if let data = document.data()["teamSelection"] as? String {
+                            self.dataArray.append(data)
+                        }
+                    }
+
+                    // 刷新表格视图
+                    self.tableView.reloadData()
+                }
+            }
+    }
 
     
     @IBAction func addButton(_ sender: Any) {
@@ -104,6 +139,7 @@ class TableController0: UITableViewController {
                         self.realm.add(newTeam)
                     }
                     // 更新数据源
+                    self.sendToFirebase(with: text)
                     self.teams = self.realm.objects(Team.self)
                     self.tableView.reloadData()
                 } catch {
@@ -127,7 +163,6 @@ class TableController0: UITableViewController {
             print("Realm file location: \(realmURL)")
         }
         
-
     }
 
 }

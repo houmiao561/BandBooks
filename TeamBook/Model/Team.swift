@@ -10,3 +10,6 @@ import RealmSwift
 class Team: Object {
     @objc dynamic var teamName: String = ""
 }
+struct TeamsSelection{
+    let whichTeam: String
+}
