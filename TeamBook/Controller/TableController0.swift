@@ -8,19 +8,14 @@
 import UIKit
 import RealmSwift
 import Firebase
-//import FirebaseFirestore
 
 class TableController0: UITableViewController {
     
     let realm = try! Realm()
     var teams : Results<Team>?
-    var data = [String]()
-    var teamsSelection: [TeamsSelection] = []
     let db = Firestore.firestore()
     var FirebaseDataArray = [String]()
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -74,17 +69,10 @@ class TableController0: UITableViewController {
         // 获取要删除的对象，假设您的数据源是 Realm 中的 Results<Item>
         if let teamToDelete = teams?[indexPath.row] {
             do {
-                // 在写事务中执行删除操作
                 try realm.write {
                     realm.delete(teamToDelete)
                 }
-
-                // 更新数据源以移除被删除的对象
-                // 假设 items 是 Results<Item>，需要刷新它
                 teams = realm.objects(Team.self)
-
-                // 更新表视图以反映删除
-                //tableView.deleteRows(at: [indexPath], with: .fade)
             } catch {
                 print("Error deleting item from Realm: \(error.localizedDescription)")
             }
@@ -155,12 +143,9 @@ class TableController0: UITableViewController {
     
     @IBAction func addButton(_ sender: Any) {
         let alertController = UIAlertController(title: "Add Text", message: nil, preferredStyle: .alert)
-        // 添加文本输入框
-        alertController.addTextField { (textField) in
-            textField.placeholder = "Enter text"
-        }
-        
-        // 添加确认按钮
+
+        alertController.addTextField { (textField) in textField.placeholder = "Enter text" }
+
         let confirmAction = UIAlertAction(title: "Add", style: .default) { (_) in
             if let text = alertController.textFields?.first?.text {
                 do {
@@ -169,7 +154,6 @@ class TableController0: UITableViewController {
                         newTeam.whichTeamRealm = text
                         self.realm.add(newTeam)
                     }
-                    // 更新数据源
                     self.sendToFirebase(with: text)
                     self.teams = self.realm.objects(Team.self)
                     DispatchQueue.main.async {
@@ -180,12 +164,10 @@ class TableController0: UITableViewController {
                     print("Error saving data to Realm: \(error.localizedDescription)")
                 }
             }
-        }//对比confirmAction与cancelAction，confirmAction多了一个handler功能
-        
-        // 添加取消按钮
+        }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
-        // 将按钮添加到 UIAlertController
+
         alertController.addAction(confirmAction)
         alertController.addAction(cancelAction)
         
