@@ -6,10 +6,10 @@
 //
 
 import Foundation
-//import RealmSwift
-//class Team: Object {
-//    @objc dynamic var teamName: String = ""
-//}
+import RealmSwift
+class Team: Object {
+    @objc dynamic var whichTeamRealm: String = ""
+}
 struct TeamsSelection{
     let whichTeam: String
 }
