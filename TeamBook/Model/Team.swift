@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 class Team: Object {
     @objc dynamic var whichTeamRealm: String = ""
+    @objc dynamic var userNameEmail: String = ""
 }
 struct TeamsSelection{
     let whichTeam: String
