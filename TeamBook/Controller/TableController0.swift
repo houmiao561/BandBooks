@@ -81,33 +81,40 @@ class TableController0: UITableViewController {
 //MARK: -Firebase
 extension TableController0 {
     func sendToFirebase(with whichTeam: String){
-        let collectionRef = db.collection("collectionName") // 替换为您的集合名称
-        collectionRef.addDocument(data: ["teamSelection":whichTeam,"time":Date().timeIntervalSince1970,"someoneName":String(user!.email!)]) { (error) in
-               if let error = error {
-                   print("Error saving data to Firestore: \(error.localizedDescription)")
-               } else {
-                   print("Data saved to Firestore successfully")
-               }
-           }
+        if let name = self.user?.email{
+            let collectionRef = db.collection("collectionName:\(name)") // 替换为您的集合名称
+            collectionRef.addDocument(data: ["teamSelection":whichTeam,"time":Date().timeIntervalSince1970,"someoneName":String(user!.email!)]) { (error) in
+                if let error = error {
+                    print("Error saving data to Firestore: \(error.localizedDescription)")
+                } else {
+                    print("Data saved to Firestore successfully")
+                }
+            }
+        }
     }
     
     func downloadFromFirebase(){
-        let collectionRef = db.collection("collectionName").order(by: "time")// 替换为您的集合名称
-        self.firebaseDataArray = []
-        collectionRef.getDocuments { (querySnapshot, error) in
-            if let error = error {
-                print("Error retrieving data from Firestore: \(error.localizedDescription)")
-                return
-            }
-            if let documents = querySnapshot?.documents {
-                for doc in documents {
-                    if let teamSelection = doc.data()["teamSelection"]as? String, let someoneName = doc.data()["someoneName"]as? String{
-                        let balabala: FirebaseDataArray = FirebaseDataArray(nameFromStruct: someoneName, commentTextFromStruct: teamSelection)
-                        self.firebaseDataArray.append(balabala)
-                        DispatchQueue.main.async{
-                            self.tableView.reloadData()
-                            let indexPath = IndexPath(row: self.firebaseDataArray.count - 1, section: 0)
-                            self.tableView.scrollToRow(at:indexPath, at:.top, animated: true)
+        if let name = self.user?.email{
+            let collectionRef = db.collection("collectionName:\(name)").order(by: "time")// 替换为您的集合名称
+            self.firebaseDataArray = []
+            collectionRef.getDocuments { (querySnapshot, error) in
+                if let error = error {
+                    print("Error retrieving data from Firestore: \(error.localizedDescription)")
+                    print("download下载成功")
+                    return
+                }
+                if let documents = querySnapshot?.documents {
+                    for doc in documents {
+    
+
+                        if let teamSelection = doc.data()["teamSelection"]as? String, let someoneName = doc.data()["someoneName"]as? String{
+                            let balabala: FirebaseDataArray = FirebaseDataArray(nameFromStruct: someoneName, commentTextFromStruct: teamSelection)
+                            self.firebaseDataArray.append(balabala)
+                            DispatchQueue.main.async{
+                                self.tableView.reloadData()
+                                let indexPath = IndexPath(row: self.firebaseDataArray.count - 1, section: 0)
+                                self.tableView.scrollToRow(at:indexPath, at:.top, animated: true)
+                            }
                         }
                     }
                 }
@@ -116,24 +123,26 @@ extension TableController0 {
     }
 
     func deleteFromFirebase(teamSelection: String) {
-        let collectionRef = db.collection("collectionName") // 替换为您的集合名称
-        
-        // 查询包含指定 "teamSelection" 值的文档
-        collectionRef.whereField("teamSelection", isEqualTo: teamSelection).getDocuments { (querySnapshot, error) in
-            if let error = error {
-                print("Error querying Firestore: \(error.localizedDescription)")
-            } else {
-                guard let documents = querySnapshot?.documents else {
-                    print("No documents found with the specified teamSelection")
-                    return
-                }
-                // 删除匹配的文档（可能有多个匹配的文档）
-                for document in documents {
-                    document.reference.delete { (error) in
-                        if let error = error {
-                            print("Error deleting document: \(error.localizedDescription)")
-                        } else {
-                            print("Document deleted successfully")
+        if let name = self.user?.email{
+            let collectionRef = db.collection("collectionName:\(name)") // 替换为您的集合名称
+            
+            // 查询包含指定 "teamSelection" 值的文档
+            collectionRef.whereField("teamSelection", isEqualTo: teamSelection).getDocuments { (querySnapshot, error) in
+                if let error = error {
+                    print("Error querying Firestore: \(error.localizedDescription)")
+                } else {
+                    guard let documents = querySnapshot?.documents else {
+                        print("No documents found with the specified teamSelection")
+                        return
+                    }
+                    // 删除匹配的文档（可能有多个匹配的文档）
+                    for document in documents {
+                        document.reference.delete { (error) in
+                            if let error = error {
+                                print("Error deleting document: \(error.localizedDescription)")
+                            } else {
+                                print("Document deleted successfully")
+                            }
                         }
                     }
                 }
