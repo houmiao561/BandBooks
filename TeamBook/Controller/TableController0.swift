@@ -75,7 +75,17 @@ class TableController0: UITableViewController {
             print("Realm file location: \(realmURL)")
         }
     }
-
+    @IBAction func logOutButton(_ sender: UIButton) {
+        do {
+            try Auth.auth().signOut() // 登出当前用户
+            if let navigationController = self.navigationController {
+                navigationController.popToRootViewController(animated: true) // 导航回根部页面
+            }
+        } catch let signOutError as NSError {
+            print("Error signing out: \(signOutError.localizedDescription)")
+        }
+    }
+    
 }
 
 //MARK: -Firebase

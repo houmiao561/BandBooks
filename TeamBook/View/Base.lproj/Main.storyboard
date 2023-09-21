@@ -339,20 +339,34 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="4He-1k-OjR">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="QDk-AF-Wie">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="u4D-aq-es9">
-                                <rect key="frame" x="315" y="5" width="95" height="34.333333333333336"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                        <nil key="title"/>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="QDk-AF-Wie">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="u4D-aq-es9">
+                                    <rect key="frame" x="315" y="5" width="95" height="34.333333333333336"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                    <connections>
+                                        <action selector="addButton:" destination="oqn-vd-To9" eventType="touchUpInside" id="Kjc-5j-SSq"/>
+                                    </connections>
+                                </button>
                                 <connections>
-                                    <action selector="addButton:" destination="oqn-vd-To9" eventType="touchUpInside" id="Kjc-5j-SSq"/>
+                                    <action selector="addButton:" destination="oqn-vd-To9" id="zzf-Oq-Nyh"/>
                                 </connections>
-                            </button>
-                            <connections>
-                                <action selector="addButton:" destination="oqn-vd-To9" id="zzf-Oq-Nyh"/>
-                            </connections>
-                        </barButtonItem>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="sjO-XS-ht0">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="JEM-fM-jUR">
+                                    <rect key="frame" x="212" y="5" width="95" height="34.333333333333336"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                    <connections>
+                                        <action selector="logOutButton:" destination="oqn-vd-To9" eventType="touchUpInside" id="RzP-8B-tGS"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sBg-bP-YQu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
