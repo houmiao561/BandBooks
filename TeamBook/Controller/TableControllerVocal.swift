@@ -13,7 +13,6 @@ class TableControllerVocal: UITableViewController {
     let db = Firestore.firestore()
     private var firebaseDataArray = [FirebaseDataArray]()
     private let user = Auth.auth().currentUser
-    //let a = AddViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -29,27 +28,9 @@ class TableControllerVocal: UITableViewController {
     
     
     @IBAction func addButton(_ sender: Any) {
-        //        let alertController = UIAlertController(title: "Add Text", message: nil, preferredStyle: .alert)
-        //
-        //        alertController.addTextField { (textField) in textField.placeholder = "Enter text" }
-        //
-        //        let confirmAction = UIAlertAction(title: "Add", style: .default) { (_) in
-        //            if let text = alertController.textFields?.first?.text {
-        //                self.sendToFirebase(with: text)
-        //                DispatchQueue.main.async {
-        //                    self.downloadFromFirebase()
-        //                    self.tableView.reloadData()
-        //                }
-        //            }
-        //        }
-        //        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        //
-        //        alertController.addAction(confirmAction)
-        //        alertController.addAction(cancelAction)
-        //        // 弹出 UIAlertController
-        //        present(alertController, animated: true, completion: nil)
         performSegue(withIdentifier: "VocalToAdd", sender: self)
     }
+    
     @IBAction func logOutButton(_ sender: UIButton) {
         do {
             try Auth.auth().signOut() // 登出当前用户
@@ -65,16 +46,6 @@ class TableControllerVocal: UITableViewController {
 
 //MARK: -Firebase
 extension TableControllerVocal {
-    //    func sendToFirebase(with whichTeam: String){
-    //        let collectionRef = db.collection("collectionNameVocal") // 替换为您的集合名称
-    //        collectionRef.addDocument(data: ["teamSelection":whichTeam,"time":Date().timeIntervalSince1970,"someoneName":String(user!.email!)]) { (error) in
-    //            if let error = error {
-    //                print("Error saving data to Firestore: \(error.localizedDescription)")
-    //            } else {
-    //                print("Data saved to Firestore successfully")
-    //            }
-    //        }
-    //    }
     
     func downloadFromFirebase(){
         let collectionRef = db.collection("collectionNameVocal").order(by: "sendTime")// 替换为您的集合名称
@@ -108,30 +79,30 @@ extension TableControllerVocal {
         }
     }
     
-    func deleteFromFirebase(teamSelection: String) {
-        //        let collectionRef = db.collection("collectionNameVocal") // 替换为您的集合名称
-        //
-        //        // 查询包含指定 "teamSelection" 值的文档
-        //        collectionRef.whereField("teamSelection", isEqualTo: teamSelection).getDocuments { (querySnapshot, error) in
-        //            if let error = error {
-        //                print("Error querying Firestore: \(error.localizedDescription)")
-        //            } else {
-        //                guard let documents = querySnapshot?.documents else {
-        //                    print("No documents found with the specified teamSelection")
-        //                    return
-        //                }
-        //                // 删除匹配的文档（可能有多个匹配的文档）
-        //                for document in documents {
-        //                    document.reference.delete { (error) in
-        //                        if let error = error {
-        //                            print("Error deleting document: \(error.localizedDescription)")
-        //                        } else {
-        //                            print("Document deleted successfully")
-        //                        }
-        //                    }
-        //                }
-        //            }
-        //        }
+    func deleteFromFirebase(Name: String) {
+        let collectionRef = db.collection("collectionNameVocal") // 替换为您的集合名称
+        
+        // 查询包含指定 "teamSelection" 值的文档
+        collectionRef.whereField("Name", isEqualTo: Name).getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print("Error querying Firestore: \(error.localizedDescription)")
+            } else {
+                guard let documents = querySnapshot?.documents else {
+                    print("No documents found with the specified teamSelection")
+                    return
+                }
+                // 删除匹配的文档（可能有多个匹配的文档）
+                for document in documents {
+                    document.reference.delete { (error) in
+                        if let error = error {
+                            print("Error deleting document: \(error.localizedDescription)")
+                        } else {
+                            print("Document deleted successfully")
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -154,25 +125,25 @@ extension TableControllerVocal {
     }
     
     @objc func handleLongPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
-        //        if gestureRecognizer.state == .began {
-        //            // 获取长按点所在的IndexPath
-        //            let point = gestureRecognizer.location(in: tableView)
-        //            if let indexPath = tableView.indexPathForRow(at: point) {
-        //                let alertController = UIAlertController(title: "Delete Item",message: "Are you sure you want to delete this item?",preferredStyle: .alert)
-        //                let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (_) in
-        //                    let teamSelectionToDelete = self.firebaseDataArray[indexPath.row]
-        //                    self.deleteFromFirebase(teamSelection: self.firebaseDataArray[indexPath.row].commentTextFromStruct)
-        //                    self.firebaseDataArray.remove(at: indexPath.row)
-        //                    self.tableView.reloadData()
-        //                }
-        //                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        //
-        //                alertController.addAction(deleteAction)
-        //                alertController.addAction(cancelAction)
-        //
-        //                present(alertController, animated: true, completion: nil)
-        //            }
-        //        }
+        if gestureRecognizer.state == .began {
+            // 获取长按点所在的IndexPath
+            let point = gestureRecognizer.location(in: tableView)
+            if let indexPath = tableView.indexPathForRow(at: point) {
+                let alertController = UIAlertController(title: "Delete Item",message: "Are you sure you want to delete this item?",preferredStyle: .alert)
+                let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (_) in
+                    let NameToDelete = self.firebaseDataArray[indexPath.row].name
+                    self.deleteFromFirebase(Name: NameToDelete)
+                    self.firebaseDataArray.remove(at: indexPath.row)
+                    self.tableView.reloadData()
+                }
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                
+                alertController.addAction(deleteAction)
+                alertController.addAction(cancelAction)
+                
+                present(alertController, animated: true, completion: nil)
+            }
+        }
     }
 }
 
