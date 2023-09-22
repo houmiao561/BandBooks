@@ -7,12 +7,16 @@
 
 import UIKit
 class Table0Cell: UITableViewCell{
-    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var nameText: UILabel!
     
-    @IBOutlet weak var commentText: UILabel!
+    @IBOutlet weak var musicStyleText: UILabel!
+    
+    @IBOutlet weak var locationText: UILabel!
+    
+    @IBOutlet weak var selfIntroductionText: UILabel!
     
     override func awakeFromNib() {
-        super.awakeFromNib()
+
     }
     
 }
