@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RealmSwift
 import Firebase
 import FirebaseAuth
 
@@ -14,10 +13,7 @@ struct FirebaseDataArray{
     var nameFromStruct: String
     var commentTextFromStruct: String
 }
-class TableController0: UITableViewController {
-    
-    let realm = try! Realm()
-    var teams : Results<Team>?
+class Table0Controller: UITableViewController {
     let db = Firestore.firestore()
     var firebaseDataArray = [FirebaseDataArray]()
     let user = Auth.auth().currentUser
@@ -27,7 +23,6 @@ class TableController0: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 100
-        teams = realm.objects(Team.self)
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         tableView.addGestureRecognizer(longPressGesture)
         tableView.register (UINib (nibName:"Table0Cell", bundle: nil),forCellReuseIdentifier: "Table0Cell")
@@ -40,40 +35,23 @@ class TableController0: UITableViewController {
 
         alertController.addTextField { (textField) in textField.placeholder = "Enter text" }
         
-
         let confirmAction = UIAlertAction(title: "Add", style: .default) { (_) in
             if let text = alertController.textFields?.first?.text {
-                do {
-                    try self.realm.write {
-                        let newTeam = Team()
-                        newTeam.whichTeamRealm = text
-                        newTeam.userNameEmail = String(self.user!.email!)
-                        self.realm.add(newTeam)
-                    }
                     self.sendToFirebase(with: text)
-                    self.teams = self.realm.objects(Team.self)
                     DispatchQueue.main.async {
                         self.downloadFromFirebase()
                         self.tableView.reloadData()
                     }
-                } catch {
-                    print("Error saving data to Realm: \(error.localizedDescription)")
-                }
             }
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
-
         alertController.addAction(confirmAction)
         alertController.addAction(cancelAction)
-        
         // 弹出 UIAlertController
         present(alertController, animated: true, completion: nil)
         downloadFromFirebase()
         tableView.reloadData()
-        if let realmURL = Realm.Configuration.defaultConfiguration.fileURL {
-            print("Realm file location: \(realmURL)")
-        }
     }
     @IBAction func logOutButton(_ sender: UIButton) {
         do {
@@ -89,7 +67,7 @@ class TableController0: UITableViewController {
 }
 
 //MARK: -Firebase
-extension TableController0 {
+extension Table0Controller {
     func sendToFirebase(with whichTeam: String){
         if let name = self.user?.email{
             let collectionRef = db.collection("collectionName:\(name)") // 替换为您的集合名称
@@ -161,28 +139,8 @@ extension TableController0 {
     }
 }
 
-
-//MARK: -Realm
-extension TableController0 {
-    func deleteItemFromRealm(at indexPath: IndexPath) {
-        // 获取要删除的对象，假设您的数据源是 Realm 中的 Results<Item>
-        if let teamToDelete = teams?[indexPath.row] {
-            do {
-                try realm.write {
-                    realm.delete(teamToDelete)
-                }
-                teams = realm.objects(Team.self)
-            } catch {
-                print("Error deleting item from Realm: \(error.localizedDescription)")
-            }
-        }
-    }
-}
-
-
-
 //MARK: -TableView
-extension TableController0 {
+extension Table0Controller {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return firebaseDataArray.count
         
@@ -207,7 +165,6 @@ extension TableController0 {
                 let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (_) in
                     let teamSelectionToDelete = self.firebaseDataArray[indexPath.row]
                     self.deleteFromFirebase(teamSelection: self.firebaseDataArray[indexPath.row].commentTextFromStruct)
-                    self.deleteItemFromRealm(at: indexPath)
                     self.firebaseDataArray.remove(at: indexPath.row)
                     self.tableView.reloadData()
                 }
