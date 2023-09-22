@@ -315,6 +315,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Button">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="GuitarButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="crO-eo-JXI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -327,6 +330,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Button">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="BassButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="b43-Mi-Lmc"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arl-aq-m9y">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="215"/>
@@ -334,6 +340,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Button">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="DrumButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="ukj-ZX-xFi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -346,6 +355,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Button">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="KeyboardButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="GTp-zE-adM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiE-3b-byZ">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="215.5"/>
@@ -353,6 +365,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="Button">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="OtherInstrumentButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="dGP-AC-pkx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

@@ -17,5 +17,20 @@ class Main0ViewController: UIViewController {
     @IBAction func VocalButton(_ sender: UIButton) {
         performSegue(withIdentifier: "Main0ToTable0", sender: sender)
     }
-    
+    @IBAction func GuitarButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "Main0ToTable0", sender: sender)
+    }
+    @IBAction func BassButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "Main0ToTable0", sender: sender)
+    }
+    @IBAction func DrumButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "Main0ToTable0", sender: sender)
+    }
+    @IBAction func KeyboardButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "Main0ToTable0", sender: sender)
+    }
+    @IBAction func OtherInstrumentButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "Main0ToTable0", sender: sender)
+    }
+   
 }
