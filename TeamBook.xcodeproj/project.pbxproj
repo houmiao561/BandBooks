@@ -21,6 +21,7 @@
 		935883DA2ABD3F8400359272 /* Main0ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935883D92ABD3F8400359272 /* Main0ViewController.swift */; };
 		935883DE2ABD868400359272 /* TableControllerVocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935883DD2ABD868400359272 /* TableControllerVocal.swift */; };
 		935883E02ABDCDE700359272 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935883DF2ABDCDE700359272 /* AddViewController.swift */; };
+		935883E22ABDEE9E00359272 /* TableControllerGuitar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935883E12ABDEE9E00359272 /* TableControllerGuitar.swift */; };
 		938C45FB2AB4A044005E4AD7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 938C45FA2AB4A043005E4AD7 /* GoogleService-Info.plist */; };
 		938C45FD2AB54E84005E4AD7 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938C45FC2AB54E84005E4AD7 /* MainController.swift */; };
 		939E48202AB96FDB0039AA79 /* Table0Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939E481F2AB96FDB0039AA79 /* Table0Controller.swift */; };
@@ -53,6 +54,7 @@
 		935883D92ABD3F8400359272 /* Main0ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main0ViewController.swift; sourceTree = "<group>"; };
 		935883DD2ABD868400359272 /* TableControllerVocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableControllerVocal.swift; sourceTree = "<group>"; };
 		935883DF2ABDCDE700359272 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		935883E12ABDEE9E00359272 /* TableControllerGuitar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableControllerGuitar.swift; sourceTree = "<group>"; };
 		938C45FA2AB4A043005E4AD7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		938C45FC2AB54E84005E4AD7 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		939E481F2AB96FDB0039AA79 /* Table0Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table0Controller.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				93CD80862AB457E00007EB04 /* LogInViewController.swift */,
 				935883D92ABD3F8400359272 /* Main0ViewController.swift */,
 				935883DD2ABD868400359272 /* TableControllerVocal.swift */,
+				935883E12ABDEE9E00359272 /* TableControllerGuitar.swift */,
 				935883DF2ABDCDE700359272 /* AddViewController.swift */,
 			);
 			path = Controller;
@@ -312,6 +315,7 @@
 			files = (
 				93CD80722AB4559C0007EB04 /* ViewController.swift in Sources */,
 				935883D12ABBB19F00359272 /* Table0Cell.swift in Sources */,
+				935883E22ABDEE9E00359272 /* TableControllerGuitar.swift in Sources */,
 				933687262AB80A6E0098BBB1 /* MainController1ImageCell.swift in Sources */,
 				935883D32ABD34BC00359272 /* CollectionViewController0.swift in Sources */,
 				938C45FD2AB54E84005E4AD7 /* MainController.swift in Sources */,

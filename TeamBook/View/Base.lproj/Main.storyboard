@@ -302,7 +302,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlm-q1-LuV">
                                                 <rect key="frame" x="0.0" y="0.0" width="177" height="215.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -312,7 +312,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8B-sh-0sG">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="215.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -327,7 +327,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v99-bF-XhI">
                                                 <rect key="frame" x="0.0" y="0.0" width="177" height="215"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -337,7 +337,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arl-aq-m9y">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="215"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -352,7 +352,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMh-c4-lQj">
                                                 <rect key="frame" x="0.0" y="0.0" width="177" height="215.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -362,7 +362,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiE-3b-byZ">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="215.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -388,7 +388,7 @@
                         <segue destination="g4W-d6-NIl" kind="show" identifier="Main0ToVocal" id="WrE-Yd-5rk"/>
                         <segue destination="HKq-JQ-A85" kind="show" id="GNo-oE-eAQ"/>
                         <segue destination="G6p-dZ-AgT" kind="show" id="bGu-RV-nA3"/>
-                        <segue destination="wdB-5I-cWO" kind="show" id="Qrq-wR-GDa"/>
+                        <segue destination="wdB-5I-cWO" kind="show" identifier="Main0ToGuitar" id="Qrq-wR-GDa"/>
                         <segue destination="3qX-tp-VQE" kind="show" id="LIe-Wg-NVZ"/>
                         <segue destination="tgW-rF-92P" kind="show" id="BYD-an-ilH"/>
                     </connections>
@@ -602,13 +602,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                    <connections>
-                                        <action selector="addButton:" destination="g4W-d6-NIl" eventType="touchUpInside" id="bfc-ub-uS4"/>
-                                    </connections>
                                 </button>
-                                <connections>
-                                    <action selector="addButton:" destination="g4W-d6-NIl" id="m0q-kQ-DBG"/>
-                                </connections>
                             </barButtonItem>
                             <barButtonItem style="plain" id="FL8-7w-hmX">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="4Vw-IM-Uid">
@@ -756,10 +750,10 @@
             </objects>
             <point key="canvasLocation" x="6062" y="-1304"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Table Controller Guitar-->
         <scene sceneID="SHq-BV-KCu">
             <objects>
-                <tableViewController id="wdB-5I-cWO" sceneMemberID="viewController">
+                <tableViewController id="wdB-5I-cWO" customClass="TableControllerGuitar" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="94U-bg-rqR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -779,7 +773,35 @@
                             <outlet property="delegate" destination="wdB-5I-cWO" id="iAp-m7-zgz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="u05-uL-yWL"/>
+                    <navigationItem key="navigationItem" id="u05-uL-yWL">
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="EAh-AU-LM6">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Uje-G8-1gf">
+                                    <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                    <connections>
+                                        <action selector="addButton:" destination="wdB-5I-cWO" eventType="touchUpInside" id="Skf-QX-lL2"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="ULY-j8-CCy">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="CBO-eT-7L5">
+                                    <rect key="frame" x="202" y="5" width="92" height="34.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                    <connections>
+                                        <action selector="logOutButton:" destination="wdB-5I-cWO" eventType="touchUpInside" id="Kc5-n0-sVr"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="RFS-T1-U8P" kind="show" identifier="GuitarToAdd" id="MZY-6r-PEW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnu-nn-rfN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -841,6 +863,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="MZY-6r-PEW"/>
         <segue reference="dsS-1Y-olN"/>
     </inferredMetricsTieBreakers>
     <resources>
