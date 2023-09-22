@@ -1,19 +1,15 @@
 //
-//  TableController0.swift
+//  TableControllerVocal.swift
 //  TeamBook
 //
-//  Created by 侯淼 on 2023/9/19.
+//  Created by 侯淼 on 2023/9/22.
 //
 
 import UIKit
 import Firebase
 import FirebaseAuth
 
-struct FirebaseDataArray{
-    var nameFromStruct: String
-    var commentTextFromStruct: String
-}
-class Table0Controller: UITableViewController {
+class TableControllerVocal: UITableViewController {
     let db = Firestore.firestore()
     var firebaseDataArray = [FirebaseDataArray]()
     let user = Auth.auth().currentUser
@@ -29,6 +25,7 @@ class Table0Controller: UITableViewController {
         downloadFromFirebase()
         tableView.reloadData()
     }
+    
     
     @IBAction func addButton(_ sender: Any) {
         let alertController = UIAlertController(title: "Add Text", message: nil, preferredStyle: .alert)
@@ -65,9 +62,9 @@ class Table0Controller: UITableViewController {
 }
 
 //MARK: -Firebase
-extension Table0Controller {
+extension TableControllerVocal {
     func sendToFirebase(with whichTeam: String){
-        let collectionRef = db.collection("collectionName") // 替换为您的集合名称
+        let collectionRef = db.collection("collectionNameVocal") // 替换为您的集合名称
         collectionRef.addDocument(data: ["teamSelection":whichTeam,"time":Date().timeIntervalSince1970,"someoneName":String(user!.email!)]) { (error) in
             if let error = error {
                 print("Error saving data to Firestore: \(error.localizedDescription)")
@@ -78,7 +75,7 @@ extension Table0Controller {
     }
     
     func downloadFromFirebase(){
-        let collectionRef = db.collection("collectionName").order(by: "time")// 替换为您的集合名称
+        let collectionRef = db.collection("collectionNameVocal").order(by: "time")// 替换为您的集合名称
         self.firebaseDataArray = []
         collectionRef.getDocuments { (querySnapshot, error) in
             if let error = error {
@@ -103,7 +100,7 @@ extension Table0Controller {
     }
     
     func deleteFromFirebase(teamSelection: String) {
-        let collectionRef = db.collection("collectionName") // 替换为您的集合名称
+        let collectionRef = db.collection("collectionNameVocal") // 替换为您的集合名称
         
         // 查询包含指定 "teamSelection" 值的文档
         collectionRef.whereField("teamSelection", isEqualTo: teamSelection).getDocuments { (querySnapshot, error) in
@@ -130,7 +127,7 @@ extension Table0Controller {
 }
 
 //MARK: -TableView
-extension Table0Controller {
+extension TableControllerVocal {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return firebaseDataArray.count
         

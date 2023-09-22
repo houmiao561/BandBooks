@@ -386,6 +386,7 @@
                     <navigationItem key="navigationItem" id="KB8-8m-VMR"/>
                     <connections>
                         <segue destination="oqn-vd-To9" kind="show" identifier="Main0ToTable0" id="bB4-gN-a7l"/>
+                        <segue destination="g4W-d6-NIl" kind="show" identifier="Main0ToVocal" id="WrE-Yd-5rk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZi-0S-hnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -425,7 +426,7 @@
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="Button"/>
                                     <connections>
-                                        <action selector="addButton:" destination="oqn-vd-To9" eventType="touchUpInside" id="Kjc-5j-SSq"/>
+                                        <action selector="addButton:" destination="oqn-vd-To9" eventType="touchUpInside" id="hWz-wh-w4d"/>
                                     </connections>
                                 </button>
                                 <connections>
@@ -439,7 +440,7 @@
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="tinted" title="Button"/>
                                     <connections>
-                                        <action selector="logOutButton:" destination="oqn-vd-To9" eventType="touchUpInside" id="RzP-8B-tGS"/>
+                                        <action selector="logOutButton:" destination="oqn-vd-To9" eventType="touchUpInside" id="xel-Gh-Xjj"/>
                                     </connections>
                                 </button>
                             </barButtonItem>
@@ -449,6 +450,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sBg-bP-YQu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4635" y="329"/>
+        </scene>
+        <!--Table Controller Vocal-->
+        <scene sceneID="TCr-bX-IQL">
+            <objects>
+                <tableViewController id="g4W-d6-NIl" customClass="TableControllerVocal" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5Tp-lk-voK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mey-ht-wui">
+                                <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mey-ht-wui" id="Lav-T9-76M">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="g4W-d6-NIl" id="nWf-Zn-8RJ"/>
+                            <outlet property="delegate" destination="g4W-d6-NIl" id="zUg-rw-WbR"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qT5-4u-s9a">
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="7yT-Zi-pIh">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qNz-tj-fi4">
+                                    <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <connections>
+                                        <action selector="addButton:" destination="g4W-d6-NIl" eventType="touchUpInside" id="bfc-ub-uS4"/>
+                                    </connections>
+                                </button>
+                                <connections>
+                                    <action selector="addButton:" destination="g4W-d6-NIl" id="m0q-kQ-DBG"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="FL8-7w-hmX">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="4Vw-IM-Uid">
+                                    <rect key="frame" x="202" y="5" width="92" height="34.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    <connections>
+                                        <action selector="logOutButton:" destination="g4W-d6-NIl" eventType="touchUpInside" id="uf2-Fs-Rnv"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dZc-fe-Ida" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4635" y="1096"/>
         </scene>
         <!--Main Controller1-->
         <scene sceneID="cPK-jV-hQt">

@@ -15,7 +15,7 @@ class Main0ViewController: UIViewController {
     }
     
     @IBAction func VocalButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "Main0ToTable0", sender: sender)
+        performSegue(withIdentifier: "Main0ToVocal", sender: sender)
     }
     @IBAction func GuitarButton(_ sender: UIButton) {
         performSegue(withIdentifier: "Main0ToTable0", sender: sender)
