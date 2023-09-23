@@ -25,7 +25,7 @@ class TableControllerVocal: UITableViewController {
         tableView.register (UINib (nibName:"Table0Cell", bundle: nil),forCellReuseIdentifier: "Table0Cell")
         downloadFromFirebase()
         tableView.reloadData()
-        print(buttonName)
+        print("TableControllerVocal:\(buttonName)")
     }
     
     

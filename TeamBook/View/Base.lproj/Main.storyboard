@@ -299,11 +299,20 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EVG-8N-CNb">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="215.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlm-q1-LuV">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlm-q1-LuV">
                                                 <rect key="frame" x="0.0" y="0.0" width="177" height="215.5"/>
+                                                <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="VocalButton">
+                                                <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="VocalButton">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="12" name="Didot"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="VocalButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="HZN-Mk-VsY"/>
@@ -312,8 +321,18 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8B-sh-0sG">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="215.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="GuitarButton">
+                                                <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="GuitarButton">
+                                                            <attributes>
+                                                                <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="12" name="Baskerville"/>
+                                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="GuitarButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="crO-eo-JXI"/>
@@ -329,6 +348,16 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="BassButton">
+                                                            <attributes>
+                                                                <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="BassButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="b43-Mi-Lmc"/>
@@ -339,6 +368,15 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="DrumButton">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="DrumButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="ukj-ZX-xFi"/>
@@ -354,6 +392,15 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="KeyboardButton">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="KeyboardButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="GTp-zE-adM"/>
@@ -364,6 +411,15 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="OtherInstrumentButton">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="OtherInstrumentButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="dGP-AC-pkx"/>
@@ -385,133 +441,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="KB8-8m-VMR"/>
                     <connections>
+                        <outlet property="bassButton" destination="v99-bF-XhI" id="M3P-Ny-Mgs"/>
+                        <outlet property="drumButton" destination="Arl-aq-m9y" id="FOz-3k-Id0"/>
+                        <outlet property="guitarButton" destination="J8B-sh-0sG" id="8sJ-8I-yT4"/>
+                        <outlet property="keyboardButton" destination="FMh-c4-lQj" id="2wc-CZ-JMp"/>
+                        <outlet property="otherInstrumentButton" destination="xiE-3b-byZ" id="UFy-Sh-2hm"/>
+                        <outlet property="vocalButton" destination="zlm-q1-LuV" id="Lh1-1s-w4K"/>
                         <segue destination="g4W-d6-NIl" kind="show" identifier="Main0ToVocal" id="WrE-Yd-5rk"/>
-                        <segue destination="HKq-JQ-A85" kind="show" id="GNo-oE-eAQ"/>
-                        <segue destination="G6p-dZ-AgT" kind="show" id="bGu-RV-nA3"/>
-                        <segue destination="wdB-5I-cWO" kind="show" identifier="Main0ToGuitar" id="Qrq-wR-GDa"/>
-                        <segue destination="3qX-tp-VQE" kind="show" id="LIe-Wg-NVZ"/>
-                        <segue destination="tgW-rF-92P" kind="show" id="BYD-an-ilH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZi-0S-hnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3721.739130434783" y="328.79464285714283"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="JTK-aZ-Ych">
-            <objects>
-                <tableViewController id="HKq-JQ-A85" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="XbK-f0-TkS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="iFV-qL-bKK">
-                                <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iFV-qL-bKK" id="VdU-EN-F9k">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="HKq-JQ-A85" id="CiD-KT-0XB"/>
-                            <outlet property="delegate" destination="HKq-JQ-A85" id="91v-dd-sUw"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="sRx-MQ-Lb7"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="THa-mh-dlk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4886" y="163"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="6Iv-Cu-wuB">
-            <objects>
-                <tableViewController id="3qX-tp-VQE" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="wBR-qy-wX9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oRF-KO-TfF">
-                                <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oRF-KO-TfF" id="Rub-us-ffY">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="3qX-tp-VQE" id="IZk-WL-bvZ"/>
-                            <outlet property="delegate" destination="3qX-tp-VQE" id="tIL-7u-NcT"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="QeF-Zx-Jei"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sSc-Th-Hbx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6067" y="163"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="leu-b6-7tI">
-            <objects>
-                <tableViewController id="G6p-dZ-AgT" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="pW1-c8-sVf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rif-aI-8tI">
-                                <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rif-aI-8tI" id="Kfn-bD-exp">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="G6p-dZ-AgT" id="SBW-gK-EPN"/>
-                            <outlet property="delegate" destination="G6p-dZ-AgT" id="7IV-5E-Ust"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="c5R-yO-jh1"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HEs-s2-zRT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4886" y="891"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="tDj-et-75z">
-            <objects>
-                <tableViewController id="tgW-rF-92P" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="K5Z-4U-HcK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zSC-1p-RC3">
-                                <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zSC-1p-RC3" id="g4N-se-oQ7">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="tgW-rF-92P" id="NrI-yA-5Ti"/>
-                            <outlet property="delegate" destination="tgW-rF-92P" id="8LK-S1-7n8"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="orJ-sK-XCx"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nbs-3E-Zhw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6067" y="891"/>
         </scene>
         <!--Table0 Controller-->
         <scene sceneID="DCH-w8-WfB">
@@ -626,7 +567,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZc-fe-Ida" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4886" y="-567"/>
+            <point key="canvasLocation" x="4787" y="329"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="jag-QF-OER">
@@ -751,64 +692,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TJt-KO-QHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6062" y="-1304"/>
-        </scene>
-        <!--Table Controller Guitar-->
-        <scene sceneID="SHq-BV-KCu">
-            <objects>
-                <tableViewController id="wdB-5I-cWO" customClass="TableControllerGuitar" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="94U-bg-rqR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rN8-1T-uQg">
-                                <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rN8-1T-uQg" id="3je-Vm-u4s">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="wdB-5I-cWO" id="Wug-RX-45D"/>
-                            <outlet property="delegate" destination="wdB-5I-cWO" id="iAp-m7-zgz"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="u05-uL-yWL">
-                        <rightBarButtonItems>
-                            <barButtonItem style="plain" id="EAh-AU-LM6">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Uje-G8-1gf">
-                                    <rect key="frame" x="302" y="5" width="92" height="34.5"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                    <connections>
-                                        <action selector="addButton:" destination="wdB-5I-cWO" eventType="touchUpInside" id="Skf-QX-lL2"/>
-                                    </connections>
-                                </button>
-                            </barButtonItem>
-                            <barButtonItem style="plain" id="ULY-j8-CCy">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="CBO-eT-7L5">
-                                    <rect key="frame" x="202" y="5" width="92" height="34.5"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                    <connections>
-                                        <action selector="logOutButton:" destination="wdB-5I-cWO" eventType="touchUpInside" id="Kc5-n0-sVr"/>
-                                    </connections>
-                                </button>
-                            </barButtonItem>
-                        </rightBarButtonItems>
-                    </navigationItem>
-                    <connections>
-                        <segue destination="RFS-T1-U8P" kind="show" identifier="GuitarToAdd" id="MZY-6r-PEW"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gnu-nn-rfN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6068" y="-567"/>
+            <point key="canvasLocation" x="5891" y="329"/>
         </scene>
         <!--Main Controller1-->
         <scene sceneID="cPK-jV-hQt">
@@ -866,7 +750,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ds5-TD-9vZ"/>
         <segue reference="dsS-1Y-olN"/>
     </inferredMetricsTieBreakers>
     <resources>

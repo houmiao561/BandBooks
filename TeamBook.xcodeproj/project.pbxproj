@@ -111,6 +111,7 @@
 				935883D52ABD368400359272 /* Collection0Cell.swift */,
 				935883D72ABD369800359272 /* Collection0Cell.xib */,
 				939E481F2AB96FDB0039AA79 /* Table0Controller.swift */,
+				935883E12ABDEE9E00359272 /* TableControllerGuitar.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -177,7 +178,6 @@
 				93CD80862AB457E00007EB04 /* LogInViewController.swift */,
 				935883D92ABD3F8400359272 /* Main0ViewController.swift */,
 				935883DD2ABD868400359272 /* TableControllerVocal.swift */,
-				935883E12ABDEE9E00359272 /* TableControllerGuitar.swift */,
 				935883DF2ABDCDE700359272 /* AddViewController.swift */,
 			);
 			path = Controller;
