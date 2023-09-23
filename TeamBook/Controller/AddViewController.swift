@@ -12,7 +12,7 @@ import FirebaseAuth
 
 class AddViewController: UIViewController {
     let db = Firestore.firestore()
-
+    var buttonName: String = ""
     private var firebaseDataArray = [FirebaseDataArray]()
     private let user = Auth.auth().currentUser
     
@@ -23,10 +23,11 @@ class AddViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("AddController:\(buttonName)")
     }
     
     func sendToFirebase(){
-        let collectionRef = db.collection("collectionNameVocal") // 替换为您的集合名称
+        let collectionRef = db.collection("collection:\(buttonName)") // 替换为您的集合名称
         collectionRef.addDocument(data: ["Name":self.NameText!.text!,
                                          "Location":self.LocationText!.text!,
                                          "MusicStyle":self.MusicStyleText!.text!,

@@ -17,6 +17,24 @@ class Main0ViewController: UIViewController {
     @IBAction func VocalButton(_ sender: UIButton) {
         performSegue(withIdentifier: "Main0ToVocal", sender: sender)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Main0ToVocal" {
+            if let destinationVC = segue.destination as? TableControllerVocal {
+                // 将按钮的标识符传递给下一个页面
+                if let button = sender as? UIButton {
+                    destinationVC.buttonName = button.titleLabel!.text!
+                }
+            }
+        }
+        if segue.identifier == "Main0ToGuitar" {
+            if let destinationVC = segue.destination as? TableControllerGuitar {
+                // 将按钮的标识符传递给下一个页面
+                if let button = sender as? UIButton {
+                    destinationVC.buttonName = button.titleLabel!.text!
+                }
+            }
+        }
+    }
     @IBAction func GuitarButton(_ sender: UIButton) {
         performSegue(withIdentifier: "Main0ToGuitar", sender: sender)
     }

@@ -13,6 +13,7 @@ class TableControllerVocal: UITableViewController {
     let db = Firestore.firestore()
     private var firebaseDataArray = [FirebaseDataArray]()
     private let user = Auth.auth().currentUser
+    var buttonName: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -24,13 +25,20 @@ class TableControllerVocal: UITableViewController {
         tableView.register (UINib (nibName:"Table0Cell", bundle: nil),forCellReuseIdentifier: "Table0Cell")
         downloadFromFirebase()
         tableView.reloadData()
+        print(buttonName)
     }
     
     
     @IBAction func addButton(_ sender: Any) {
         performSegue(withIdentifier: "VocalToAdd", sender: self)
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "VocalToAdd" {
+            if let destinationVC = segue.destination as? AddViewController {
+                destinationVC.buttonName = self.buttonName
+            }
+        }
+    }
     @IBAction func logOutButton(_ sender: UIButton) {
         do {
             try Auth.auth().signOut() // 登出当前用户
@@ -48,7 +56,7 @@ class TableControllerVocal: UITableViewController {
 extension TableControllerVocal {
     
     func downloadFromFirebase(){
-        let collectionRef = db.collection("collectionNameVocal").order(by: "sendTime")// 替换为您的集合名称
+        let collectionRef = db.collection("collection:\(buttonName)").order(by: "sendTime")// 替换为您的集合名称
         self.firebaseDataArray = []
         collectionRef.getDocuments { (querySnapshot, error) in
             if let error = error {
@@ -80,7 +88,7 @@ extension TableControllerVocal {
     }
     
     func deleteFromFirebase(Name: String) {
-        let collectionRef = db.collection("collectionNameVocal") // 替换为您的集合名称
+        let collectionRef = db.collection("collection:\(buttonName)") // 替换为您的集合名称
         
         // 查询包含指定 "teamSelection" 值的文档
         collectionRef.whereField("Name", isEqualTo: Name).getDocuments { (querySnapshot, error) in

@@ -12,6 +12,7 @@ class TableControllerGuitar: UITableViewController {
     let db = Firestore.firestore()
     private var firebaseDataArray = [FirebaseDataArray]()
     private let user = Auth.auth().currentUser
+    var buttonName: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -28,7 +29,13 @@ class TableControllerGuitar: UITableViewController {
     @IBAction func addButton(_ sender: Any) {
         performSegue(withIdentifier: "GuitarToAdd", sender: self)
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GuitarToAdd" {
+            if let destinationVC = segue.destination as? AddViewController {
+                destinationVC.buttonName = self.buttonName
+            }
+        }
+    }
     
     
     @IBAction func logOutButton(_ sender: UIButton) {
@@ -48,7 +55,7 @@ class TableControllerGuitar: UITableViewController {
 extension TableControllerGuitar{
     
     func downloadFromFirebase(){
-        let collectionRef = db.collection("collectionNameGuitar").order(by: "sendTime")// 替换为您的集合名称
+        let collectionRef = db.collection("collection:\(buttonName)").order(by: "sendTime")// 替换为您的集合名称
         self.firebaseDataArray = []
         collectionRef.getDocuments { (querySnapshot, error) in
             if let error = error {
