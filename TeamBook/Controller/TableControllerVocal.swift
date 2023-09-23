@@ -87,31 +87,33 @@ extension TableControllerVocal {
         }
     }
     
-    func deleteFromFirebase(Name: String) {
-        let collectionRef = db.collection("collection:\(buttonName)") // 替换为您的集合名称
-        
-        // 查询包含指定 "teamSelection" 值的文档
-        collectionRef.whereField("Name", isEqualTo: Name).getDocuments { (querySnapshot, error) in
-            if let error = error {
-                print("Error querying Firestore: \(error.localizedDescription)")
-            } else {
-                guard let documents = querySnapshot?.documents else {
-                    print("No documents found with the specified teamSelection")
-                    return
-                }
-                // 删除匹配的文档（可能有多个匹配的文档）
-                for document in documents {
-                    document.reference.delete { (error) in
-                        if let error = error {
-                            print("Error deleting document: \(error.localizedDescription)")
-                        } else {
-                            print("Document deleted successfully")
+    func deleteFromFirebase(SelfIntroduction: String) {
+            let collectionRef = db.collection("collection:\(buttonName)") // 替换为您的集合名称
+            collectionRef.whereField("SelfIntroduction", isEqualTo: SelfIntroduction).getDocuments { (querySnapshot, error) in
+                if let error = error {
+                    print("Error querying Firestore: \(error.localizedDescription)")
+                } else {
+                    guard let documents = querySnapshot?.documents else {
+                        print("No documents found with the specified teamSelection")
+                        return
+                    }
+                    // 删除匹配的文档（可能有多个匹配的文档）
+                    for document in documents {
+                        document.reference.delete { (error) in
+                            if let error = error {
+                                print("Error deleting document: \(error.localizedDescription)")
+                            } else {
+                                print("Document deleted successfully")
+                            }
                         }
                     }
                 }
             }
-        }
+        
     }
+    
+    
+    
 }
 
 //MARK: -TableView
@@ -134,23 +136,47 @@ extension TableControllerVocal {
     
     @objc func handleLongPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
         if gestureRecognizer.state == .began {
-            // 获取长按点所在的IndexPath
-            let point = gestureRecognizer.location(in: tableView)
-            if let indexPath = tableView.indexPathForRow(at: point) {
-                let alertController = UIAlertController(title: "Delete Item",message: "Are you sure you want to delete this item?",preferredStyle: .alert)
-                let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (_) in
-                    let NameToDelete = self.firebaseDataArray[indexPath.row].name
-                    self.deleteFromFirebase(Name: NameToDelete)
-                    self.firebaseDataArray.remove(at: indexPath.row)
-                    self.tableView.reloadData()
+            let collectionRef = db.collection("collection:\(buttonName)")
+            collectionRef.getDocuments { (querySnapshot, error) in
+                if let documents = querySnapshot?.documents{
+                    for doc in documents{
+                        if let selfIntroduction = doc.data()["SelfIntroduction"]as? String,
+                           let someoneName = doc.data()["someoneName"]as? String{
+                            
+                            
+                            if self.user!.email == someoneName{
+                                let point = gestureRecognizer.location(in: self.tableView)
+                                if let indexPath = self.tableView.indexPathForRow(at: point) {
+                                    let alertController = UIAlertController(title: "Delete Item",message: "Are you sure you want to delete this item?",preferredStyle: .alert)
+                                    let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (_) in
+                                        let ToDelete = selfIntroduction
+                                        self.deleteFromFirebase(SelfIntroduction: ToDelete)
+                                        self.firebaseDataArray.remove(at: indexPath.row)
+                                        print(ToDelete)
+                                        self.tableView.reloadData()
+                                    }
+                                    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                                    
+                                    alertController.addAction(deleteAction)
+                                    alertController.addAction(cancelAction)
+                                    
+                                    self.present(alertController, animated: true, completion: nil)
+                                }
+                            }
+                            
+                            
+                            else{
+                                let alertController = UIAlertController(title: "What?!", message: "You want to delete others message?", preferredStyle: .alert)
+                                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                                alertController.addAction(cancelAction)
+                                self.present(alertController,animated: true,completion: nil)
+                            }
+                        }
+                    }
                 }
-                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                
-                alertController.addAction(deleteAction)
-                alertController.addAction(cancelAction)
-                
-                present(alertController, animated: true, completion: nil)
             }
+            
+            
         }
     }
 }
