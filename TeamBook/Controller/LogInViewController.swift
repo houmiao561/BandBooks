@@ -15,8 +15,19 @@ class LogInController: UIViewController{
     @IBOutlet weak var LogInPasswordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+
     @IBAction func logInButton(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: LogInEmailTextField.text!, password: LogInPasswordTextField.text!) { (user, error) in
             if let error = error {

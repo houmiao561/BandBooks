@@ -24,6 +24,8 @@ class AddViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("AddController:\(buttonName)")
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
     }
     
     func sendToFirebase(){
@@ -46,6 +48,15 @@ class AddViewController: UIViewController {
     @IBAction func AddAllTextButton(_ sender: UIButton) {
         sendToFirebase()
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
 }

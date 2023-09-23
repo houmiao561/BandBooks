@@ -16,17 +16,21 @@ class SingUpViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // 隐藏键盘
+        return true
+    }
+    
+    // 点击键盘以外的区域时调用
+    @objc func dismissKeyboard() {
+        view.endEditing(true) // 隐藏键盘
     }
     
     @IBAction func signUpButton(_ sender: UIButton) {
-        if let realEmialText = emailTextField.text, let realPasswordText = passwordTextField.text{
-            Auth.auth().createUser(withEmail: realEmialText, password: realPasswordText){ _ ,error in
-                if let e = error{print("123")}
-                else{
-                    print("321")
-                }
-            }
-        }
         performSegue(withIdentifier: "SignUpToLogIn", sender: self)
     }
     
