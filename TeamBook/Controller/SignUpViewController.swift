@@ -18,6 +18,8 @@ class SingUpViewController: UIViewController{
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
+        let swipeDownGesture = UIPanGestureRecognizer(target: self, action: #selector(handleSwipeDown(_:)))
+        view.addGestureRecognizer(swipeDownGesture)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -30,9 +32,18 @@ class SingUpViewController: UIViewController{
         view.endEditing(true) // 隐藏键盘
     }
     
+    // 处理下滑手势
+    @objc func handleSwipeDown(_ gestureRecognizer: UIPanGestureRecognizer) {
+        if gestureRecognizer.state == .ended {
+            let velocity = gestureRecognizer.velocity(in: view)
+            if velocity.y > 0 { // 用户向下滑动
+                view.endEditing(true) // 隐藏键盘
+            }
+        }
+    }
+    
     @IBAction func signUpButton(_ sender: UIButton) {
         performSegue(withIdentifier: "SignUpToLogIn", sender: self)
     }
-    
     
 }

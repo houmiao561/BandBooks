@@ -17,6 +17,8 @@ class LogInController: UIViewController{
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
+        let swipeDownGesture = UIPanGestureRecognizer(target: self, action: #selector(handleSwipeDown(_:)))
+        view.addGestureRecognizer(swipeDownGesture)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -24,10 +26,6 @@ class LogInController: UIViewController{
         return true
     }
     
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-
     @IBAction func logInButton(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: LogInEmailTextField.text!, password: LogInPasswordTextField.text!) { (user, error) in
             if let error = error {
@@ -44,6 +42,19 @@ class LogInController: UIViewController{
                 performSegue(withIdentifier: "LogInToMain0", sender: self)
             }
         }
-        
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    // 处理下滑手势
+    @objc func handleSwipeDown(_ gestureRecognizer: UIPanGestureRecognizer) {
+        if gestureRecognizer.state == .ended {
+            let velocity = gestureRecognizer.velocity(in: view)
+            if velocity.y > 0 { // 用户向下滑动
+                view.endEditing(true) // 隐藏键盘
+            }
+        }
     }
 }
