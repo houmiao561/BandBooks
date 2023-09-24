@@ -20,7 +20,7 @@ class TableControllerVocal: UITableViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = 100
+        //tableView.rowHeight = 100
         tableView.rowHeight = UITableView.automaticDimension
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         tableView.addGestureRecognizer(longPressGesture)

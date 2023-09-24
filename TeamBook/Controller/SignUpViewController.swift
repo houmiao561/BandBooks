@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Realm
 import Firebase
 import FirebaseAuth
 
@@ -22,12 +21,6 @@ class SingUpViewController: UIViewController{
         view.addGestureRecognizer(swipeDownGesture)
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder() // 隐藏键盘
-        return true
-    }
-    
-    // 点击键盘以外的区域时调用
     @objc func dismissKeyboard() {
         view.endEditing(true) // 隐藏键盘
     }
