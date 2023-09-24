@@ -17,29 +17,12 @@ class Main0ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        vocalButton.layer.borderColor = UIColor.black.cgColor
-        vocalButton.layer.borderWidth = 1.0
-        vocalButton.layer.cornerRadius = 10.0
-
-        guitarButton.layer.borderColor = UIColor.black.cgColor
-        guitarButton.layer.borderWidth = 1.0
-        guitarButton.layer.cornerRadius = 10.0
-        
-        bassButton.layer.borderColor = UIColor.black.cgColor
-        bassButton.layer.borderWidth = 1.0
-        bassButton.layer.cornerRadius = 10.0
-        
-        drumButton.layer.borderColor = UIColor.black.cgColor
-        drumButton.layer.borderWidth = 1.0
-        drumButton.layer.cornerRadius = 10.0
-        
-        keyboardButton.layer.borderColor = UIColor.black.cgColor
-        keyboardButton.layer.borderWidth = 1.0
-        keyboardButton.layer.cornerRadius = 10.0
-        
-        otherInstrumentButton.layer.borderColor = UIColor.black.cgColor
-        otherInstrumentButton.layer.borderWidth = 1.0
-        otherInstrumentButton.layer.cornerRadius = 10.0
+        changeButtonStyle(vocalButton)
+        changeButtonStyle(guitarButton)
+        changeButtonStyle(bassButton)
+        changeButtonStyle(drumButton)
+        changeButtonStyle(keyboardButton)
+        changeButtonStyle(otherInstrumentButton)
     }
     
     @IBAction func VocalButton(_ sender: UIButton) {
@@ -61,6 +44,11 @@ class Main0ViewController: UIViewController {
         performSegue(withIdentifier: "Main0ToVocal", sender: sender)
     }
     
+    private func changeButtonStyle(_ button: UIButton){
+        button.layer.borderColor = UIColor.black.cgColor
+        button.layer.borderWidth = 1.0
+        button.layer.cornerRadius = 10.0
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Main0ToVocal" {

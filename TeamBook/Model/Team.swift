@@ -13,4 +13,6 @@ struct FirebaseDataArray{
     var musicStyle: String
     var location: String
     var selfIntroduction: String
+    var allEmailText: String
 }
+let db = Firestore.firestore()

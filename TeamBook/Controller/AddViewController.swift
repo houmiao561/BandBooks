@@ -11,7 +11,6 @@ import FirebaseAuth
 
 
 class AddViewController: UIViewController {
-    let db = Firestore.firestore()
     var buttonName: String = ""
     private var firebaseDataArray = [FirebaseDataArray]()
     private let user = Auth.auth().currentUser
@@ -23,7 +22,6 @@ class AddViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("AddController:\(buttonName)")
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
         let swipeDownGesture = UIPanGestureRecognizer(target: self, action: #selector(handleSwipeDown(_:)))
@@ -37,24 +35,12 @@ class AddViewController: UIViewController {
                                          "MusicStyle":self.MusicStyleText!.text!,
                                          "SelfIntroduction":self.SelfIntroductionText!.text!,
                                          "sendTime":Date().timeIntervalSince1970,
-                                         "someoneName":String(user!.email!)
-                                        ]) { (error) in
-            if let error = error {
-                print("Error saving data to Firestore: \(error.localizedDescription)")
-            } else {
-                print("Data saved to Firestore successfully")
-            }
-        }
+                                         "someoneName":String(user!.email!)] ) { _ in }
     }
     
     @IBAction func AddAllTextButton(_ sender: UIButton) {
         sendToFirebase()
         self.navigationController?.popViewController(animated: true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
     }
     
     @objc func dismissKeyboard() {
