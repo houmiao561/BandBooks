@@ -531,15 +531,19 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" text="Please introduce yourself or your band ..." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="eGL-AY-02E">
-                                        <rect key="frame" x="0.0" y="319" width="390" height="384.66666666666674"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" text="Please introduce yourself or your band ..." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="eGL-AY-02E">
+                                        <rect key="frame" x="0.0" y="319" width="390" height="359"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2L-nb-8Sq">
-                                        <rect key="frame" x="165.33333333333334" y="720.66666666666663" width="59.666666666666657" height="34.333333333333371"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2L-nb-8Sq">
+                                        <rect key="frame" x="120" y="695" width="150" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="Fhh-hN-QUv"/>
+                                            <constraint firstAttribute="height" constant="60" id="pjZ-l0-kOC"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Add!"/>
                                         <connections>
