@@ -45,6 +45,14 @@ class TableControllerVocal: UITableViewController {
                 destinationVC.buttonName = self.buttonName
             }
         }
+        if segue.identifier == "VocalToDetail"{
+            if let destinationVC = segue.destination as? DetailViewController{
+                destinationVC.smallFirebase.name = self.firebaseDataArray[self.selectCellEmail].name
+                destinationVC.smallFirebase.location = self.firebaseDataArray[self.selectCellEmail].location
+                destinationVC.smallFirebase.musicStyle = self.firebaseDataArray[self.selectCellEmail].musicStyle
+                destinationVC.smallFirebase.selfIntroduction = self.firebaseDataArray[self.selectCellEmail].selfIntroduction
+            }
+        }
     }
 }
 
@@ -116,6 +124,8 @@ extension TableControllerVocal {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectCellEmail = 0
+        selectCellEmail = indexPath.row
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "VocalToDetail", sender: self)
     }

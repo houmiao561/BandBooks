@@ -540,13 +540,19 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abababababababababab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhQ-cy-pcw">
-                                        <rect key="frame" x="0.0" y="196" width="190" height="534"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zTs-na-aA4">
+                                        <rect key="frame" x="0.0" y="196" width="374" height="534"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zTs-na-aA4" secondAttribute="trailing" id="hBw-Kf-js6"/>
+                                    <constraint firstItem="zTs-na-aA4" firstAttribute="leading" secondItem="b2D-i6-0oY" secondAttribute="leading" id="yVk-Nd-evF"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UAB-X9-A7I"/>
@@ -559,10 +565,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EEf-GF-47r"/>
+                    <connections>
+                        <outlet property="locationLabel" destination="guO-Mc-YBI" id="gVc-xl-8n8"/>
+                        <outlet property="musicStyleLabel" destination="PmK-fv-4sD" id="clE-OL-S6S"/>
+                        <outlet property="nameLabel" destination="ySW-ax-xtd" id="aID-fO-qqy"/>
+                        <outlet property="selfIntroduceText" destination="zTs-na-aA4" id="qwR-9e-WbJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ro7-rf-dw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5886" y="255"/>
+            <point key="canvasLocation" x="5885.507246376812" y="254.46428571428569"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="jag-QF-OER">
@@ -635,11 +647,18 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" text="Please introduce yourself or your band ..." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="eGL-AY-02E">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eGL-AY-02E">
                                         <rect key="frame" x="0.0" y="319" width="374" height="334"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Please introduce yourself or your band ...">
+                                                <attributes>
+                                                    <color key="NSColor" systemColor="labelColor"/>
+                                                    <font key="NSFont" metaFont="system" size="14"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2L-nb-8Sq">
