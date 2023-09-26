@@ -11,6 +11,7 @@ import FirebaseAuth
 
 class TableControllerVocal: UITableViewController {
     private var firebaseDataArray = [FirebaseDataArray]()
+    @IBOutlet weak var searchBar: UISearchBar!
     private let user = Auth.auth().currentUser
     private var selectCellEmail = 0
     lazy var buttonName: String = ""
@@ -18,11 +19,12 @@ class TableControllerVocal: UITableViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        searchBar.delegate = self
         tableView.rowHeight = 150
+        navigationController?.hidesBarsOnSwipe = true
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         tableView.addGestureRecognizer(longPressGesture)
         tableView.register (UINib (nibName:"Table0Cell", bundle: nil),forCellReuseIdentifier: "Table0Cell")
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,7 +78,7 @@ extension TableControllerVocal {
                         self.firebaseDataArray.append(balabala)
                         DispatchQueue.main.async{
                             self.tableView.reloadData()
-                            let indexPath = IndexPath(row: self.firebaseDataArray.count - 1, section: 0)
+                            //let indexPath = IndexPath(row: self.firebaseDataArray.count - 1, section: 0)
                         }
                     }
                 }
@@ -162,6 +164,26 @@ extension TableControllerVocal {
                     }
                 }
             }
+        }
+    }
+}
+
+
+//MARK: -SearchBar
+extension TableControllerVocal: UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text!.count == 0{
+            downloadFromFirebase()
+            tableView.reloadData()
+        }else if searchBar.text != nil {
+            let filteredItems = firebaseDataArray.filter { item in
+                let containsName = item.name.lowercased().contains(searchText.lowercased())
+                let containsLocation = item.location.lowercased().contains(searchText.lowercased())
+                let containsMusicStyle = item.musicStyle.lowercased().contains(searchText.lowercased())
+                return containsName || containsLocation || containsMusicStyle
+            }
+            firebaseDataArray = filteredItems
+            tableView.reloadData()
         }
     }
 }

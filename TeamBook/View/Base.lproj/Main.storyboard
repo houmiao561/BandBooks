@@ -258,7 +258,7 @@
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background" image="Yummy"/>
+                                                    <backgroundConfiguration key="background" image="GuitarKia"/>
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="Guitar">
                                                             <attributes>
@@ -284,7 +284,7 @@
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background" image="Yummy"/>
+                                                    <backgroundConfiguration key="background" image="BassKia"/>
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="Bass">
                                                             <attributes>
@@ -442,9 +442,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="05i-dk-g54">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="g4W-d6-NIl" id="cwI-sB-seQ"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="mey-ht-wui">
-                                <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mey-ht-wui" id="Lav-T9-76M">
                                     <rect key="frame" x="0.0" y="0.0" width="383.5" height="43.5"/>
@@ -471,13 +479,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="05i-dk-g54" id="47b-1I-p0z"/>
                         <segue destination="RFS-T1-U8P" kind="show" identifier="VocalToAdd" id="ds5-TD-9vZ"/>
                         <segue destination="MeB-J6-cd2" kind="show" identifier="VocalToDetail" id="A58-sb-dQk"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dZc-fe-Ida" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4345" y="329"/>
+            <point key="canvasLocation" x="4338" y="430"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="IK5-IP-ZdQ">
@@ -729,6 +738,8 @@
         <segue reference="dsS-1Y-olN"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="BassKia" width="3541" height="3541"/>
+        <image name="GuitarKia" width="3541" height="3541"/>
         <image name="Yummy" width="1024" height="1024"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
