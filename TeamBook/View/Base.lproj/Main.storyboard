@@ -240,10 +240,10 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                     <attributedString key="attributedTitle">
-                                                        <fragment content="VocalButton">
+                                                        <fragment content="Vocal">
                                                             <attributes>
                                                                 <color key="NSBackgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <font key="NSFont" size="12" name="Didot"/>
                                                             </attributes>
                                                         </fragment>
@@ -260,12 +260,12 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                     <attributedString key="attributedTitle">
-                                                        <fragment content="GuitarButton">
+                                                        <fragment content="Guitar">
                                                             <attributes>
                                                                 <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                <font key="NSFont" size="12" name="Baskerville"/>
-                                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
@@ -286,10 +286,10 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                     <attributedString key="attributedTitle">
-                                                        <fragment content="BassButton">
+                                                        <fragment content="Bass">
                                                             <attributes>
                                                                 <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <font key="NSFont" size="12" name="Helvetica"/>
                                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                                             </attributes>
@@ -307,9 +307,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                     <attributedString key="attributedTitle">
-                                                        <fragment content="DrumButton">
+                                                        <fragment content="Drum">
                                                             <attributes>
-                                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <font key="NSFont" size="12" name="Helvetica"/>
                                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                                             </attributes>
@@ -332,9 +332,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                     <attributedString key="attributedTitle">
-                                                        <fragment content="KeyboardButton">
+                                                        <fragment content="Keyboard">
                                                             <attributes>
-                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <font key="NSFont" size="12" name="Helvetica"/>
                                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                                             </attributes>
@@ -352,9 +352,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="Yummy"/>
                                                     <attributedString key="attributedTitle">
-                                                        <fragment content="OtherInstrumentButton">
+                                                        <fragment content="OtherInstrument">
                                                             <attributes>
-                                                                <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <font key="NSFont" size="12" name="Helvetica"/>
                                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                                             </attributes>
@@ -381,8 +381,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="KB8-8m-VMR">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Laf-ES-mSS">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="v7w-CV-zQ4">
-                                <rect key="frame" x="351" y="5.5" width="47.5" height="33"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="v7w-CV-zQ4">
+                                <rect key="frame" x="346.5" y="5.5" width="47.5" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Set" buttonSize="mini"/>
@@ -459,7 +459,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="qT5-4u-s9a">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="eDd-Cc-xNb">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="oyY-WM-5Cd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="oyY-WM-5Cd">
                                 <rect key="frame" x="346.5" y="5.5" width="47.5" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>

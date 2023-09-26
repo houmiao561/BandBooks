@@ -28,6 +28,7 @@ class TableControllerVocal: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         downloadFromFirebase()
         tableView.reloadData()
+        title = buttonName
     }
     
     
