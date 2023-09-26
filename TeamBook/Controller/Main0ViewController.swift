@@ -50,6 +50,11 @@ class Main0ViewController: UIViewController {
         button.layer.cornerRadius = 10.0
     }
     
+    
+    @IBAction func SetButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "Main0ToSet", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Main0ToVocal" {
             if let destinationVC = segue.destination as? TableControllerVocal {

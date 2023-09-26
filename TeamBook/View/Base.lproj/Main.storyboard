@@ -379,7 +379,19 @@
                             <constraint firstItem="2lx-aZ-XO0" firstAttribute="leading" secondItem="KoD-0F-LDw" secondAttribute="leading" constant="20" id="rbH-0X-9f9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="KB8-8m-VMR"/>
+                    <navigationItem key="navigationItem" id="KB8-8m-VMR">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Laf-ES-mSS">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="v7w-CV-zQ4">
+                                <rect key="frame" x="351" y="5.5" width="47.5" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Set" buttonSize="mini"/>
+                                <connections>
+                                    <action selector="SetButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="Cmm-j5-Xci"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bassButton" destination="v99-bF-XhI" id="M3P-Ny-Mgs"/>
                         <outlet property="drumButton" destination="Arl-aq-m9y" id="FOz-3k-Id0"/>
@@ -388,11 +400,39 @@
                         <outlet property="otherInstrumentButton" destination="xiE-3b-byZ" id="UFy-Sh-2hm"/>
                         <outlet property="vocalButton" destination="zlm-q1-LuV" id="Lh1-1s-w4K"/>
                         <segue destination="g4W-d6-NIl" kind="show" identifier="Main0ToVocal" id="WrE-Yd-5rk"/>
+                        <segue destination="rnK-2l-UhG" kind="show" identifier="Main0ToSet" id="Gz2-S7-U0W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZi-0S-hnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3513" y="329"/>
+        </scene>
+        <!--Set View Controller-->
+        <scene sceneID="Bp8-Ag-JUA">
+            <objects>
+                <viewController id="rnK-2l-UhG" customClass="SetViewController" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t3r-kK-cPq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNO-k2-rSh">
+                                <rect key="frame" x="167" y="719" width="81" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="LogOut"/>
+                                <connections>
+                                    <action selector="LogOutButton:" destination="rnK-2l-UhG" eventType="touchUpInside" id="wIP-aE-PSm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7tL-CB-aeC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yQ3-rj-uVn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlK-iF-unb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4338" y="-325"/>
         </scene>
         <!--Table Controller Vocal-->
         <scene sceneID="TCr-bX-IQL">
@@ -418,44 +458,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="qT5-4u-s9a">
-                        <rightBarButtonItems>
-                            <barButtonItem style="plain" id="7yT-Zi-pIh">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="qNz-tj-fi4">
-                                    <rect key="frame" x="302" y="4.5" width="92" height="35"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" systemColor="linkColor"/>
-                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Add"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="10"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="addButton:" destination="g4W-d6-NIl" eventType="touchUpInside" id="Dvs-KN-EEq"/>
-                                    </connections>
-                                </button>
-                            </barButtonItem>
-                            <barButtonItem style="plain" id="FL8-7w-hmX">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="4Vw-IM-Uid">
-                                    <rect key="frame" x="202" y="4.5" width="92" height="35"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" systemColor="linkColor"/>
-                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="LogOut"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                            <integer key="value" value="10"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                    <connections>
-                                        <action selector="logOutButton:" destination="g4W-d6-NIl" eventType="touchUpInside" id="uf2-Fs-Rnv"/>
-                                    </connections>
-                                </button>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="eDd-Cc-xNb">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="oyY-WM-5Cd">
+                                <rect key="frame" x="346.5" y="5.5" width="47.5" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add" buttonSize="mini"/>
+                                <connections>
+                                    <action selector="AddButton:" destination="g4W-d6-NIl" eventType="touchUpInside" id="RCz-bU-wX7"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="RFS-T1-U8P" kind="show" identifier="VocalToAdd" id="ds5-TD-9vZ"/>

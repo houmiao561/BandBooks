@@ -22,6 +22,7 @@ class TableControllerVocal: UITableViewController {
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         tableView.addGestureRecognizer(longPressGesture)
         tableView.register (UINib (nibName:"Table0Cell", bundle: nil),forCellReuseIdentifier: "Table0Cell")
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,17 +30,9 @@ class TableControllerVocal: UITableViewController {
         tableView.reloadData()
     }
     
-    @IBAction func addButton(_ sender: Any) {
-        performSegue(withIdentifier: "VocalToAdd", sender: self)
-    }
     
-    @IBAction func logOutButton(_ sender: UIButton) {
-        do {
-            try Auth.auth().signOut() // 登出当前用户
-            if let navigationController = self.navigationController {
-                navigationController.popToRootViewController(animated: true)
-            }
-        } catch { print("Error signing out") }
+    @IBAction func AddButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "VocalToAdd", sender: sender)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -83,7 +76,6 @@ extension TableControllerVocal {
                         DispatchQueue.main.async{
                             self.tableView.reloadData()
                             let indexPath = IndexPath(row: self.firebaseDataArray.count - 1, section: 0)
-                            self.tableView.scrollToRow(at:indexPath, at:.top, animated: true)
                         }
                     }
                 }

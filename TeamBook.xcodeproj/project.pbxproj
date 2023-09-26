@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		584962DF6ED61B85EB8E8B4D /* Pods_TeamBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C38D1DFEC949F5DB4B4630 /* Pods_TeamBook.framework */; };
+		931A09242AC2BD2A005FBA02 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931A09232AC2BD2A005FBA02 /* SetViewController.swift */; };
 		935303532AC1410000EDC4AE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935303522AC1410000EDC4AE /* DetailViewController.swift */; };
 		935883CF2ABBB12800359272 /* Table0Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 935883CE2ABBB12700359272 /* Table0Cell.xib */; };
 		935883D12ABBB19F00359272 /* Table0Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935883D02ABBB19F00359272 /* Table0Cell.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		205A8C6356DD2F6D81004447 /* Pods-TeamBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamBook.debug.xcconfig"; path = "Target Support Files/Pods-TeamBook/Pods-TeamBook.debug.xcconfig"; sourceTree = "<group>"; };
+		931A09232AC2BD2A005FBA02 /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		935303522AC1410000EDC4AE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		935883CE2ABBB12700359272 /* Table0Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Table0Cell.xib; sourceTree = "<group>"; };
 		935883D02ABBB19F00359272 /* Table0Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table0Cell.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				93CD80842AB457C00007EB04 /* SignUpViewController.swift */,
 				93CD80862AB457E00007EB04 /* LogInViewController.swift */,
 				935883D92ABD3F8400359272 /* Main0ViewController.swift */,
+				931A09232AC2BD2A005FBA02 /* SetViewController.swift */,
 				935883DD2ABD868400359272 /* TableControllerVocal.swift */,
 				935303522AC1410000EDC4AE /* DetailViewController.swift */,
 				935883DF2ABDCDE700359272 /* AddViewController.swift */,
@@ -270,6 +273,7 @@
 				93CD806E2AB4559C0007EB04 /* AppDelegate.swift in Sources */,
 				935303532AC1410000EDC4AE /* DetailViewController.swift in Sources */,
 				93CD80872AB457E00007EB04 /* LogInViewController.swift in Sources */,
+				931A09242AC2BD2A005FBA02 /* SetViewController.swift in Sources */,
 				935883E02ABDCDE700359272 /* AddViewController.swift in Sources */,
 				935883DE2ABD868400359272 /* TableControllerVocal.swift in Sources */,
 				93CD80702AB4559C0007EB04 /* SceneDelegate.swift in Sources */,
