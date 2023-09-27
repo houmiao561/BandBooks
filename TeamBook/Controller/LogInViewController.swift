@@ -12,8 +12,8 @@ import FirebaseAuth
 class LogInController: UIViewController{
     @IBOutlet weak var LogInEmailTextField: UITextField!
     @IBOutlet weak var LogInPasswordTextField: UITextField!
-    var logInEmailText = ""
-    var logInPasswordText = ""
+    var logInEmailText = "114@hm.com"
+    var logInPasswordText = "123456"
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))

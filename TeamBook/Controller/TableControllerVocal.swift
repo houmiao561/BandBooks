@@ -20,7 +20,7 @@ class TableControllerVocal: UITableViewController {
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
-        tableView.rowHeight = 150
+        tableView.rowHeight = 80
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         tableView.addGestureRecognizer(longPressGesture)
         tableView.register (UINib (nibName:"Table0Cell", bundle: nil),forCellReuseIdentifier: "Table0Cell")
@@ -115,8 +115,7 @@ extension TableControllerVocal {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Table0Cell",for: indexPath) as! Table0Cell
         cell.nameText.text = "Name:  \(firebaseDataArray[indexPath.row].name)"
         cell.locationText.text = "Location:  \(firebaseDataArray[indexPath.row].location)"
-        cell.musicStyleText.text = "Music Style:  \(firebaseDataArray[indexPath.row].musicStyle)"
-        cell.selfIntroductionText.text = "Self Introduction:  \n  \(firebaseDataArray[indexPath.row].selfIntroduction)"
+        cell.musicStyleText.text = "Style:  \(firebaseDataArray[indexPath.row].musicStyle)"
         return cell
     }
     
