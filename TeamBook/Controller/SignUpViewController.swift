@@ -36,7 +36,19 @@ class SingUpViewController: UIViewController{
     }
     
     @IBAction func signUpButton(_ sender: UIButton) {
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!)
         performSegue(withIdentifier: "SignUpToLogIn", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SignUpToLogIn" {
+            if let destinationVC = segue.destination as? LogInController {
+                if let email = emailTextField.text, let password = passwordTextField.text{
+                    destinationVC.logInEmailText = email
+                    destinationVC.logInPasswordText = password
+                }
+            }
+        }
     }
     
 }
