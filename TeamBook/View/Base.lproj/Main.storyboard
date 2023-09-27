@@ -382,7 +382,7 @@
                     <navigationItem key="navigationItem" id="KB8-8m-VMR">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="BVw-z3-9x3">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6nL-j7-3WU">
-                                <rect key="frame" x="346.5" y="5.5" width="33" height="33"/>
+                                <rect key="frame" x="344" y="5" width="50" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system"/>
@@ -400,7 +400,7 @@
                         <outlet property="otherInstrumentButton" destination="xiE-3b-byZ" id="UFy-Sh-2hm"/>
                         <outlet property="vocalButton" destination="zlm-q1-LuV" id="Lh1-1s-w4K"/>
                         <segue destination="g4W-d6-NIl" kind="show" identifier="Main0ToVocal" id="WrE-Yd-5rk"/>
-                        <segue destination="rnK-2l-UhG" kind="show" identifier="Main0ToSet" id="Gz2-S7-U0W"/>
+                        <segue destination="rnK-2l-UhG" kind="showDetail" identifier="Main0ToSet" id="Gz2-S7-U0W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZi-0S-hnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -412,7 +412,7 @@
             <objects>
                 <viewController id="rnK-2l-UhG" customClass="SetViewController" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t3r-kK-cPq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNO-k2-rSh">
@@ -485,7 +485,7 @@
                     <navigationItem key="navigationItem" id="qT5-4u-s9a">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="kes-do-rAi">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="a9Q-rn-7c5">
-                                <rect key="frame" x="361" y="5.5" width="33" height="33"/>
+                                <rect key="frame" x="359.5" y="5" width="34.5" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="+"/>
