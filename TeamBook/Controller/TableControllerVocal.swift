@@ -21,7 +21,6 @@ class TableControllerVocal: UITableViewController {
         tableView.dataSource = self
         searchBar.delegate = self
         tableView.rowHeight = 150
-        navigationController?.hidesBarsOnSwipe = true
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         tableView.addGestureRecognizer(longPressGesture)
         tableView.register (UINib (nibName:"Table0Cell", bundle: nil),forCellReuseIdentifier: "Table0Cell")

@@ -11,7 +11,6 @@ import Firebase
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseStorage
-import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

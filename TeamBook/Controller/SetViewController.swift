@@ -10,9 +10,11 @@ import FirebaseAuth
 
 class SetViewController: UIViewController {
 
+    @IBOutlet weak var emailLabel: UILabel!
+    private let user = Auth.auth().currentUser
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        emailLabel.text = user!.email
     }
     
     @IBAction func LogOutButton(_ sender: Any) {

@@ -15,8 +15,8 @@
 		935883DA2ABD3F8400359272 /* Main0ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935883D92ABD3F8400359272 /* Main0ViewController.swift */; };
 		935883DE2ABD868400359272 /* TableControllerVocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935883DD2ABD868400359272 /* TableControllerVocal.swift */; };
 		935883E02ABDCDE700359272 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935883DF2ABDCDE700359272 /* AddViewController.swift */; };
-		938C45FB2AB4A044005E4AD7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 938C45FA2AB4A043005E4AD7 /* GoogleService-Info.plist */; };
 		939E48222AB9849A0039AA79 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939E48212AB9849A0039AA79 /* Team.swift */; };
+		93C7B9CE2AC3C69E00ECFC0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93C7B9CD2AC3C69E00ECFC0E /* GoogleService-Info.plist */; };
 		93CD806E2AB4559C0007EB04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CD806D2AB4559C0007EB04 /* AppDelegate.swift */; };
 		93CD80702AB4559C0007EB04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CD806F2AB4559C0007EB04 /* SceneDelegate.swift */; };
 		93CD80722AB4559C0007EB04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CD80712AB4559C0007EB04 /* ViewController.swift */; };
@@ -37,8 +37,8 @@
 		935883D92ABD3F8400359272 /* Main0ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main0ViewController.swift; sourceTree = "<group>"; };
 		935883DD2ABD868400359272 /* TableControllerVocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableControllerVocal.swift; sourceTree = "<group>"; };
 		935883DF2ABDCDE700359272 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
-		938C45FA2AB4A043005E4AD7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		939E48212AB9849A0039AA79 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		93C7B9CD2AC3C69E00ECFC0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		93CD806A2AB4559C0007EB04 /* TeamBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CD806D2AB4559C0007EB04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93CD806F2AB4559C0007EB04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 				93CD807B2AB4559D0007EB04 /* LaunchScreen.storyboard */,
 				93CD807E2AB4559D0007EB04 /* Info.plist */,
 				93CD80762AB4559C0007EB04 /* TeamBook.xcdatamodeld */,
-				938C45FA2AB4A043005E4AD7 /* GoogleService-Info.plist */,
+				93C7B9CD2AC3C69E00ECFC0E /* GoogleService-Info.plist */,
 			);
 			path = TeamBook;
 			sourceTree = "<group>";
@@ -212,8 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				93CD807D2AB4559D0007EB04 /* LaunchScreen.storyboard in Resources */,
-				938C45FB2AB4A044005E4AD7 /* GoogleService-Info.plist in Resources */,
 				93CD807A2AB4559D0007EB04 /* Assets.xcassets in Resources */,
+				93C7B9CE2AC3C69E00ECFC0E /* GoogleService-Info.plist in Resources */,
 				93CD80752AB4559C0007EB04 /* Main.storyboard in Resources */,
 				935883CF2ABBB12800359272 /* Table0Cell.xib in Resources */,
 			);
@@ -431,6 +431,7 @@
 				DEVELOPMENT_TEAM = 53ZFFU6DAC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeamBook/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to upload and share photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -461,6 +462,7 @@
 				DEVELOPMENT_TEAM = 53ZFFU6DAC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeamBook/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to upload and share photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
