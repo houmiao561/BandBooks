@@ -9,8 +9,12 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class TableControllerVocal: UITableViewController {
+class TableControllerVocal: UITableViewController,UIGestureRecognizerDelegate {
     private var firebaseDataArray = [FirebaseDataArray]()
+    var swipeGestureRecognizer: UISwipeGestureRecognizer!
+    var tapGestureRecognizer: UITapGestureRecognizer!
+
+
     @IBOutlet weak var searchBar: UISearchBar!
     private let user = Auth.auth().currentUser
     private var selectCellEmail = 0
@@ -23,8 +27,33 @@ class TableControllerVocal: UITableViewController {
         tableView.rowHeight = 80
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         tableView.addGestureRecognizer(longPressGesture)
-        let swipeDownGesture = UIPanGestureRecognizer(target: self, action: #selector(handleSwipeDown(_:)))
-        view.addGestureRecognizer(swipeDownGesture)
+
+        // 创建一个向下滑动手势识别器
+            swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
+            swipeGestureRecognizer.direction = .down
+            swipeGestureRecognizer.delegate = self
+
+            // 添加手势识别器到UITableView
+            tableView.addGestureRecognizer(swipeGestureRecognizer)
+        
+        // 创建一个向下滑动手势识别器
+            swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
+        swipeGestureRecognizer.direction = .up
+            swipeGestureRecognizer.delegate = self
+        
+
+            // 添加手势识别器到UITableView
+            tableView.addGestureRecognizer(swipeGestureRecognizer)
+        
+        // 创建一个点击手势识别器
+            tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
+            tapGestureRecognizer.delegate = self
+
+            // 添加手势识别器到UITableView
+            tableView.addGestureRecognizer(tapGestureRecognizer)
+        
+        
+        
         tableView.register (UINib (nibName:"Table0Cell", bundle: nil),forCellReuseIdentifier: "Table0Cell")
     }
     
@@ -34,6 +63,45 @@ class TableControllerVocal: UITableViewController {
         title = buttonName
     }
     
+    @objc func handleSwipeGesture(_ gestureRecognizer: UISwipeGestureRecognizer) {
+        // 检查手势方向是否为向下滑动
+        if gestureRecognizer.direction == .down{
+            // 收起搜索栏的键盘
+            searchBar.resignFirstResponder()
+
+            // 执行其他你想要的滑动操作
+            // 比如滚动UITableView或其他一些操作
+        }
+        if gestureRecognizer.direction == .up{
+            // 收起搜索栏的键盘
+            searchBar.resignFirstResponder()
+
+            // 执行其他你想要的滑动操作
+            // 比如滚动UITableView或其他一些操作
+        }
+    }
+    @objc func handleTapGesture(_ gestureRecognizer: UITapGestureRecognizer) {
+        // 检查手势的状态是否为ended，以确保只在点击结束时触发操作
+        if gestureRecognizer.state == .ended {
+            let location = gestureRecognizer.location(in: tableView)
+            if let indexPath = tableView.indexPathForRow(at: location) {
+                searchBar.resignFirstResponder()
+                selectCellEmail = 0
+                selectCellEmail = indexPath.row
+                tableView.deselectRow(at: indexPath, animated: true)
+                performSegue(withIdentifier: "VocalToDetail", sender: self)
+            } else {
+                // 用户点击了UITableView但未点击到任何单元格
+                // 这里你可以执行收起搜索栏键盘的操作
+                searchBar.resignFirstResponder()
+            }
+        }
+    }
+
+    //与其他手势协同工作
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
     
     @IBAction func AddButton(_ sender: UIButton) {
         performSegue(withIdentifier: "VocalToAdd", sender: sender)
@@ -131,12 +199,12 @@ extension TableControllerVocal {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectCellEmail = 0
-        selectCellEmail = indexPath.row
-        tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "VocalToDetail", sender: self)
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        selectCellEmail = 0
+//        selectCellEmail = indexPath.row
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        performSegue(withIdentifier: "VocalToDetail", sender: self)
+//    }
     
     @objc func handleLongPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
         if user != nil {
