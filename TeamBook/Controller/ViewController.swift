@@ -21,5 +21,8 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "WelcomeToLogIn", sender: self)
     }
     
+    @IBAction func GuestModeButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "WelcomeToMain0", sender: self)
+    }
 }
 

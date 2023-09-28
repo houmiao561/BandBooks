@@ -14,7 +14,7 @@ class SetViewController: UIViewController {
     private let user = Auth.auth().currentUser
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailLabel.text = user!.email
+        emailLabel.text = user?.email ?? "Please Log In"
     }
     
     @IBAction func LogOutButton(_ sender: Any) {
