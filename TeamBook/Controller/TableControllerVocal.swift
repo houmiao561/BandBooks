@@ -23,6 +23,8 @@ class TableControllerVocal: UITableViewController {
         tableView.rowHeight = 80
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         tableView.addGestureRecognizer(longPressGesture)
+        let swipeDownGesture = UIPanGestureRecognizer(target: self, action: #selector(handleSwipeDown(_:)))
+        view.addGestureRecognizer(swipeDownGesture)
         tableView.register (UINib (nibName:"Table0Cell", bundle: nil),forCellReuseIdentifier: "Table0Cell")
     }
     
@@ -49,6 +51,16 @@ class TableControllerVocal: UITableViewController {
                 destinationVC.smallFirebase.location = self.firebaseDataArray[self.selectCellEmail].location
                 destinationVC.smallFirebase.musicStyle = self.firebaseDataArray[self.selectCellEmail].musicStyle
                 destinationVC.smallFirebase.selfIntroduction = self.firebaseDataArray[self.selectCellEmail].selfIntroduction
+            }
+        }
+    }
+    
+    // 处理下滑手势
+    @objc func handleSwipeDown(_ gestureRecognizer: UIPanGestureRecognizer) {
+        if gestureRecognizer.state == .ended {
+            let velocity = gestureRecognizer.velocity(in: view)
+            if velocity.y > 0 { // 用户向下滑动
+                view.endEditing(true) // 隐藏键盘
             }
         }
     }
@@ -165,7 +177,7 @@ extension TableControllerVocal {
                 }
             }
         }else{
-            let alertController = UIAlertController(title: "Please Log In!",message: "If U want to send message,plz sign up and log in",preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Please Log In!",message: "If U want to send message\nPlz sign up and log in",preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(cancelAction)
             self.present(alertController, animated: true, completion: nil)
