@@ -9,99 +9,44 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class TableControllerVocal: UITableViewController,UIGestureRecognizerDelegate {
+class TableControllerVocal: UITableViewController{
+    
     private var firebaseDataArray = [FirebaseDataArray]()
-    var swipeGestureRecognizer: UISwipeGestureRecognizer!
-    var tapGestureRecognizer: UITapGestureRecognizer!
-
-
-    @IBOutlet weak var searchBar: UISearchBar!
     private let user = Auth.auth().currentUser
     private var selectCellEmail = 0
     lazy var buttonName: String = ""
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        searchBar.delegate = self
-        tableView.rowHeight = 80
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
-        tableView.addGestureRecognizer(longPressGesture)
-
-        // 创建一个向下滑动手势识别器
-            swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
-            swipeGestureRecognizer.direction = .down
-            swipeGestureRecognizer.delegate = self
-
-            // 添加手势识别器到UITableView
-            tableView.addGestureRecognizer(swipeGestureRecognizer)
-        
-        // 创建一个向下滑动手势识别器
-            swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
-        swipeGestureRecognizer.direction = .up
-            swipeGestureRecognizer.delegate = self
-        
-
-            // 添加手势识别器到UITableView
-            tableView.addGestureRecognizer(swipeGestureRecognizer)
-        
-        // 创建一个点击手势识别器
-            tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
-            tapGestureRecognizer.delegate = self
-
-            // 添加手势识别器到UITableView
-            tableView.addGestureRecognizer(tapGestureRecognizer)
-        
-        
-        
-        tableView.register (UINib (nibName:"Table0Cell", bundle: nil),forCellReuseIdentifier: "Table0Cell")
-    }
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewWillAppear(_ animated: Bool) {
         downloadFromFirebase()
         tableView.reloadData()
         title = buttonName
+        tableView.register (UINib (nibName:"Table0Cell", bundle: nil),forCellReuseIdentifier: "Table0Cell")
+        tableView.rowHeight = 80
     }
     
-    @objc func handleSwipeGesture(_ gestureRecognizer: UISwipeGestureRecognizer) {
-        // 检查手势方向是否为向下滑动
-        if gestureRecognizer.direction == .down{
-            // 收起搜索栏的键盘
-            searchBar.resignFirstResponder()
-
-            // 执行其他你想要的滑动操作
-            // 比如滚动UITableView或其他一些操作
-        }
-        if gestureRecognizer.direction == .up{
-            // 收起搜索栏的键盘
-            searchBar.resignFirstResponder()
-
-            // 执行其他你想要的滑动操作
-            // 比如滚动UITableView或其他一些操作
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        searchBar.delegate = self
+        
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
+        tableView.addGestureRecognizer(longPressGesture)
+        let swipeDownGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
+        swipeDownGestureRecognizer.direction = .down
+        tableView.addGestureRecognizer(swipeDownGestureRecognizer)
+        swipeDownGestureRecognizer.delegate = self
+        let swipeUpGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
+        swipeUpGestureRecognizer.direction = .up
+        tableView.addGestureRecognizer(swipeUpGestureRecognizer)
+        swipeUpGestureRecognizer.delegate = self
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
+        tableView.addGestureRecognizer(tapGestureRecognizer)
     }
-    @objc func handleTapGesture(_ gestureRecognizer: UITapGestureRecognizer) {
-        // 检查手势的状态是否为ended，以确保只在点击结束时触发操作
-        if gestureRecognizer.state == .ended {
-            let location = gestureRecognizer.location(in: tableView)
-            if let indexPath = tableView.indexPathForRow(at: location) {
-                searchBar.resignFirstResponder()
-                selectCellEmail = 0
-                selectCellEmail = indexPath.row
-                tableView.deselectRow(at: indexPath, animated: true)
-                performSegue(withIdentifier: "VocalToDetail", sender: self)
-            } else {
-                // 用户点击了UITableView但未点击到任何单元格
-                // 这里你可以执行收起搜索栏键盘的操作
-                searchBar.resignFirstResponder()
-            }
-        }
-    }
-
-    //与其他手势协同工作
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        return true
-    }
+    
     
     @IBAction func AddButton(_ sender: UIButton) {
         performSegue(withIdentifier: "VocalToAdd", sender: sender)
@@ -123,16 +68,120 @@ class TableControllerVocal: UITableViewController,UIGestureRecognizerDelegate {
         }
     }
     
-    // 处理下滑手势
-    @objc func handleSwipeDown(_ gestureRecognizer: UIPanGestureRecognizer) {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//MARK: -gesture
+extension TableControllerVocal: UIGestureRecognizerDelegate{
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }//与其他手势协同工作
+    
+    @objc func handleSwipeGesture(_ gestureRecognizer: UISwipeGestureRecognizer) {
+        if gestureRecognizer.direction == .down{
+            searchBar.resignFirstResponder()
+        }
+        if gestureRecognizer.direction == .up{
+            searchBar.resignFirstResponder()
+        }
+    }
+    
+    @objc func handleTapGesture(_ gestureRecognizer: UITapGestureRecognizer) {
         if gestureRecognizer.state == .ended {
-            let velocity = gestureRecognizer.velocity(in: view)
-            if velocity.y > 0 { // 用户向下滑动
-                view.endEditing(true) // 隐藏键盘
+            let location = gestureRecognizer.location(in: tableView)
+            if let indexPath = tableView.indexPathForRow(at: location) {
+                searchBar.resignFirstResponder()
+                selectCellEmail = 0
+                selectCellEmail = indexPath.row
+                tableView.deselectRow(at: indexPath, animated: true)
+                performSegue(withIdentifier: "VocalToDetail", sender: self)
+            } else {
+                searchBar.resignFirstResponder()
             }
         }
     }
+    
+    @objc func handleLongPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
+        searchBar.resignFirstResponder()
+        if user != nil {
+            selectCellEmail = 0
+            let point = gestureRecognizer.location(in: self.tableView)
+            if let indexPath = self.tableView.indexPathForRow(at: point) {
+                selectCellEmail = indexPath.row
+                if gestureRecognizer.state == .began {
+                    let collectionRef = db.collection("collection:\(buttonName)")
+                    collectionRef.getDocuments { (querySnapshot, error) in
+                        if let documents = querySnapshot?.documents{
+                            for doc in documents{
+                                if let selfIntroduction = doc.data()["SelfIntroduction"]as? String{
+                                    if self.user!.email == self.firebaseDataArray[self.selectCellEmail].allEmailText{
+                                        let alertController = UIAlertController(title: "Delete Item",message: "Are you sure you want to delete this item?",preferredStyle: .alert)
+                                        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
+                                            let ToDelete = selfIntroduction
+                                            self.deleteFromFirebase(SelfIntroduction: ToDelete)
+                                            self.firebaseDataArray.remove(at: indexPath.row)
+                                            print(ToDelete)
+                                            self.tableView.reloadData()
+                                        }
+                                        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                                        alertController.addAction(deleteAction)
+                                        alertController.addAction(cancelAction)
+                                        self.present(alertController, animated: true, completion: nil)
+                                    }
+                                    else{
+                                        let alertController = UIAlertController(title: "What?!", message: "You want to delete others message?", preferredStyle: .alert)
+                                        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                                        alertController.addAction(cancelAction)
+                                        self.present(alertController,animated: true,completion: nil)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }else{
+            let alertController = UIAlertController(title: "Please Log In!",message: "If U want to send message\nPlz sign up and log in",preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //MARK: -Firebase
 extension TableControllerVocal {
@@ -183,14 +232,31 @@ extension TableControllerVocal {
     }
     
     
-    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //MARK: -TableView
 extension TableControllerVocal {
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.firebaseDataArray.count
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Table0Cell",for: indexPath) as! Table0Cell
         cell.nameText.text = "Name:  \(firebaseDataArray[indexPath.row].name)"
@@ -199,63 +265,27 @@ extension TableControllerVocal {
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        selectCellEmail = 0
-//        selectCellEmail = indexPath.row
-//        tableView.deselectRow(at: indexPath, animated: true)
-//        performSegue(withIdentifier: "VocalToDetail", sender: self)
-//    }
-    
-    @objc func handleLongPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
-        if user != nil {
-            selectCellEmail = 0
-            let point = gestureRecognizer.location(in: self.tableView)
-            if let indexPath = self.tableView.indexPathForRow(at: point) {
-                selectCellEmail = indexPath.row
-                if gestureRecognizer.state == .began {
-                    let collectionRef = db.collection("collection:\(buttonName)")
-                    collectionRef.getDocuments { (querySnapshot, error) in
-                        if let documents = querySnapshot?.documents{
-                            for doc in documents{
-                                if let selfIntroduction = doc.data()["SelfIntroduction"]as? String{
-                                    if self.user!.email == self.firebaseDataArray[self.selectCellEmail].allEmailText{
-                                        let alertController = UIAlertController(title: "Delete Item",message: "Are you sure you want to delete this item?",preferredStyle: .alert)
-                                        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
-                                            let ToDelete = selfIntroduction
-                                            self.deleteFromFirebase(SelfIntroduction: ToDelete)
-                                            self.firebaseDataArray.remove(at: indexPath.row)
-                                            print(ToDelete)
-                                            self.tableView.reloadData()
-                                        }
-                                        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                                        alertController.addAction(deleteAction)
-                                        alertController.addAction(cancelAction)
-                                        self.present(alertController, animated: true, completion: nil)
-                                    }
-                                    else{
-                                        let alertController = UIAlertController(title: "What?!", message: "You want to delete others message?", preferredStyle: .alert)
-                                        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                                        alertController.addAction(cancelAction)
-                                        self.present(alertController,animated: true,completion: nil)
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }else{
-            let alertController = UIAlertController(title: "Please Log In!",message: "If U want to send message\nPlz sign up and log in",preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(cancelAction)
-            self.present(alertController, animated: true, completion: nil)
-        }
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //MARK: -SearchBar
 extension TableControllerVocal: UISearchBarDelegate{
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text!.count == 0{
             downloadFromFirebase()
@@ -271,5 +301,7 @@ extension TableControllerVocal: UISearchBarDelegate{
             tableView.reloadData()
         }
     }
+    
+    
 }
 
