@@ -230,13 +230,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="2lx-aZ-XO0">
-                                <rect key="frame" x="20" y="112" width="374" height="730"/>
+                                <rect key="frame" x="20" y="112" width="374" height="615"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EVG-8N-CNb">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="215.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="177"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlm-q1-LuV">
-                                                <rect key="frame" x="0.0" y="0.0" width="177" height="215.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="177"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="177" id="Cjy-Ll-pOZ"/>
+                                                    <constraint firstAttribute="height" constant="177" id="bQH-MV-HNg"/>
+                                                </constraints>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -256,7 +260,11 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8B-sh-0sG">
-                                                <rect key="frame" x="197" y="0.0" width="177" height="215.5"/>
+                                                <rect key="frame" x="197" y="0.0" width="177" height="177"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="177" id="NoZ-PR-sKX"/>
+                                                    <constraint firstAttribute="width" constant="177" id="u37-D2-d75"/>
+                                                </constraints>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -279,10 +287,14 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZYY-kP-9Pv">
-                                        <rect key="frame" x="0.0" y="257.5" width="374" height="215"/>
+                                        <rect key="frame" x="0.0" y="219" width="374" height="177"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v99-bF-XhI">
-                                                <rect key="frame" x="0.0" y="0.0" width="177" height="215"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="177"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="177" id="2Kd-Wd-oVv"/>
+                                                    <constraint firstAttribute="height" constant="177" id="Ss8-eu-nna"/>
+                                                </constraints>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -303,7 +315,11 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arl-aq-m9y">
-                                                <rect key="frame" x="197" y="0.0" width="177" height="215"/>
+                                                <rect key="frame" x="197" y="0.0" width="177" height="177"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="177" id="REB-bQ-mvP"/>
+                                                    <constraint firstAttribute="height" constant="177" id="up9-yv-Lb7"/>
+                                                </constraints>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -325,10 +341,14 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="P7n-Ch-9cr">
-                                        <rect key="frame" x="0.0" y="514.5" width="374" height="215.5"/>
+                                        <rect key="frame" x="0.0" y="438" width="374" height="177"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMh-c4-lQj">
-                                                <rect key="frame" x="0.0" y="0.0" width="177" height="215.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="177" height="177"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="177" id="K9c-q8-FB8"/>
+                                                    <constraint firstAttribute="height" constant="177" id="h1N-Po-cG3"/>
+                                                </constraints>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -348,7 +368,11 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiE-3b-byZ">
-                                                <rect key="frame" x="197" y="0.0" width="177" height="215.5"/>
+                                                <rect key="frame" x="197" y="0.0" width="177" height="177"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="177" id="4qG-OF-3RJ"/>
+                                                    <constraint firstAttribute="height" constant="177" id="qQR-sM-xmj"/>
+                                                </constraints>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
@@ -375,10 +399,9 @@
                         <viewLayoutGuide key="safeArea" id="KoD-0F-LDw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2lx-aZ-XO0" firstAttribute="top" secondItem="KoD-0F-LDw" secondAttribute="top" constant="20" id="4Va-SA-82K"/>
-                            <constraint firstItem="KoD-0F-LDw" firstAttribute="bottom" secondItem="2lx-aZ-XO0" secondAttribute="bottom" constant="20" id="hJS-6f-CQp"/>
-                            <constraint firstAttribute="trailing" secondItem="2lx-aZ-XO0" secondAttribute="trailing" constant="20" id="olR-kX-9bb"/>
-                            <constraint firstItem="2lx-aZ-XO0" firstAttribute="leading" secondItem="KoD-0F-LDw" secondAttribute="leading" constant="20" id="rbH-0X-9f9"/>
+                            <constraint firstItem="2lx-aZ-XO0" firstAttribute="leading" secondItem="KoD-0F-LDw" secondAttribute="leading" constant="20" id="8HK-rE-7eW"/>
+                            <constraint firstItem="2lx-aZ-XO0" firstAttribute="top" secondItem="KoD-0F-LDw" secondAttribute="top" constant="20" id="AIY-K7-tGF"/>
+                            <constraint firstItem="KoD-0F-LDw" firstAttribute="trailing" secondItem="2lx-aZ-XO0" secondAttribute="trailing" constant="20" id="q2p-ZX-k9M"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KB8-8m-VMR">
@@ -767,7 +790,7 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
