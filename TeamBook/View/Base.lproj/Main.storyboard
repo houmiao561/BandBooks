@@ -31,7 +31,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="67R-bO-fQO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="4"/>
+            <point key="canvasLocation" x="-725" y="3"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -42,10 +42,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Me-dl-YSi">
-                                <rect key="frame" x="67.5" y="152" width="279" height="70"/>
+                                <rect key="frame" x="65.5" y="152" width="283.5" height="70"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BankBook" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAF-9t-M6E">
-                                        <rect key="frame" x="0.0" y="0.0" width="279" height="70"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BandBook" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAF-9t-M6E">
+                                        <rect key="frame" x="0.0" y="0.0" width="283.5" height="70"/>
                                         <fontDescription key="fontDescription" name="BigCaslon-Medium" family="Big Caslon" pointSize="60"/>
                                         <color key="textColor" name="HMColor"/>
                                         <nil key="highlightedColor"/>
@@ -102,16 +102,101 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Stv-qD-ca2" secondAttribute="bottom" constant="50" id="tvn-El-AEP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yk0-W2-fGH"/>
+                    <navigationItem key="navigationItem" id="yk0-W2-fGH">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Owz-a3-ArQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="MNU-Ef-fV9">
+                                <rect key="frame" x="344" y="5" width="50" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="addButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7e0-tu-xjF"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="1cC-8E-Fti" kind="show" identifier="WelcomeToSignUp" id="hBw-vW-nhU"/>
                         <segue destination="KOh-aV-Bqk" kind="show" identifier="WelcomeToLogIn" id="s8X-cK-j19"/>
                         <segue destination="b5J-uh-7JN" kind="show" identifier="WelcomeToMain0" id="Gua-Aj-ye3"/>
+                        <segue destination="5nj-Xr-4f2" kind="showDetail" identifier="FirstToSupport" id="FH3-Bg-IQz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052.6717557251909" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="149" y="3"/>
+        </scene>
+        <!--Support View Controller-->
+        <scene sceneID="xpe-2C-8hU">
+            <objects>
+                <viewController id="5nj-Xr-4f2" customClass="SupportViewController" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qui-e1-nr8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yg8-gh-tRC">
+                                <rect key="frame" x="30" y="30" width="354" height="836"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Hello！
+This is HM.The developer of BandBook.
+在这里想告诉你一些有关这个APP的事情
+
+-关于初衷
+我是一个贝斯手（四弦坚定爱好者！），与此同时是一个大学生。在大学读书期间我发现我和我身边的朋友们（包括一些很优秀的乐手和一些很优秀的乐队）找不到属于自己的合适的乐队。也许因为喜欢的音乐风格不同，也许因为可接受的排练地理位置不同，所以我只是想构建一个平台来为乐手和乐队找到自己的归宿。
+
+-关于愿景
+现在是一个信息爆炸的时代，我发现我们的痛点似乎是想要找到自己需要的东西，总是大海捞针，甚至一无所获。我只希望搭建这个平台，能让我们这群因为热爱而聚在这里的人可以节约自己宝贵的练琴时间，快速获取到合适的信息。
+
+-关于使用方法
+我按照乐手们的不同位置划分为了六个板块，每个人只需要用自己的邮箱注册账号便可以发布信息或者删除自己发布的信息，而不注册账号也可以浏览信息。我希望的信息填写如下：
+Name：你自己的姓名或昵称或艺名，或是你乐队的名称
+Music Style：你喜欢的音乐风格，或是你乐队正在玩的类型
+Location：可接受的排练区域，不一定是某一个城市，可以是一片区域
+Self Introduce：留下作品的链接，留下其他平台的联系方式，留下自己对自己的评价（比如我可以舞台上跳街舞）
+我不希望添加各种诸如音乐播放、视频播放、聊天功能，因为其他平台的体验比我优秀太多太多了，而且这样可以使整个APP中只留下最关键的信息
+
+-关于优化
+这是小规模团队所完成的作品，所以一定会产生很多不尽如人意的地方，如果有发现任何的bug和想提出的建议，请联系：houmiao561@gmail.com ，这是我本人邮箱，这将是我们的荣幸。也请留下您的ID，如果因为您的有趣的建议而产生的Version 更新，也将发布在下一次的Develop Log中。
+
+-关于团队
+如您所知，一个人的精力是有限的，但是所幸我有一群可爱又志同道合的朋友，他们给了我非常多的帮助
+Apple Developer Account Provider ：栢
+APP Icon Developer : 114
+APP ImageView Developer : Kia
+APP Frame Developer : Real杨泽生 , Eleven
+APP Translation Developer : 你自己写吧
+
+-关于成本
+我保证这个平台将是我为爱发电，一切盈亏自负，将不添加任何收费功能，直到某一天地球爆炸了，或是我穷的吃不起饭了，不足以支撑平台运营了。
+你可以随时通过？？？（学姐这里你不用管，因为我还没找到合适的平台）来支持我，金额随意，也可以只在App Store中为我加上五星好评，让更多人知道这个平台。“We are the ones who make a brighter day, so let's start giving”。
+以下是我的制作成本：
+Apple Developer Account $99
+Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需要收钱的时候我将在Develop Log中更新
+团队中每人一杯星巴克
+
+-关于现阶段困难
+我并没有足够的能力来开发Android APP和Web（完全没学过），因此我需要同样志同道合的朋友来帮助我！如果你也是程序员朋友和热爱乐队，而且愿意为爱发电（我真的没有钱555），请联系：houmiao561@gmail.com 。
+“It's true we'll make a better day, just you and me”
+</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xy4-LV-PNc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yg8-gh-tRC" firstAttribute="leading" secondItem="xy4-LV-PNc" secondAttribute="leading" constant="30" id="Nwm-At-CS1"/>
+                            <constraint firstItem="xy4-LV-PNc" firstAttribute="bottom" secondItem="yg8-gh-tRC" secondAttribute="bottom" constant="20" id="g6Y-m8-o64"/>
+                            <constraint firstItem="yg8-gh-tRC" firstAttribute="top" secondItem="xy4-LV-PNc" secondAttribute="top" constant="30" id="qzX-38-hGc"/>
+                            <constraint firstItem="xy4-LV-PNc" firstAttribute="trailing" secondItem="yg8-gh-tRC" secondAttribute="trailing" constant="30" id="uwt-UL-A2O"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IEj-zn-KK9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t4K-YU-ka3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="-659"/>
         </scene>
         <!--SingUpViewController-->
         <scene sceneID="AAy-zx-g3d">
@@ -245,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iss-vE-PnL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1836" y="360"/>
+            <point key="canvasLocation" x="1691" y="505"/>
         </scene>
         <!--Main0 View Controller-->
         <scene sceneID="jDK-W4-0gO">
@@ -433,7 +518,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZi-0S-hnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2900" y="80"/>
+            <point key="canvasLocation" x="2758" y="96"/>
         </scene>
         <!--Set View Controller-->
         <scene sceneID="Bp8-Ag-JUA">
@@ -675,7 +760,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ro7-rf-dw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5271" y="633"/>
+            <point key="canvasLocation" x="5380" y="633"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="jag-QF-OER">

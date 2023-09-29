@@ -24,5 +24,10 @@ class ViewController: UIViewController {
     @IBAction func GuestModeButton(_ sender: UIButton) {
         performSegue(withIdentifier: "WelcomeToMain0", sender: self)
     }
+    
+    @IBAction func addButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "FirstToSupport", sender: sender)
+    }
+    
 }
 

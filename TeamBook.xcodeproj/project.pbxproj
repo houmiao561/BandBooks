@@ -15,6 +15,7 @@
 		935883DA2ABD3F8400359272 /* Main0ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935883D92ABD3F8400359272 /* Main0ViewController.swift */; };
 		935883DE2ABD868400359272 /* TableControllerVocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935883DD2ABD868400359272 /* TableControllerVocal.swift */; };
 		935883E02ABDCDE700359272 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935883DF2ABDCDE700359272 /* AddViewController.swift */; };
+		9368FE682AC716580085130D /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9368FE672AC716580085130D /* SupportViewController.swift */; };
 		939E48222AB9849A0039AA79 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939E48212AB9849A0039AA79 /* Team.swift */; };
 		93C7B9CE2AC3C69E00ECFC0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93C7B9CD2AC3C69E00ECFC0E /* GoogleService-Info.plist */; };
 		93CD806E2AB4559C0007EB04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CD806D2AB4559C0007EB04 /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 		935883D92ABD3F8400359272 /* Main0ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main0ViewController.swift; sourceTree = "<group>"; };
 		935883DD2ABD868400359272 /* TableControllerVocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableControllerVocal.swift; sourceTree = "<group>"; };
 		935883DF2ABDCDE700359272 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		9368FE672AC716580085130D /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
 		939E48212AB9849A0039AA79 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		93C7B9CD2AC3C69E00ECFC0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		93CD806A2AB4559C0007EB04 /* TeamBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				93CD80712AB4559C0007EB04 /* ViewController.swift */,
+				9368FE672AC716580085130D /* SupportViewController.swift */,
 				93CD80842AB457C00007EB04 /* SignUpViewController.swift */,
 				93CD80862AB457E00007EB04 /* LogInViewController.swift */,
 				935883D92ABD3F8400359272 /* Main0ViewController.swift */,
@@ -274,6 +277,7 @@
 				935303532AC1410000EDC4AE /* DetailViewController.swift in Sources */,
 				93CD80872AB457E00007EB04 /* LogInViewController.swift in Sources */,
 				931A09242AC2BD2A005FBA02 /* SetViewController.swift in Sources */,
+				9368FE682AC716580085130D /* SupportViewController.swift in Sources */,
 				935883E02ABDCDE700359272 /* AddViewController.swift in Sources */,
 				935883DE2ABD868400359272 /* TableControllerVocal.swift in Sources */,
 				93CD80702AB4559C0007EB04 /* SceneDelegate.swift in Sources */,
