@@ -9,9 +9,11 @@ import UIKit
 import Firebase
 
 class DetailViewController: UIViewController {
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var musicStyleLabel: UILabel!
+    
+    @IBOutlet weak var nameLabel: UITextField!
+    @IBOutlet weak var locationLabel: UITextField!
+    @IBOutlet weak var musicStyleLabel: UITextField!
+    
     @IBOutlet weak var selfIntroduceText: UITextView!
     
     var smallFirebase = FirebaseDataArray(name: "", musicStyle: "", location: "", selfIntroduction: "", allEmailText: "")
