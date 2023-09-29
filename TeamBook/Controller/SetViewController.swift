@@ -16,7 +16,7 @@ class SetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if user == nil{
-            emailLabel.text = "Please Log In"
+            emailLabel.text = "No Account Email Log In\nPlz Sign Up and Log In"
             LogOutButtonIB.titleLabel?.text = "Back to Main Page\nLog In"
             LogOutButtonIB.titleLabel?.textAlignment = .center
             LogOutButtonIB.titleLabel?.numberOfLines = 2
