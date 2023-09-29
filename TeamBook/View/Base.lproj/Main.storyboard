@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EiM-vC-zG1">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,6 +17,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fV5-7t-cGQ">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="HMColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="HMColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="HMColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sf2-N3-sKt"/>
@@ -49,7 +57,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRY-gk-HL2">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="56.666666666666664"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Guest Mode"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Guest Mode">
+                                            <color key="baseBackgroundColor" name="HMColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="GuestModeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h2I-Rp-XP9"/>
                                         </connections>
@@ -57,7 +67,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eL-BK-jQx">
                                         <rect key="frame" x="0.0" y="71.666666666666629" width="200" height="56.666666666666657"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Sign Up">
+                                            <color key="baseBackgroundColor" name="HMColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="signUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TMw-J7-4eR"/>
                                         </connections>
@@ -65,7 +77,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="logInButtonPressed" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXZ-Sf-GGX">
                                         <rect key="frame" x="0.0" y="143.33333333333337" width="200" height="56.666666666666657"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Log In"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Log In">
+                                            <color key="baseBackgroundColor" name="HMColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="logInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S8U-Vo-n9l"/>
                                         </connections>
@@ -132,7 +146,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="61.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Sign Up">
-                                            <color key="baseBackgroundColor" systemColor="linkColor"/>
+                                            <color key="baseBackgroundColor" name="HMColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="signUpButton:" destination="1cC-8E-Fti" eventType="touchUpInside" id="qh6-yJ-kus"/>
@@ -198,7 +212,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tF-p7-dCu">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="61.333333333333336"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Log In"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Log In">
+                                            <color key="baseBackgroundColor" name="HMColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="logInButton:" destination="KOh-aV-Bqk" eventType="touchUpInside" id="Dek-od-2qY"/>
                                         </connections>
@@ -488,6 +504,7 @@
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
+                                            <color key="baseBackgroundColor" name="HMColor"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="LogOutButton:" destination="rnK-2l-UhG" eventType="touchUpInside" id="wIP-aE-PSm"/>
@@ -794,7 +811,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2L-nb-8Sq">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="61.333333333333336"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Add!"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Add!">
+                                            <color key="baseBackgroundColor" name="HMColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="AddAllTextButton:" destination="RFS-T1-U8P" eventType="touchUpInside" id="shM-0G-RX8"/>
                                         </connections>
@@ -840,11 +859,11 @@
         <image name="Yummy" width="1024" height="1024"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="HMColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
