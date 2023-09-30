@@ -6,12 +6,16 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 
 class ViewController: UIViewController {
+    private let user = Auth.auth().currentUser
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if user != nil{
+            performSegue(withIdentifier: "WelcomeToMain0", sender: self)
+        }
     }
 
     @IBAction func signUpButton(_ sender: UIButton) {
@@ -23,10 +27,6 @@ class ViewController: UIViewController {
     
     @IBAction func GuestModeButton(_ sender: UIButton) {
         performSegue(withIdentifier: "WelcomeToMain0", sender: self)
-    }
-    
-    @IBAction func addButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "FirstToSupport", sender: sender)
     }
     
 }

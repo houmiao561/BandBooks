@@ -38,4 +38,7 @@ class SetViewController: UIViewController {
         } catch { print("Error signing out") }
     }
     
+    @IBAction func DeveloperLogButton(_ sender: Any) {
+        performSegue(withIdentifier: "SetToDeveloperLog", sender: sender)
+    }
 }

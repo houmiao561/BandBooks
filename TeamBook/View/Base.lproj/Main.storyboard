@@ -31,7 +31,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="67R-bO-fQO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-725" y="3"/>
+            <point key="canvasLocation" x="-41" y="273"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -102,29 +102,16 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Stv-qD-ca2" secondAttribute="bottom" constant="50" id="tvn-El-AEP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yk0-W2-fGH">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Owz-a3-ArQ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="MNU-Ef-fV9">
-                                <rect key="frame" x="344" y="5" width="50" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system"/>
-                                <connections>
-                                    <action selector="addButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7e0-tu-xjF"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="yk0-W2-fGH"/>
                     <connections>
                         <segue destination="1cC-8E-Fti" kind="show" identifier="WelcomeToSignUp" id="hBw-vW-nhU"/>
                         <segue destination="KOh-aV-Bqk" kind="show" identifier="WelcomeToLogIn" id="s8X-cK-j19"/>
                         <segue destination="b5J-uh-7JN" kind="show" identifier="WelcomeToMain0" id="Gua-Aj-ye3"/>
-                        <segue destination="5nj-Xr-4f2" kind="showDetail" identifier="FirstToSupport" id="FH3-Bg-IQz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="149" y="3"/>
+            <point key="canvasLocation" x="833" y="273"/>
         </scene>
         <!--Support View Controller-->
         <scene sceneID="xpe-2C-8hU">
@@ -196,7 +183,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t4K-YU-ka3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1012" y="-659"/>
+            <point key="canvasLocation" x="4590" y="-76"/>
         </scene>
         <!--SingUpViewController-->
         <scene sceneID="AAy-zx-g3d">
@@ -263,7 +250,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRY-4L-CaC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1837" y="-437"/>
+            <point key="canvasLocation" x="1903" y="-76"/>
         </scene>
         <!--LogInViewController-->
         <scene sceneID="fFJ-dk-MDk">
@@ -330,7 +317,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iss-vE-PnL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1691" y="505"/>
+            <point key="canvasLocation" x="1904" y="633"/>
         </scene>
         <!--Main0 View Controller-->
         <scene sceneID="jDK-W4-0gO">
@@ -518,7 +505,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZi-0S-hnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2758" y="96"/>
+            <point key="canvasLocation" x="2807" y="273"/>
         </scene>
         <!--Set View Controller-->
         <scene sceneID="Bp8-Ag-JUA">
@@ -577,12 +564,33 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                     <constraint firstAttribute="height" constant="61.329999999999998" id="ZSO-Hl-DGr"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5Jf-HH-3IM">
+                                <rect key="frame" x="107" y="822" width="200" height="32"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyu-hx-cuz">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="32"/>
+                                        <color key="tintColor" name="HMColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Developer Log">
+                                            <fontDescription key="titleFontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="16"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="DeveloperLogButton:" destination="rnK-2l-UhG" eventType="touchUpInside" id="gQf-9W-iBF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="71q-AH-6ab"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7tL-CB-aeC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="m4u-f5-33D" firstAttribute="top" secondItem="7tL-CB-aeC" secondAttribute="top" constant="60" id="36L-ob-bsQ"/>
+                            <constraint firstItem="5Jf-HH-3IM" firstAttribute="top" secondItem="ehS-Ya-uw1" secondAttribute="bottom" constant="10" id="6Wg-sl-k3d"/>
                             <constraint firstItem="ehS-Ya-uw1" firstAttribute="centerX" secondItem="t3r-kK-cPq" secondAttribute="centerX" id="CvG-gt-Wlb"/>
+                            <constraint firstItem="5Jf-HH-3IM" firstAttribute="centerX" secondItem="t3r-kK-cPq" secondAttribute="centerX" id="G8a-Hp-tae"/>
                             <constraint firstItem="7tL-CB-aeC" firstAttribute="bottom" secondItem="ehS-Ya-uw1" secondAttribute="bottom" constant="50" id="Hw2-ig-r0a"/>
                             <constraint firstItem="m4u-f5-33D" firstAttribute="centerX" secondItem="t3r-kK-cPq" secondAttribute="centerX" id="htf-wR-Mi4"/>
                         </constraints>
@@ -591,6 +599,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                     <connections>
                         <outlet property="LogOutButtonIB" destination="WNO-k2-rSh" id="GgL-tJ-A24"/>
                         <outlet property="emailLabel" destination="X3K-av-tYi" id="M9s-fz-GmI"/>
+                        <segue destination="5nj-Xr-4f2" kind="showDetail" identifier="SetToDeveloperLog" id="qwf-1L-3pw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlK-iF-unb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -923,7 +932,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="5pe-vc-1xg"/>
-        <segue reference="dsS-1Y-olN"/>
+        <segue reference="s8X-cK-j19"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Yummy" width="1024" height="1024"/>

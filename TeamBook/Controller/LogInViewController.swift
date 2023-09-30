@@ -29,6 +29,14 @@ class LogInController: UIViewController{
         performSegue(withIdentifier: "LogInToMain0", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "LogInToMain0" {
+            if let destinationVC = segue.destination as? Main0ViewController {
+                destinationVC.backButtonHide = true
+            }
+        }
+    }
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }

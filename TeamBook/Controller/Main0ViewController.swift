@@ -14,6 +14,7 @@ class Main0ViewController: UIViewController {
     @IBOutlet weak var drumButton: UIButton!
     @IBOutlet weak var keyboardButton: UIButton!
     @IBOutlet weak var otherInstrumentButton: UIButton!
+    var backButtonHide: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,8 @@ class Main0ViewController: UIViewController {
         changeButtonStyle(drumButton)
         changeButtonStyle(keyboardButton)
         changeButtonStyle(otherInstrumentButton)
+        navigationController?.navigationBar.topItem?.hidesBackButton = true
+        navigationItem.title = "BandBook"
     }
     
     @IBAction func VocalButton(_ sender: UIButton) {
