@@ -12,8 +12,8 @@ import FirebaseAuth
 class LogInController: UIViewController{
     @IBOutlet weak var LogInEmailTextField: UITextField!
     @IBOutlet weak var LogInPasswordTextField: UITextField!
-    var logInEmailText = "114@hm.com"
-    var logInPasswordText = "123456"
+    var logInEmailText = ""
+    var logInPasswordText = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -25,8 +25,16 @@ class LogInController: UIViewController{
     }
     
     @IBAction func logInButton(_ sender: UIButton) {
-        Auth.auth().signIn(withEmail: LogInEmailTextField.text!, password: LogInPasswordTextField.text!)
-        performSegue(withIdentifier: "LogInToMain0", sender: self)
+        Auth.auth().signIn(withEmail: LogInEmailTextField.text!, password: LogInPasswordTextField.text!) { (authResult, error) in
+            if let _ = error {
+                let alertController = UIAlertController(title: "Something Wrong !", message: "Plz check your email and password.", preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(cancelAction)
+                self.present(alertController,animated: true,completion: nil)
+            } else {
+                self.performSegue(withIdentifier: "LogInToMain0", sender: self)
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
