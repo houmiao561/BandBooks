@@ -104,7 +104,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="yk0-W2-fGH">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Owz-a3-ArQ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="MNU-Ef-fV9">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="MNU-Ef-fV9">
                                 <rect key="frame" x="344" y="5" width="50" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -137,7 +137,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yg8-gh-tRC">
                                 <rect key="frame" x="30" y="30" width="354" height="836"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">Hello！
+                                <string key="text">Hello！
 This is HM.The developer of BandBook.
 在这里想告诉你一些有关这个APP的事情
 
@@ -177,7 +177,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
 -关于现阶段困难
 我并没有足够的能力来开发Android APP和Web（完全没学过），因此我需要同样志同道合的朋友来帮助我！如果你也是程序员朋友和热爱乐队，而且愿意为爱发电（我真的没有钱555），请联系：houmiao561@gmail.com 。
 “It's true we'll make a better day, just you and me”
-</mutableString>
+</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -725,19 +725,32 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="是第几啊护肤品尬得很尬的数据恢复啊是的哦啊大帅哥 阿凡达能看见你空间都散发看见你的手机开发能看见阿森纳的风口浪尖能看见撒毒奶粉了的瞬间安抚旅客胶囊咖啡机你快乐就按时到风口浪尖阿里将苏丹诺夫离开静安寺；登陆福建哦屁阿加得甘教案的时光" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="zTs-na-aA4">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l7b-Wy-uTH">
                                         <rect key="frame" x="0.0" y="319" width="374" height="411"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="zTs-na-aA4">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="411"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="yIQ-9z-qDS" firstAttribute="bottom" secondItem="zTs-na-aA4" secondAttribute="bottom" id="Xd9-74-1cP"/>
+                                            <constraint firstItem="zTs-na-aA4" firstAttribute="leading" secondItem="yIQ-9z-qDS" secondAttribute="leading" id="fIA-pD-9hE"/>
+                                            <constraint firstItem="zTs-na-aA4" firstAttribute="trailing" secondItem="yIQ-9z-qDS" secondAttribute="trailing" id="gO5-Yi-DCk"/>
+                                            <constraint firstItem="zTs-na-aA4" firstAttribute="top" secondItem="l7b-Wy-uTH" secondAttribute="top" id="uMq-KL-Qgc"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="2gR-xQ-oCY"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="yIQ-9z-qDS"/>
+                                    </scrollView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="zTs-na-aA4" secondAttribute="bottom" id="4rc-8B-iHF"/>
-                                    <constraint firstAttribute="trailing" secondItem="zTs-na-aA4" secondAttribute="trailing" id="J72-ag-pkH"/>
-                                    <constraint firstItem="zTs-na-aA4" firstAttribute="top" secondItem="rda-4w-LPh" secondAttribute="bottom" constant="8" symbolic="YES" id="fSy-n4-1Hn"/>
-                                    <constraint firstItem="zTs-na-aA4" firstAttribute="leading" secondItem="b2D-i6-0oY" secondAttribute="leading" id="oz4-73-1BJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="l7b-Wy-uTH" secondAttribute="trailing" id="OwJ-4Y-YGc"/>
+                                    <constraint firstAttribute="bottom" secondItem="l7b-Wy-uTH" secondAttribute="bottom" id="RXH-fd-Uia"/>
+                                    <constraint firstItem="l7b-Wy-uTH" firstAttribute="leading" secondItem="b2D-i6-0oY" secondAttribute="leading" id="cTz-6h-skv"/>
+                                    <constraint firstItem="l7b-Wy-uTH" firstAttribute="top" secondItem="rda-4w-LPh" secondAttribute="bottom" constant="20" id="v2v-z2-dOC"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -771,7 +784,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gsj-kA-Xic">
-                                <rect key="frame" x="20" y="112" width="374" height="352"/>
+                                <rect key="frame" x="20" y="112" width="374" height="700"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfb-9n-seX">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
@@ -833,65 +846,65 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eGL-AY-02E">
-                                        <rect key="frame" x="0.0" y="319" width="374" height="33"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Please introduce yourself or your band ...">
-                                                <attributes>
-                                                    <color key="NSColor" systemColor="labelColor"/>
-                                                    <font key="NSFont" metaFont="system" size="14"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0M-Fa-XP9">
+                                        <rect key="frame" x="0.0" y="319" width="374" height="302.5"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="eGL-AY-02E">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="389.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="mtb-K5-liX"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="RLx-yk-aYd"/>
+                                    </scrollView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b1h-vw-SB2">
+                                        <rect key="frame" x="87" y="638.5" width="200" height="61.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2L-nb-8Sq">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="61.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Add!">
+                                                    <color key="baseBackgroundColor" name="HMColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="AddAllTextButton:" destination="RFS-T1-U8P" eventType="touchUpInside" id="shM-0G-RX8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="61.329999999999998" id="mMD-xf-1dW"/>
+                                            <constraint firstAttribute="width" constant="200" id="tgA-lK-tQW"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="eGL-AY-02E" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="44c-0O-EKa"/>
+                                    <constraint firstItem="C0M-Fa-XP9" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="6YY-rO-H6U"/>
                                     <constraint firstItem="QLn-Gk-G8A" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="7gL-gc-UKE"/>
+                                    <constraint firstItem="b1h-vw-SB2" firstAttribute="top" secondItem="C0M-Fa-XP9" secondAttribute="bottom" constant="17" id="IMK-Vz-OaA"/>
                                     <constraint firstAttribute="trailing" secondItem="ItG-Bw-jrp" secondAttribute="trailing" id="JiJ-Kw-fkh"/>
                                     <constraint firstItem="Jfb-9n-seX" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="Pcd-Tt-2h1"/>
                                     <constraint firstAttribute="trailing" secondItem="f0y-Cr-wso" secondAttribute="trailing" id="Rim-j3-HeQ"/>
                                     <constraint firstItem="f0y-Cr-wso" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="S8v-xb-Nry"/>
+                                    <constraint firstAttribute="trailing" secondItem="C0M-Fa-XP9" secondAttribute="trailing" id="Z6h-VY-3aZ"/>
                                     <constraint firstAttribute="trailing" secondItem="Wcz-K6-j5m" secondAttribute="trailing" id="Zh5-jX-lzj"/>
                                     <constraint firstItem="ItG-Bw-jrp" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="bUI-Hj-oMP"/>
                                     <constraint firstItem="UKG-GT-EUt" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="egn-ZF-1Ks"/>
+                                    <constraint firstItem="C0M-Fa-XP9" firstAttribute="top" secondItem="HP1-FE-y1c" secondAttribute="bottom" constant="17" id="hii-CN-yXt"/>
                                     <constraint firstItem="HP1-FE-y1c" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="kJS-b1-RgZ"/>
-                                    <constraint firstAttribute="trailing" secondItem="eGL-AY-02E" secondAttribute="trailing" id="kbq-Gz-iba"/>
                                     <constraint firstItem="Wcz-K6-j5m" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="sL6-ZZ-6Df"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b1h-vw-SB2">
-                                <rect key="frame" x="107" y="750.5" width="200" height="61.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2L-nb-8Sq">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="61.5"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Add!">
-                                            <color key="baseBackgroundColor" name="HMColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="AddAllTextButton:" destination="RFS-T1-U8P" eventType="touchUpInside" id="shM-0G-RX8"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="61.329999999999998" id="mMD-xf-1dW"/>
-                                    <constraint firstAttribute="width" constant="200" id="tgA-lK-tQW"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DMf-nx-Hmv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="DMf-nx-Hmv" firstAttribute="bottom" secondItem="b1h-vw-SB2" secondAttribute="bottom" constant="50" id="QBc-QM-O3q"/>
-                            <constraint firstItem="Gsj-kA-Xic" firstAttribute="top" secondItem="DMf-nx-Hmv" secondAttribute="top" constant="20" id="Rko-7m-seE"/>
-                            <constraint firstItem="DMf-nx-Hmv" firstAttribute="trailing" secondItem="Gsj-kA-Xic" secondAttribute="trailing" constant="20" id="eiv-kp-TFc"/>
-                            <constraint firstItem="b1h-vw-SB2" firstAttribute="centerX" secondItem="JA3-Ws-s9Z" secondAttribute="centerX" id="fvL-Wm-xL9"/>
-                            <constraint firstItem="Gsj-kA-Xic" firstAttribute="centerX" secondItem="JA3-Ws-s9Z" secondAttribute="centerX" id="on6-AV-JRJ"/>
-                            <constraint firstItem="Gsj-kA-Xic" firstAttribute="leading" secondItem="DMf-nx-Hmv" secondAttribute="leading" constant="20" id="oyh-yT-4q4"/>
+                            <constraint firstItem="Gsj-kA-Xic" firstAttribute="leading" secondItem="DMf-nx-Hmv" secondAttribute="leading" constant="20" id="jMj-YI-TNW"/>
+                            <constraint firstItem="Gsj-kA-Xic" firstAttribute="top" secondItem="DMf-nx-Hmv" secondAttribute="top" constant="20" id="ma1-XW-XsA"/>
+                            <constraint firstItem="DMf-nx-Hmv" firstAttribute="trailing" secondItem="Gsj-kA-Xic" secondAttribute="trailing" constant="20" id="o14-8u-781"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Gsj-kA-Xic" secondAttribute="bottom" constant="50" id="ztw-7i-mNh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wkp-ku-zvz"/>
@@ -899,17 +912,18 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                         <outlet property="LocationText" destination="f0y-Cr-wso" id="xYi-82-5jx"/>
                         <outlet property="MusicStyleText" destination="Wcz-K6-j5m" id="fH8-w0-KrL"/>
                         <outlet property="NameText" destination="ItG-Bw-jrp" id="M3n-HY-anb"/>
-                        <outlet property="SelfIntroductionText" destination="eGL-AY-02E" id="Nae-Oz-oMd"/>
+                        <outlet property="SelfIntroductionText" destination="eGL-AY-02E" id="5n5-UM-zoY"/>
+                        <outlet property="scrollView" destination="C0M-Fa-XP9" id="bWl-CQ-bcG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TJt-KO-QHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4590" y="633"/>
+            <point key="canvasLocation" x="4589.8550724637689" y="632.8125"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Gua-Aj-ye3"/>
-        <segue reference="s8X-cK-j19"/>
+        <segue reference="dsS-1Y-olN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="BassKia" width="3541" height="3541"/>
