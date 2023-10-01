@@ -23,7 +23,7 @@ class TableControllerVocal: UITableViewController{
         tableView.reloadData()
         title = buttonName
         tableView.register (UINib (nibName:"Table0Cell", bundle: nil),forCellReuseIdentifier: "Table0Cell")
-        tableView.rowHeight = 80
+        tableView.rowHeight = 100
     }
     
     override func viewDidLoad() {
@@ -125,34 +125,25 @@ extension TableControllerVocal: UIGestureRecognizerDelegate{
             if let indexPath = self.tableView.indexPathForRow(at: point) {
                 selectCellEmail = indexPath.row
                 if gestureRecognizer.state == .began {
-                    let collectionRef = db.collection("collection:\(buttonName)")
-                    collectionRef.getDocuments { (querySnapshot, error) in
-                        if let documents = querySnapshot?.documents{
-                            for doc in documents{
-                                if let selfIntroduction = doc.data()["SelfIntroduction"]as? String{
-                                    if self.user!.email == self.firebaseDataArray[self.selectCellEmail].allEmailText{
-                                        let alertController = UIAlertController(title: "Delete Item",message: "Are you sure you want to delete this item?",preferredStyle: .alert)
-                                        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
-                                            let ToDelete = selfIntroduction
-                                            self.deleteFromFirebase(SelfIntroduction: ToDelete)
-                                            self.firebaseDataArray.remove(at: indexPath.row)
-                                            print(ToDelete)
-                                            self.tableView.reloadData()
-                                        }
-                                        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                                        alertController.addAction(deleteAction)
-                                        alertController.addAction(cancelAction)
-                                        self.present(alertController, animated: true, completion: nil)
-                                    }
-                                    else{
-                                        let alertController = UIAlertController(title: "What?!", message: "You want to delete others message?", preferredStyle: .alert)
-                                        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                                        alertController.addAction(cancelAction)
-                                        self.present(alertController,animated: true,completion: nil)
-                                    }
-                                }
-                            }
+                    let selfIntroduction = self.firebaseDataArray[self.selectCellEmail].selfIntroduction
+                    if self.user!.email == self.firebaseDataArray[self.selectCellEmail].allEmailText && selfIntroduction == self.firebaseDataArray[self.selectCellEmail].selfIntroduction{
+                        let alertController = UIAlertController(title: "Delete Item",message: "Are you sure you want to delete this item?",preferredStyle: .alert)
+                        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
+                            let ToDelete = selfIntroduction
+                            self.deleteFromFirebase(SelfIntroduction: ToDelete)
+                            self.firebaseDataArray.remove(at: indexPath.row)
+                            print(ToDelete)
+                            self.tableView.reloadData()
                         }
+                        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                        alertController.addAction(deleteAction)
+                        alertController.addAction(cancelAction)
+                        self.present(alertController, animated: true, completion: nil)
+                    }else{
+                        let alertController = UIAlertController(title: "What?!", message: "You want to delete others message?", preferredStyle: .alert)
+                        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                        alertController.addAction(cancelAction)
+                        self.present(alertController,animated: true,completion: nil)
                     }
                 }
             }
