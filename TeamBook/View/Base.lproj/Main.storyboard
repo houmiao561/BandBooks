@@ -338,7 +338,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background" image="Yummy"/>
+                                                    <backgroundConfiguration key="background" image="Vocal"/>
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="Vocal">
                                                             <attributes>
@@ -358,7 +358,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background" image="Yummy"/>
+                                                    <backgroundConfiguration key="background" image="Guitar"/>
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="Guitar">
                                                             <attributes>
@@ -384,7 +384,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background" image="Yummy"/>
+                                                    <backgroundConfiguration key="background" image="Bass"/>
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="Bass">
                                                             <attributes>
@@ -405,7 +405,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background" image="Yummy"/>
+                                                    <backgroundConfiguration key="background" image="Drum"/>
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="Drum">
                                                             <attributes>
@@ -430,7 +430,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background" image="Yummy"/>
+                                                    <backgroundConfiguration key="background" image="Keyboard"/>
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="Keyboard">
                                                             <attributes>
@@ -935,6 +935,11 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
         <segue reference="s8X-cK-j19"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Bass" width="1180" height="1180"/>
+        <image name="Drum" width="1180" height="1180"/>
+        <image name="Guitar" width="1180" height="1180"/>
+        <image name="Keyboard" width="1180" height="1180"/>
+        <image name="Vocal" width="1180" height="1180"/>
         <image name="Yummy" width="1024" height="1024"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>
