@@ -57,16 +57,8 @@ class AddViewController: UIViewController {
     }
     
     @IBAction func AddAllTextButton(_ sender: UIButton) {
-        if user != nil{
-            sendToFirebase()
-            self.navigationController?.popViewController(animated: true)
-        }else{
-            let alertController = UIAlertController(title: "Please Log In!",message: "If U want to send message\nPlz sign up and log in",preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(cancelAction)
-            self.present(alertController, animated: true, completion: nil)
-        }
-        
+        sendToFirebase()
+        self.navigationController?.popViewController(animated: true)
     }
     
     @objc func dismissKeyboard() {

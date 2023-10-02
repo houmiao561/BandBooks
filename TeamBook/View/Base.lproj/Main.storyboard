@@ -926,7 +926,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TJt-KO-QHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4589.8550724637689" y="632.8125"/>
+            <point key="canvasLocation" x="4590" y="723"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
