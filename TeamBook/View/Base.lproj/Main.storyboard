@@ -370,7 +370,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                                     </attributedString>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="GuitarButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="crO-eo-JXI"/>
+                                                    <action selector="VocalButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="LAB-Eh-TvI"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -396,7 +396,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                                     </attributedString>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="BassButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="b43-Mi-Lmc"/>
+                                                    <action selector="VocalButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="99e-Px-jvP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arl-aq-m9y">
@@ -416,7 +416,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                                     </attributedString>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="DrumButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="ukj-ZX-xFi"/>
+                                                    <action selector="VocalButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="yJ1-YI-N9w"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -441,7 +441,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                                     </attributedString>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="KeyboardButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="GTp-zE-adM"/>
+                                                    <action selector="VocalButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="iNz-Ff-tyt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiE-3b-byZ">
@@ -461,7 +461,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                                     </attributedString>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="OtherInstrumentButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="dGP-AC-pkx"/>
+                                                    <action selector="VocalButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="Inh-Mp-z2q"/>
                                                 </connections>
                                             </button>
                                         </subviews>

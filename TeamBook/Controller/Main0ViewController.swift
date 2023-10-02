@@ -14,7 +14,6 @@ class Main0ViewController: UIViewController {
     @IBOutlet weak var drumButton: UIButton!
     @IBOutlet weak var keyboardButton: UIButton!
     @IBOutlet weak var otherInstrumentButton: UIButton!
-    var backButtonHide: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,33 +29,7 @@ class Main0ViewController: UIViewController {
     
     @IBAction func VocalButton(_ sender: UIButton) {
         performSegue(withIdentifier: "Main0ToVocal", sender: sender)
-    }
-    @IBAction func GuitarButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "Main0ToVocal", sender: sender)
-    }
-    @IBAction func BassButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "Main0ToVocal", sender: sender)
-    }
-    @IBAction func DrumButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "Main0ToVocal", sender: sender)
-    }
-    @IBAction func KeyboardButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "Main0ToVocal", sender: sender)
-    }
-    @IBAction func OtherInstrumentButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "Main0ToVocal", sender: sender)
-    }
-    
-    private func changeButtonStyle(_ button: UIButton){
-        button.layer.borderColor = UIColor.black.cgColor
-        button.layer.borderWidth = 1.0
-        button.layer.cornerRadius = 10.0
-        button.heightAnchor.constraint(equalTo: button.widthAnchor).isActive = true
-    }
-    
-    
-    @IBAction func SetButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "Main0ToSet", sender: self)
+        sender.setTitle("", for: .normal)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -69,4 +42,17 @@ class Main0ViewController: UIViewController {
             }
         }
     }
+    
+    private func changeButtonStyle(_ button: UIButton){
+        button.layer.borderColor = UIColor.darkGray.cgColor
+        button.layer.borderWidth = 1.0
+        button.layer.cornerRadius = 10.0
+        button.heightAnchor.constraint(equalTo: button.widthAnchor).isActive = true
+    }
+    
+    @IBAction func SetButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "Main0ToSet", sender: self)
+    }
+    
+    
 }
