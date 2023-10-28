@@ -15,30 +15,14 @@ class SingUpViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-        let swipeDownGesture = UIPanGestureRecognizer(target: self, action: #selector(handleSwipeDown(_:)))
-        view.addGestureRecognizer(swipeDownGesture)
+        
     }
     
-    @objc func dismissKeyboard() {
-        view.endEditing(true) // 隐藏键盘
-    }
-    
-    // 处理下滑手势
-    @objc func handleSwipeDown(_ gestureRecognizer: UIPanGestureRecognizer) {
-        if gestureRecognizer.state == .ended {
-            let velocity = gestureRecognizer.velocity(in: view)
-            if velocity.y > 0 { // 用户向下滑动
-                view.endEditing(true) // 隐藏键盘
-            }
-        }
-    }
     
     @IBAction func signUpButton(_ sender: UIButton) {
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authResult, error) in
             if let _ = error {
-                let alertController = UIAlertController(title: "Something Wrong !", message: "1.Plz enter your right email.\n2.The password must be 6 string long or more.", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Something Wrong !", message: "1.Please enter your right email.\n2.The password must be 6 string long or more.", preferredStyle: .alert)
                 let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 alertController.addAction(cancelAction)
                 self.present(alertController,animated: true,completion: nil)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EiM-vC-zG1">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
@@ -15,7 +15,7 @@
             <objects>
                 <navigationController id="EiM-vC-zG1" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fV5-7t-cGQ">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="HMColor"/>
                         <textAttributes key="titleTextAttributes">
@@ -38,14 +38,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Me-dl-YSi">
-                                <rect key="frame" x="65.5" y="152" width="283.5" height="70"/>
+                                <rect key="frame" x="73.333333333333343" y="163" width="283.66666666666663" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BandBook" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAF-9t-M6E">
-                                        <rect key="frame" x="0.0" y="0.0" width="283.5" height="70"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="283.66666666666669" height="70"/>
                                         <fontDescription key="fontDescription" name="BigCaslon-Medium" family="Big Caslon" pointSize="60"/>
                                         <color key="textColor" name="HMColor"/>
                                         <nil key="highlightedColor"/>
@@ -53,10 +53,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Stv-qD-ca2">
-                                <rect key="frame" x="107" y="612" width="200" height="200"/>
+                                <rect key="frame" x="115" y="648" width="200" height="200"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRY-gk-HL2">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="56.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="56.666666666666664"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Guest Mode">
                                             <color key="baseBackgroundColor" name="HMColor"/>
@@ -66,7 +66,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eL-BK-jQx">
-                                        <rect key="frame" x="0.0" y="71.5" width="200" height="57"/>
+                                        <rect key="frame" x="0.0" y="71.666666666666629" width="200" height="56.666666666666657"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Sign Up">
                                             <color key="baseBackgroundColor" name="HMColor"/>
@@ -76,7 +76,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="logInButtonPressed" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXZ-Sf-GGX">
-                                        <rect key="frame" x="0.0" y="143.5" width="200" height="56.5"/>
+                                        <rect key="frame" x="0.0" y="143.33333333333337" width="200" height="56.666666666666657"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Log In">
                                             <color key="baseBackgroundColor" name="HMColor"/>
@@ -118,52 +118,52 @@
             <objects>
                 <viewController id="5nj-Xr-4f2" customClass="SupportViewController" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qui-e1-nr8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yg8-gh-tRC">
-                                <rect key="frame" x="30" y="30" width="354" height="836"/>
-                                <string key="text">Hello！
-This is HM.The developer of BandBook.
-在这里想告诉你一些有关这个APP的事情
+                                <rect key="frame" x="20" y="30" width="390" height="872"/>
+                                <mutableString key="text">Hello!
+I am HM. The developer of BandBook.
+Here I want to tell you a few things about this APP.
 
--关于初衷
-我是一个贝斯手（四弦坚定爱好者！），与此同时是一个大学生。在大学读书期间我发现我和我身边的朋友们（包括一些很优秀的乐手和一些很优秀的乐队）找不到属于自己的合适的乐队。也许因为喜欢的音乐风格不同，也许因为可接受的排练地理位置不同，所以我只是想构建一个平台来为乐手和乐队找到自己的归宿。
+- About the Intention
+I'm a bass player (a four-string lover!) and at the same time, a college student. When I am in college, I have found some people, just like me, can’t find an approach to get in touch with other instrument players. Maybe it is because of the different styles of music preferred, or the different locations of acceptable rehearsals. It is quite hard for us to find buddies who is sharing common music ideas and want to form a band. We need a supporting platform to solve this problem.
 
--关于愿景
-现在是一个信息爆炸的时代，我发现我们的痛点似乎是想要找到自己需要的东西，总是大海捞针，甚至一无所获。我只希望搭建这个平台，能让我们这群因为热爱而聚在这里的人可以节约自己宝贵的练琴时间，快速获取到合适的信息。
+- About Vision
+Now it is an era of information explosion and we are surrounded by unlimited information which is disturbing us. Therefore, it is extremely hard for us to search for the information of instrument players we want. I only hope that by founding this platform, we, who are gathered here because of the love of music, can recruit the new band members efficiently, so that we can seize more of our time for playing music.
 
--关于使用方法
-我按照乐手们的不同位置划分为了六个板块，每个人只需要用自己的邮箱注册账号便可以发布信息或者删除自己发布的信息，而不注册账号也可以浏览信息。我希望的信息填写如下：
-Name：你自己的姓名或昵称或艺名，或是你乐队的名称
-Music Style：你喜欢的音乐风格，或是你乐队正在玩的类型
-Location：可接受的排练区域，不一定是某一个城市，可以是一片区域
-Self Introduce：留下作品的链接，留下其他平台的联系方式，留下自己对自己的评价（比如我可以舞台上跳街舞）
-我不希望添加各种诸如音乐播放、视频播放、聊天功能，因为其他平台的体验比我优秀太多太多了，而且这样可以使整个APP中只留下最关键的信息
+- About How to Use
+I divided the musicians into six sections according to their different instruments. Users can register with their mailbox account. Moreover, they can also have a quick view without an account. The mandatory information for posting is listed below:👇
+NAME: Your own name or nickname or stage name, or the name of your band;
+MUSIC STYLE: The style of music you like, or the type of music your band is playing;
+LOCATION: An acceptable rehearsal area, not necessarily a city, but an area;
+SELF-INTRODUCTION: the link of the work, the contact information of other platforms, or the introduction of yourself (for example, I can dance hip-hop on the stage).
+I don't want to add all kinds of functions like music player, video player, chat and so on, because the experience of other platforms is much better than mine. All I just want this application can contain the most essential information of forming a band.
 
--关于优化
-这是小规模团队所完成的作品，所以一定会产生很多不尽如人意的地方，如果有发现任何的bug和想提出的建议，请联系：houmiao561@gmail.com ，这是我本人邮箱，这将是我们的荣幸。也请留下您的ID，如果因为您的有趣的建议而产生的Version 更新，也将发布在下一次的Develop Log中。
+- About Optimization
+This is a work completed by a small team, so there will be a lot of shortcomings. If you find any bugs, please contact: [houmiao561@gmail.com](mailto:houmiao561@gmail.com), it will be our honor to get suggestions from you guys. Please also leave your ID so that if any Version updates that result from your interesting suggestions, it will also be posted in the next Develop Log.
 
--关于团队
-如您所知，一个人的精力是有限的，但是所幸我有一群可爱又志同道合的朋友，他们给了我非常多的帮助
-Apple Developer Account Provider ：栢
+- About the Team
+As you know, one's energy is limited, but fortunately I have a group of lovely and like-minded friends who gave me a lot of help.
+Apple Developer Account Provider: DJ.Uncle
 APP Icon Developer : 114
 APP ImageView Developer : Kia
-APP Frame Developer : Real杨泽生 , Eleven
-APP Translation Developer : 你自己写吧
+APP Frame Developer: Real Yang Zesheng, Eleven
+APP Translation Developer: Dabria
 
--关于成本
-我保证这个平台将是我为爱发电，一切盈亏自负，将不添加任何收费功能，直到某一天地球爆炸了，或是我穷的吃不起饭了，不足以支撑平台运营了。
-你可以随时通过？？？（学姐这里你不用管，因为我还没找到合适的平台）来支持我，金额随意，也可以只在App Store中为我加上五星好评，让更多人知道这个平台。“We are the ones who make a brighter day, so let's start giving”。
-以下是我的制作成本：
-Apple Developer Account $99
-Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需要收钱的时候我将在Develop Log中更新
-团队中每人一杯星巴克
+- About the Cost
+I promise that this platform will be a labor of love, all profit and loss, will not add any charging function, until one day the earth exploded, or I can not afford my living and not able to support the platform operation.
+You can _________ to support me, the amount is voluntary or you can only add five-star praise for me in the App Store, so that more people can know about this platform. "We are the ones who make a brighter day, so let's start giving".
+Here are my production costs:
+1.Apple Developer Account $99,
+2.Google Firebase collects money according to the number of people and traffic. It is free at this stage. I will update it in the Develop Log when I need to collect money,
+3.One Starbucks per person in the group.
 
--关于现阶段困难
-我并没有足够的能力来开发Android APP和Web（完全没学过），因此我需要同样志同道合的朋友来帮助我！如果你也是程序员朋友和热爱乐队，而且愿意为爱发电（我真的没有钱555），请联系：houmiao561@gmail.com 。
-“It's true we'll make a better day, just you and me”
-</string>
+- About the Difficulties at This Stage
+I don't have enough skills to develop Android apps and the Web (completely unable), so I need like-minded friends to help me! If you are also a programmer and music lover,and would like to work with us on a voluntary basis, please contact: [houmiao561@gmail.com](mailto:houmiao561@gmail.com).
+
+'It's true we'll make a better day, just you and me.’——MJ</mutableString>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -172,10 +172,10 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                         <viewLayoutGuide key="safeArea" id="xy4-LV-PNc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yg8-gh-tRC" firstAttribute="leading" secondItem="xy4-LV-PNc" secondAttribute="leading" constant="30" id="Nwm-At-CS1"/>
+                            <constraint firstItem="yg8-gh-tRC" firstAttribute="leading" secondItem="xy4-LV-PNc" secondAttribute="leading" constant="20" id="HIA-yz-RvZ"/>
+                            <constraint firstItem="xy4-LV-PNc" firstAttribute="trailing" secondItem="yg8-gh-tRC" secondAttribute="trailing" constant="20" id="Xf9-1H-6a8"/>
                             <constraint firstItem="xy4-LV-PNc" firstAttribute="bottom" secondItem="yg8-gh-tRC" secondAttribute="bottom" constant="20" id="g6Y-m8-o64"/>
                             <constraint firstItem="yg8-gh-tRC" firstAttribute="top" secondItem="xy4-LV-PNc" secondAttribute="top" constant="30" id="qzX-38-hGc"/>
-                            <constraint firstItem="xy4-LV-PNc" firstAttribute="trailing" secondItem="yg8-gh-tRC" secondAttribute="trailing" constant="30" id="uwt-UL-A2O"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IEj-zn-KK9"/>
@@ -189,11 +189,11 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
             <objects>
                 <viewController title="SingUpViewController" id="1cC-8E-Fti" customClass="SingUpViewController" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ciQ-CL-N0j">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="PiW-f5-JCB">
-                                <rect key="frame" x="27" y="152" width="360" height="120"/>
+                                <rect key="frame" x="35" y="163" width="360" height="120"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eqL-JC-zA4">
                                         <rect key="frame" x="0.0" y="0.0" width="360" height="49"/>
@@ -212,10 +212,10 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="i7V-pq-OkU">
-                                <rect key="frame" x="107" y="750.5" width="200" height="61.5"/>
+                                <rect key="frame" x="115" y="786.66666666666663" width="200" height="61.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ee-Az-YUn">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="61.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="61.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Sign Up">
                                             <color key="baseBackgroundColor" name="HMColor"/>
@@ -256,11 +256,11 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
             <objects>
                 <viewController title="LogInViewController" id="KOh-aV-Bqk" customClass="LogInController" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1yx-sR-rpV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="XoC-lj-5d0">
-                                <rect key="frame" x="27" y="152" width="360" height="120"/>
+                                <rect key="frame" x="35" y="163" width="360" height="120"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cRD-Z8-8HL">
                                         <rect key="frame" x="0.0" y="0.0" width="360" height="45"/>
@@ -279,10 +279,10 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RaK-x5-V0V">
-                                <rect key="frame" x="107" y="750.5" width="200" height="61.5"/>
+                                <rect key="frame" x="115" y="786.66666666666663" width="200" height="61.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tF-p7-dCu">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="61.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="61.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Log In">
                                             <color key="baseBackgroundColor" name="HMColor"/>
@@ -323,51 +323,34 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
             <objects>
                 <viewController id="b5J-uh-7JN" customClass="Main0ViewController" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oMz-Nl-v9e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2lx-aZ-XO0">
-                                <rect key="frame" x="20" y="112" width="374" height="125"/>
+                                <rect key="frame" x="20" y="123" width="390" height="125"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EVG-8N-CNb">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="29"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlm-q1-LuV">
-                                                <rect key="frame" x="0.0" y="0.0" width="177" height="29"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="185" height="29"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
+                                                <buttonConfiguration key="configuration" style="plain" title="Vocal">
                                                     <backgroundConfiguration key="background" image="Vocal"/>
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Vocal">
-                                                            <attributes>
-                                                                <color key="NSBackgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Didot"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                    <fontDescription key="titleFontDescription" name="Didot" family="Didot" pointSize="12"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="VocalButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="HZN-Mk-VsY"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8B-sh-0sG">
-                                                <rect key="frame" x="197" y="0.0" width="177" height="29"/>
+                                                <rect key="frame" x="205" y="0.0" width="185" height="29"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
+                                                <buttonConfiguration key="configuration" style="plain" title="Guitar">
                                                     <backgroundConfiguration key="background" image="Guitar"/>
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Guitar">
-                                                            <attributes>
-                                                                <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="VocalButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="LAB-Eh-TvI"/>
@@ -376,44 +359,27 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZYY-kP-9Pv">
-                                        <rect key="frame" x="0.0" y="49" width="374" height="28"/>
+                                        <rect key="frame" x="0.0" y="49" width="390" height="28"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v99-bF-XhI">
-                                                <rect key="frame" x="0.0" y="0.0" width="177" height="28"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="185" height="28"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
+                                                <buttonConfiguration key="configuration" style="plain" title="Bass">
                                                     <backgroundConfiguration key="background" image="Bass"/>
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Bass">
-                                                            <attributes>
-                                                                <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="VocalButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="99e-Px-jvP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arl-aq-m9y">
-                                                <rect key="frame" x="197" y="0.0" width="177" height="28"/>
+                                                <rect key="frame" x="205" y="0.0" width="185" height="28"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
+                                                <buttonConfiguration key="configuration" style="plain" title="Drum">
                                                     <backgroundConfiguration key="background" image="Drum"/>
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Drum">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="VocalButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="yJ1-YI-N9w"/>
@@ -422,43 +388,27 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="P7n-Ch-9cr">
-                                        <rect key="frame" x="0.0" y="97" width="374" height="28"/>
+                                        <rect key="frame" x="0.0" y="97" width="390" height="28"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMh-c4-lQj">
-                                                <rect key="frame" x="0.0" y="0.0" width="177" height="28"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="185" height="28"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
+                                                <buttonConfiguration key="configuration" style="plain" title="Keyboard">
                                                     <backgroundConfiguration key="background" image="Keyboard"/>
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Keyboard">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="VocalButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="iNz-Ff-tyt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xiE-3b-byZ">
-                                                <rect key="frame" x="197" y="0.0" width="177" height="28"/>
+                                                <rect key="frame" x="205" y="0.0" width="185" height="28"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background" image="Yummy"/>
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="OtherInstrument">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                <buttonConfiguration key="configuration" style="plain" title="OtherInstrument">
+                                                    <backgroundConfiguration key="background" image="Other"/>
+                                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="VocalButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="Inh-Mp-z2q"/>
@@ -481,10 +431,10 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                     <navigationItem key="navigationItem" id="KB8-8m-VMR">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="BVw-z3-9x3">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="6nL-j7-3WU">
-                                <rect key="frame" x="344" y="5" width="50" height="34"/>
+                                <rect key="frame" x="355.66666666666669" y="4.6666666666666679" width="54.333333333333314" height="34.666666666666657"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system" title=" "/>
                                 <connections>
                                     <action selector="SetButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="jEn-M2-Vwx"/>
                                 </connections>
@@ -511,11 +461,11 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
             <objects>
                 <viewController id="rnK-2l-UhG" customClass="SetViewController" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t3r-kK-cPq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="m4u-f5-33D">
-                                <rect key="frame" x="27" y="152" width="360" height="200"/>
+                                <rect key="frame" x="35" y="163" width="360" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Account Email : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kio-Ee-1Gb">
                                         <rect key="frame" x="0.0" y="0.0" width="360" height="91"/>
@@ -535,22 +485,22 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="4wo-Ey-axS"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ehS-Ya-uw1">
-                                <rect key="frame" x="107" y="750.5" width="200" height="61.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ehS-Ya-uw1">
+                                <rect key="frame" x="115" y="718" width="200" height="130"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNO-k2-rSh">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="61.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbg-Ln-HLm">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Log Out">
-                                                    <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" metaFont="smallSystem"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
+                                        <buttonConfiguration key="configuration" style="filled" title="Delete Account"/>
+                                        <connections>
+                                            <action selector="deleteAccount:" destination="rnK-2l-UhG" eventType="touchUpInside" id="rkI-cr-cjO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNO-k2-rSh">
+                                        <rect key="frame" x="0.0" y="70" width="200" height="60"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Log Out">
+                                            <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                             <color key="baseBackgroundColor" name="HMColor"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -560,11 +510,11 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="VOO-L5-cwE"/>
-                                    <constraint firstAttribute="height" constant="61.329999999999998" id="ZSO-Hl-DGr"/>
+                                    <constraint firstAttribute="height" constant="130" id="Y1y-JK-l40"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5Jf-HH-3IM">
-                                <rect key="frame" x="107" y="822" width="200" height="32"/>
+                                <rect key="frame" x="115" y="858" width="200" height="32"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyu-hx-cuz">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="32"/>
@@ -610,12 +560,12 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
             <objects>
                 <tableViewController id="g4W-d6-NIl" customClass="TableControllerVocal" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="5Tp-lk-voK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="05i-dk-g54">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="430" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -624,10 +574,10 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="mey-ht-wui">
-                                <rect key="frame" x="0.0" y="94" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="94" width="430" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mey-ht-wui" id="Lav-T9-76M">
-                                    <rect key="frame" x="0.0" y="0.0" width="383.5" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="399.66666666666669" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -640,10 +590,10 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                     <navigationItem key="navigationItem" id="qT5-4u-s9a">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="kes-do-rAi">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="a9Q-rn-7c5">
-                                <rect key="frame" x="347" y="4.5" width="47" height="35"/>
+                                <rect key="frame" x="358.33333333333331" y="4.6666666666666679" width="51.666666666666686" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title=" ">
                                     <backgroundConfiguration key="background"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -667,14 +617,14 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
             <objects>
                 <viewController id="MeB-J6-cd2" customClass="DetailViewController" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BmF-MQ-Ebj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="b2D-i6-0oY">
-                                <rect key="frame" x="20" y="112" width="374" height="730"/>
+                                <rect key="frame" x="20" y="123" width="390" height="755"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCP-ha-rIb">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="DnN-8M-6aw"/>
                                         </constraints>
@@ -683,7 +633,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tr2-Ks-X1f">
-                                        <rect key="frame" x="0.0" y="37" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="37" width="390" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="gP2-yg-QyA"/>
                                         </constraints>
@@ -691,7 +641,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWU-nB-2eV">
-                                        <rect key="frame" x="0.0" y="94" width="374" height="20"/>
+                                        <rect key="frame" x="0.0" y="94" width="390" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="ulI-aF-VTd"/>
                                         </constraints>
@@ -700,7 +650,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v3Y-61-NNq">
-                                        <rect key="frame" x="0.0" y="131" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="131" width="390" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="KFV-fX-gPL"/>
                                         </constraints>
@@ -708,7 +658,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Style:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xb6-pO-r8t">
-                                        <rect key="frame" x="0.0" y="188" width="374" height="20"/>
+                                        <rect key="frame" x="0.0" y="188" width="390" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="htl-o0-Fel"/>
                                         </constraints>
@@ -717,7 +667,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tZa-2t-nWe">
-                                        <rect key="frame" x="0.0" y="225" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="225" width="390" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="IiX-gb-zy8"/>
                                         </constraints>
@@ -725,7 +675,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Self Introduce:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rda-4w-LPh">
-                                        <rect key="frame" x="0.0" y="282" width="374" height="20"/>
+                                        <rect key="frame" x="0.0" y="282" width="390" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="gG8-x6-8fc"/>
                                         </constraints>
@@ -733,32 +683,19 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l7b-Wy-uTH">
-                                        <rect key="frame" x="0.0" y="319" width="374" height="411"/>
-                                        <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="zTs-na-aA4">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="411"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <color key="textColor" systemColor="labelColor"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="yIQ-9z-qDS" firstAttribute="bottom" secondItem="zTs-na-aA4" secondAttribute="bottom" id="Xd9-74-1cP"/>
-                                            <constraint firstItem="zTs-na-aA4" firstAttribute="leading" secondItem="yIQ-9z-qDS" secondAttribute="leading" id="fIA-pD-9hE"/>
-                                            <constraint firstItem="zTs-na-aA4" firstAttribute="trailing" secondItem="yIQ-9z-qDS" secondAttribute="trailing" id="gO5-Yi-DCk"/>
-                                            <constraint firstItem="zTs-na-aA4" firstAttribute="top" secondItem="l7b-Wy-uTH" secondAttribute="top" id="uMq-KL-Qgc"/>
-                                        </constraints>
-                                        <viewLayoutGuide key="contentLayoutGuide" id="2gR-xQ-oCY"/>
-                                        <viewLayoutGuide key="frameLayoutGuide" id="yIQ-9z-qDS"/>
-                                    </scrollView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="zTs-na-aA4">
+                                        <rect key="frame" x="0.0" y="319" width="390" height="436"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="l7b-Wy-uTH" secondAttribute="trailing" id="OwJ-4Y-YGc"/>
-                                    <constraint firstAttribute="bottom" secondItem="l7b-Wy-uTH" secondAttribute="bottom" id="RXH-fd-Uia"/>
-                                    <constraint firstItem="l7b-Wy-uTH" firstAttribute="leading" secondItem="b2D-i6-0oY" secondAttribute="leading" id="cTz-6h-skv"/>
-                                    <constraint firstItem="l7b-Wy-uTH" firstAttribute="top" secondItem="rda-4w-LPh" secondAttribute="bottom" constant="20" id="v2v-z2-dOC"/>
+                                    <constraint firstItem="zTs-na-aA4" firstAttribute="leading" secondItem="b2D-i6-0oY" secondAttribute="leading" id="GAW-Q2-VqE"/>
+                                    <constraint firstAttribute="bottom" secondItem="zTs-na-aA4" secondAttribute="bottom" id="ShS-EP-0dw"/>
+                                    <constraint firstItem="zTs-na-aA4" firstAttribute="top" secondItem="rda-4w-LPh" secondAttribute="bottom" constant="17" id="avW-Sb-RCW"/>
+                                    <constraint firstAttribute="trailing" secondItem="zTs-na-aA4" secondAttribute="trailing" id="oHW-S7-qVM"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -781,21 +718,21 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ro7-rf-dw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5380" y="633"/>
+            <point key="canvasLocation" x="5301" y="723"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="jag-QF-OER">
             <objects>
                 <viewController id="RFS-T1-U8P" customClass="AddViewController" customModule="TeamBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JA3-Ws-s9Z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gsj-kA-Xic">
-                                <rect key="frame" x="20" y="112" width="374" height="700"/>
+                                <rect key="frame" x="20" y="123" width="390" height="725"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfb-9n-seX">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Z1C-dk-OQK"/>
                                         </constraints>
@@ -804,7 +741,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         <color key="highlightedColor" name="HMColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ItG-Bw-jrp">
-                                        <rect key="frame" x="0.0" y="37" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="37" width="390" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="66U-UZ-fyZ"/>
                                         </constraints>
@@ -812,7 +749,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLn-Gk-G8A">
-                                        <rect key="frame" x="0.0" y="94" width="374" height="20"/>
+                                        <rect key="frame" x="0.0" y="94" width="390" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="JV4-4t-nDH"/>
                                         </constraints>
@@ -821,7 +758,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f0y-Cr-wso">
-                                        <rect key="frame" x="0.0" y="131" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="131" width="390" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="bt9-UA-IwQ"/>
                                         </constraints>
@@ -829,7 +766,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Style:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKG-GT-EUt">
-                                        <rect key="frame" x="0.0" y="188" width="374" height="20"/>
+                                        <rect key="frame" x="0.0" y="188" width="390" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="NHp-O1-iOA"/>
                                         </constraints>
@@ -838,7 +775,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wcz-K6-j5m">
-                                        <rect key="frame" x="0.0" y="225" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="225" width="390" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="8ma-8t-o69"/>
                                         </constraints>
@@ -846,7 +783,7 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Self Introduction:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HP1-FE-y1c">
-                                        <rect key="frame" x="0.0" y="282" width="374" height="20"/>
+                                        <rect key="frame" x="0.0" y="282" width="390" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="bqn-sk-Pkc"/>
                                         </constraints>
@@ -854,25 +791,17 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0M-Fa-XP9">
-                                        <rect key="frame" x="0.0" y="319" width="374" height="302.5"/>
-                                        <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="eGL-AY-02E">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="389.5"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                        </subviews>
-                                        <viewLayoutGuide key="contentLayoutGuide" id="mtb-K5-liX"/>
-                                        <viewLayoutGuide key="frameLayoutGuide" id="RLx-yk-aYd"/>
-                                    </scrollView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="eGL-AY-02E">
+                                        <rect key="frame" x="0.0" y="319" width="390" height="327.66666666666674"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b1h-vw-SB2">
-                                        <rect key="frame" x="87" y="638.5" width="200" height="61.5"/>
+                                        <rect key="frame" x="95" y="663.66666666666663" width="200" height="61.333333333333371"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2L-nb-8Sq">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="61.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="61.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Add!">
                                                     <color key="baseBackgroundColor" name="HMColor"/>
@@ -889,19 +818,19 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="C0M-Fa-XP9" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="6YY-rO-H6U"/>
                                     <constraint firstItem="QLn-Gk-G8A" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="7gL-gc-UKE"/>
-                                    <constraint firstItem="b1h-vw-SB2" firstAttribute="top" secondItem="C0M-Fa-XP9" secondAttribute="bottom" constant="17" id="IMK-Vz-OaA"/>
+                                    <constraint firstItem="eGL-AY-02E" firstAttribute="top" secondItem="HP1-FE-y1c" secondAttribute="bottom" constant="17" id="EgW-fs-jAd"/>
                                     <constraint firstAttribute="trailing" secondItem="ItG-Bw-jrp" secondAttribute="trailing" id="JiJ-Kw-fkh"/>
                                     <constraint firstItem="Jfb-9n-seX" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="Pcd-Tt-2h1"/>
                                     <constraint firstAttribute="trailing" secondItem="f0y-Cr-wso" secondAttribute="trailing" id="Rim-j3-HeQ"/>
                                     <constraint firstItem="f0y-Cr-wso" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="S8v-xb-Nry"/>
-                                    <constraint firstAttribute="trailing" secondItem="C0M-Fa-XP9" secondAttribute="trailing" id="Z6h-VY-3aZ"/>
                                     <constraint firstAttribute="trailing" secondItem="Wcz-K6-j5m" secondAttribute="trailing" id="Zh5-jX-lzj"/>
                                     <constraint firstItem="ItG-Bw-jrp" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="bUI-Hj-oMP"/>
+                                    <constraint firstItem="b1h-vw-SB2" firstAttribute="top" secondItem="eGL-AY-02E" secondAttribute="bottom" constant="17" id="cR7-yM-OxB"/>
+                                    <constraint firstItem="eGL-AY-02E" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="dTv-Th-ODf"/>
                                     <constraint firstItem="UKG-GT-EUt" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="egn-ZF-1Ks"/>
-                                    <constraint firstItem="C0M-Fa-XP9" firstAttribute="top" secondItem="HP1-FE-y1c" secondAttribute="bottom" constant="17" id="hii-CN-yXt"/>
                                     <constraint firstItem="HP1-FE-y1c" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="kJS-b1-RgZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="eGL-AY-02E" secondAttribute="trailing" id="mnY-NG-1sy"/>
                                     <constraint firstItem="Wcz-K6-j5m" firstAttribute="leading" secondItem="Gsj-kA-Xic" secondAttribute="leading" id="sL6-ZZ-6Df"/>
                                 </constraints>
                             </stackView>
@@ -921,7 +850,6 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
                         <outlet property="MusicStyleText" destination="Wcz-K6-j5m" id="fH8-w0-KrL"/>
                         <outlet property="NameText" destination="ItG-Bw-jrp" id="M3n-HY-anb"/>
                         <outlet property="SelfIntroductionText" destination="eGL-AY-02E" id="5n5-UM-zoY"/>
-                        <outlet property="scrollView" destination="C0M-Fa-XP9" id="bWl-CQ-bcG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TJt-KO-QHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -934,12 +862,12 @@ Google Firebase 按照人数以及流量来收钱，现阶段免费，等到需�
         <segue reference="s8X-cK-j19"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="Bass" width="1180" height="1180"/>
-        <image name="Drum" width="1180" height="1180"/>
-        <image name="Guitar" width="1180" height="1180"/>
-        <image name="Keyboard" width="1180" height="1180"/>
-        <image name="Vocal" width="1180" height="1180"/>
-        <image name="Yummy" width="1024" height="1024"/>
+        <image name="Bass" width="1180.3333740234375" height="1180.3333740234375"/>
+        <image name="Drum" width="1180.3333740234375" height="1180.3333740234375"/>
+        <image name="Guitar" width="1180.3333740234375" height="1180.3333740234375"/>
+        <image name="Keyboard" width="1180.3333740234375" height="1180.3333740234375"/>
+        <image name="Other" width="682.66668701171875" height="682.66668701171875"/>
+        <image name="Vocal" width="1180.3333740234375" height="1180.3333740234375"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="HMColor">

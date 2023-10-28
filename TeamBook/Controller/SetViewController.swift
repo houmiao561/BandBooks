@@ -16,7 +16,7 @@ class SetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if user == nil{
-            emailLabel.text = "No Account Email Log In\nPlz Sign Up and Log In"
+            emailLabel.text = "No Account Email Log In\nPlease Sign Up and Log In"
             LogOutButtonIB.titleLabel?.text = "Back to Main Page\nLog In"
             LogOutButtonIB.titleLabel?.textAlignment = .center
             LogOutButtonIB.titleLabel?.numberOfLines = 2
@@ -26,13 +26,12 @@ class SetViewController: UIViewController {
             LogOutButtonIB.titleLabel?.textAlignment = .center
             LogOutButtonIB.titleLabel?.numberOfLines = 1
         }
-        
     }
     
     @IBAction func LogOutButton(_ sender: Any) {
         do {
             if let navigationController = self.navigationController {
-                            navigationController.popToRootViewController(animated: true)
+            navigationController.popToRootViewController(animated: true)
             try Auth.auth().signOut() // 登出当前用户
             }
         } catch { print("Error signing out") }
@@ -40,5 +39,22 @@ class SetViewController: UIViewController {
     
     @IBAction func DeveloperLogButton(_ sender: Any) {
         performSegue(withIdentifier: "SetToDeveloperLog", sender: sender)
+    }
+    
+    @IBAction func deleteAccount(_ sender: Any) {
+        do {
+            if let navigationController = self.navigationController {
+                try Auth.auth().signOut() // 登出当前用户
+                user!.delete { (error) in
+                    if let error = error {
+                        print("Error deleting user: \(error.localizedDescription)")
+                    } else {
+                        print("User deleted successfully")
+                        navigationController.popToRootViewController(animated: true)
+                    }
+                }
+            }
+        } catch { print("Error signing out") }
+    
     }
 }

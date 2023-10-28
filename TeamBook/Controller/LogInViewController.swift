@@ -16,10 +16,6 @@ class LogInController: UIViewController{
     var logInPasswordText = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-        let swipeDownGesture = UIPanGestureRecognizer(target: self, action: #selector(handleSwipeDown(_:)))
-        view.addGestureRecognizer(swipeDownGesture)
         LogInEmailTextField.text = logInEmailText
         LogInPasswordTextField.text = logInPasswordText
     }
@@ -27,27 +23,12 @@ class LogInController: UIViewController{
     @IBAction func logInButton(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: LogInEmailTextField.text!, password: LogInPasswordTextField.text!) { (authResult, error) in
             if let _ = error {
-                let alertController = UIAlertController(title: "Something Wrong !", message: "Plz check your email and password.", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Something Wrong !", message: "Please check your email and password.", preferredStyle: .alert)
                 let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 alertController.addAction(cancelAction)
                 self.present(alertController,animated: true,completion: nil)
             } else {
                 self.performSegue(withIdentifier: "LogInToMain0", sender: self)
-            }
-        }
-    }
-    
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
-    // 处理下滑手势
-    @objc func handleSwipeDown(_ gestureRecognizer: UIPanGestureRecognizer) {
-        if gestureRecognizer.state == .ended {
-            let velocity = gestureRecognizer.velocity(in: view)
-            if velocity.y > 0 { // 用户向下滑动
-                view.endEditing(true) // 隐藏键盘
             }
         }
     }

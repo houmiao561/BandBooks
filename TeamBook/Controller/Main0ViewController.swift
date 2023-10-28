@@ -47,6 +47,7 @@ class Main0ViewController: UIViewController {
         button.layer.borderColor = UIColor.darkGray.cgColor
         button.layer.borderWidth = 1.0
         button.layer.cornerRadius = 10.0
+        button.setTitleColor(UIColor.clear, for: .normal)
         button.heightAnchor.constraint(equalTo: button.widthAnchor).isActive = true
     }
     

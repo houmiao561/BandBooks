@@ -16,6 +16,7 @@
 		935883DE2ABD868400359272 /* TableControllerVocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935883DD2ABD868400359272 /* TableControllerVocal.swift */; };
 		935883E02ABDCDE700359272 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935883DF2ABDCDE700359272 /* AddViewController.swift */; };
 		9368FE682AC716580085130D /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9368FE672AC716580085130D /* SupportViewController.swift */; };
+		936B48172AEA47DC0007B09F /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 936B48162AEA47DC0007B09F /* IQKeyboardManagerSwift */; };
 		939E48222AB9849A0039AA79 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939E48212AB9849A0039AA79 /* Team.swift */; };
 		93C7B9CE2AC3C69E00ECFC0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93C7B9CD2AC3C69E00ECFC0E /* GoogleService-Info.plist */; };
 		93CD806E2AB4559C0007EB04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CD806D2AB4559C0007EB04 /* AppDelegate.swift */; };
@@ -62,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				584962DF6ED61B85EB8E8B4D /* Pods_TeamBook.framework in Frameworks */,
+				936B48172AEA47DC0007B09F /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +174,9 @@
 			dependencies = (
 			);
 			name = TeamBook;
+			packageProductDependencies = (
+				936B48162AEA47DC0007B09F /* IQKeyboardManagerSwift */,
+			);
 			productName = TeamBook;
 			productReference = 93CD806A2AB4559C0007EB04 /* TeamBook.app */;
 			productType = "com.apple.product-type.application";
@@ -200,6 +205,9 @@
 				Base,
 			);
 			mainGroup = 93CD80612AB4559C0007EB04;
+			packageReferences = (
+				936B48152AEA47DC0007B09F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 93CD806B2AB4559C0007EB04 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -432,7 +440,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 53ZFFU6DAC;
+				DEVELOPMENT_TEAM = L67F98NJ7R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeamBook/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to upload and share photos.";
@@ -441,17 +449,20 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.houmiao.TeamBook;
+				PRODUCT_BUNDLE_IDENTIFIER = com.houmiao.BandBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -463,7 +474,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 53ZFFU6DAC;
+				DEVELOPMENT_TEAM = L67F98NJ7R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TeamBook/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to your photo library to upload and share photos.";
@@ -472,17 +483,21 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.houmiao.TeamBook;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.houmiao.BandBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -508,6 +523,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		936B48152AEA47DC0007B09F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.16;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		936B48162AEA47DC0007B09F /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 936B48152AEA47DC0007B09F /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		93CD80762AB4559C0007EB04 /* TeamBook.xcdatamodeld */ = {

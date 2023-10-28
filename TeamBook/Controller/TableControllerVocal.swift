@@ -19,30 +19,33 @@ class TableControllerVocal: UITableViewController{
     @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         downloadFromFirebase()
         tableView.reloadData()
         title = buttonName
         tableView.register (UINib (nibName:"Table0Cell", bundle: nil),forCellReuseIdentifier: "Table0Cell")
         tableView.rowHeight = 100
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
         
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         tableView.addGestureRecognizer(longPressGesture)
+        
         let swipeDownGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
         swipeDownGestureRecognizer.direction = .down
         tableView.addGestureRecognizer(swipeDownGestureRecognizer)
         swipeDownGestureRecognizer.delegate = self
+        
         let swipeUpGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
         swipeUpGestureRecognizer.direction = .up
         tableView.addGestureRecognizer(swipeUpGestureRecognizer)
         swipeUpGestureRecognizer.delegate = self
+        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
         tableView.addGestureRecognizer(tapGestureRecognizer)
     }
@@ -50,7 +53,7 @@ class TableControllerVocal: UITableViewController{
     
     @IBAction func AddButton(_ sender: UIButton) {
         if user == nil{
-            let alertController = UIAlertController(title: "Please Log In!",message: "If U want to send message\nPlz sign up and log in",preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Please Log In!",message: "If you want to send message\nPlease sign up and log in",preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(cancelAction)
             self.present(alertController, animated: true, completion: nil)
@@ -155,7 +158,7 @@ extension TableControllerVocal: UIGestureRecognizerDelegate{
                 }
             }
         }else{
-            let alertController = UIAlertController(title: "Please Log In!",message: "If U want to send message\nPlz sign up and log in",preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Please Log In!",message: "If you want to send message\nPlease sign up and log in",preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(cancelAction)
             self.present(alertController, animated: true, completion: nil)

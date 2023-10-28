@@ -23,29 +23,9 @@ class AddViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-        let swipeDownGesture = UIPanGestureRecognizer(target: self, action: #selector(handleSwipeDown(_:)))
-        view.addGestureRecognizer(swipeDownGesture)
-        let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
-        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
     }
-    @objc func adjustForKeyboard(notification: Notification) {
-        guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-
-        let keyboardScreenEndFrame = keyboardValue.cgRectValue
-        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
-
-        if notification.name == UIResponder.keyboardWillHideNotification {
-            SelfIntroductionText.contentInset = .zero
-        } else {
-            SelfIntroductionText.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom+15, right: 0)
-        }
-        SelfIntroductionText.scrollIndicatorInsets = SelfIntroductionText.contentInset
-        let selectedRange = SelfIntroductionText.selectedRange
-        SelfIntroductionText.scrollRangeToVisible(selectedRange)
-    }
+    
     func sendToFirebase(){
         let collectionRef = db.collection("collection:\(buttonName)") // 替换为您的集合名称
         collectionRef.addDocument(data: ["Name":self.NameText!.text!,
@@ -59,20 +39,6 @@ class AddViewController: UIViewController {
     @IBAction func AddAllTextButton(_ sender: UIButton) {
         sendToFirebase()
         self.navigationController?.popViewController(animated: true)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
-    // 处理下滑手势
-    @objc func handleSwipeDown(_ gestureRecognizer: UIPanGestureRecognizer) {
-        if gestureRecognizer.state == .ended {
-            let velocity = gestureRecognizer.velocity(in: view)
-            if velocity.y > 0 { // 用户向下滑动
-                view.endEditing(true) // 隐藏键盘
-            }
-        }
     }
     
 }
