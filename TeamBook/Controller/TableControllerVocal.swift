@@ -26,6 +26,13 @@ class TableControllerVocal: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 注册加载动画
+        activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), type: .lineScale, color: .systemYellow, padding: nil)
+        activityIndicatorView.center = view.center
+        activityIndicatorView.padding = 20
+        view.addSubview(activityIndicatorView)
+        
+        
         downloadFromFirebase()
         tableView.reloadData()
         title = buttonName
@@ -51,12 +58,6 @@ class TableControllerVocal: UITableViewController{
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
         tableView.addGestureRecognizer(tapGestureRecognizer)
         
-        // 注册加载动画
-        activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), type: .lineScale, color: .systemYellow, padding: nil)
-        activityIndicatorView.center = view.center
-        activityIndicatorView.padding = 20
-        view.addSubview(activityIndicatorView)
-        activityIndicatorView.startAnimating()
     }
     
     
@@ -197,9 +198,11 @@ extension TableControllerVocal: UIGestureRecognizerDelegate{
 extension TableControllerVocal {
     
     func downloadFromFirebase(){
+        self.activityIndicatorView.startAnimating()
         let collectionRef = db.collection("collection:\(buttonName)").order(by: "sendTime")// 替换为您的集合名称
         self.firebaseDataArray = []
         collectionRef.getDocuments { (querySnapshot,error)in
+            
             if let documents = querySnapshot?.documents {
                 for doc in documents {
                     if let name = doc.data()["Name"]as? String,
@@ -214,14 +217,17 @@ extension TableControllerVocal {
                                                          selfIntroduction: selfIntroduction,
                                                          allEmailText: someoneName)
                         self.firebaseDataArray.append(balabala)
-                        self.activityIndicatorView.stopAnimating()
                         DispatchQueue.main.async{
                             self.tableView.reloadData()
                         }
                     }
                 }
+                self.activityIndicatorView.stopAnimating()
+            }else{
+                self.activityIndicatorView.stopAnimating()
             }
         }
+        
     }
     
     func deleteFromFirebase(SelfIntroduction: String) {
@@ -272,6 +278,7 @@ extension TableControllerVocal {
         cell.nameText.text = "Name:  \(firebaseDataArray[indexPath.row].name)"
         cell.locationText.text = "Location:  \(firebaseDataArray[indexPath.row].location)"
         cell.musicStyleText.text = "Style:  \(firebaseDataArray[indexPath.row].musicStyle)"
+        
         return cell
     }
     

@@ -62,34 +62,38 @@ class SetViewController: UIViewController {
     }
     
     @IBAction func deleteAccount(_ sender: Any) {
-        let alertController = UIAlertController(title: "Delete Account",message: "Are you sure you want to delete this Account?\nThis operation cannot be undone!!",preferredStyle: .alert)
-        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
-            self.activityIndicatorView.startAnimating()
-            do {
-                if let navigationController = self.navigationController {
-                    try Auth.auth().signOut() // 登出当前用户
-                    self.user?.delete { (error) in
-                        if let error = error {
-                            print("Error deleting user: \(error.localizedDescription)")
-                            self.activityIndicatorView.stopAnimating()
-                        } else {
-                            self.activityIndicatorView.stopAnimating()
-                            let alertController = UIAlertController(title: "Great!", message: "Delete Account Succeed.", preferredStyle: .alert)
-                            self.present(alertController, animated: true, completion: nil)
-                            
-                            // 延时两秒后自动关闭 UIAlertController
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                alertController.dismiss(animated: true, completion: nil)
-                                navigationController.popToRootViewController(animated: true)
+        if user == nil{
+            self.navigationController?.popToRootViewController(animated: true)
+        }else{
+            let alertController = UIAlertController(title: "Delete Account",message: "Are you sure you want to delete this Account?\nThis operation cannot be undone!!",preferredStyle: .alert)
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
+                self.activityIndicatorView.startAnimating()
+                do {
+                    if let navigationController = self.navigationController {
+                        try Auth.auth().signOut() // 登出当前用户
+                        self.user?.delete { (error) in
+                            if let error = error {
+                                print("Error deleting user: \(error.localizedDescription)")
+                                self.activityIndicatorView.stopAnimating()
+                            } else {
+                                self.activityIndicatorView.stopAnimating()
+                                let alertController = UIAlertController(title: "Great!", message: "Delete Account Succeed.", preferredStyle: .alert)
+                                self.present(alertController, animated: true, completion: nil)
+                                
+                                // 延时两秒后自动关闭 UIAlertController
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                    alertController.dismiss(animated: true, completion: nil)
+                                    navigationController.popToRootViewController(animated: true)
+                                }
                             }
                         }
                     }
-                }
-            } catch { print("Error signing out") }
+                } catch { print("Error signing out") }
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            alertController.addAction(deleteAction)
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true, completion: nil)
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        alertController.addAction(deleteAction)
-        alertController.addAction(cancelAction)
-        self.present(alertController, animated: true, completion: nil)
     }
 }
