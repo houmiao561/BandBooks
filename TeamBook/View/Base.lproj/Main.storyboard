@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EiM-vC-zG1">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
@@ -41,6 +41,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LetsGo" translatesAutoresizingMaskIntoConstraints="NO" id="vcM-eE-LPk">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Me-dl-YSi">
                                 <rect key="frame" x="73.333333333333343" y="163" width="283.66666666666663" height="70"/>
                                 <subviews>
@@ -93,13 +96,16 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7Me-dl-YSi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="74s-UK-aTg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vcM-eE-LPk" secondAttribute="trailing" id="8UE-jw-e5M"/>
                             <constraint firstItem="7Me-dl-YSi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iym-66-SGZ"/>
+                            <constraint firstItem="vcM-eE-LPk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ojq-cJ-TnE"/>
                             <constraint firstItem="Stv-qD-ca2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uyg-9y-YRs"/>
+                            <constraint firstItem="vcM-eE-LPk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="W1V-V6-7x4"/>
                             <constraint firstItem="Stv-qD-ca2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m9G-R0-BZ3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Stv-qD-ca2" secondAttribute="bottom" constant="50" id="tvn-El-AEP"/>
+                            <constraint firstAttribute="bottom" secondItem="vcM-eE-LPk" secondAttribute="bottom" id="zVS-Ot-aX0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yk0-W2-fGH"/>
@@ -111,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="273"/>
+            <point key="canvasLocation" x="831.62790697674416" y="272.96137339055798"/>
         </scene>
         <!--Support View Controller-->
         <scene sceneID="xpe-2C-8hU">
@@ -129,10 +135,8 @@ Here I want to tell you a few things about this APP.
 
 - About the Intention
 I'm a bass player (a four-string lover!) and at the same time, a college student. When I am in college, I have found some people, just like me, can’t find an approach to get in touch with other instrument players. Maybe it is because of the different styles of music preferred, or the different locations of acceptable rehearsals. It is quite hard for us to find buddies who is sharing common music ideas and want to form a band. We need a supporting platform to solve this problem.
-
 - About Vision
 Now it is an era of information explosion and we are surrounded by unlimited information which is disturbing us. Therefore, it is extremely hard for us to search for the information of instrument players we want. I only hope that by founding this platform, we, who are gathered here because of the love of music, can recruit the new band members efficiently, so that we can seize more of our time for playing music.
-
 - About How to Use
 I divided the musicians into six sections according to their different instruments. Users can register with their mailbox account. Moreover, they can also have a quick view without an account. The mandatory information for posting is listed below:👇
 NAME: Your own name or nickname or stage name, or the name of your band;
@@ -140,30 +144,23 @@ MUSIC STYLE: The style of music you like, or the type of music your band is play
 LOCATION: An acceptable rehearsal area, not necessarily a city, but an area;
 SELF-INTRODUCTION: the link of the work, the contact information of other platforms, or the introduction of yourself (for example, I can dance hip-hop on the stage).
 I don't want to add all kinds of functions like music player, video player, chat and so on, because the experience of other platforms is much better than mine. All I just want this application can contain the most essential information of forming a band.
-
 - About Optimization
-This is a work completed by a small team, so there will be a lot of shortcomings. If you find any bugs, please contact: [houmiao561@gmail.com](mailto:houmiao561@gmail.com), it will be our honor to get suggestions from you guys. Please also leave your ID so that if any Version updates that result from your interesting suggestions, it will also be posted in the next Develop Log.
-
+This is a work completed by a small team, so there will be a lot of shortcomings. You can add comments in the App Store.
 - About the Team
 As you know, one's energy is limited, but fortunately I have a group of lovely and like-minded friends who gave me a lot of help.
 Apple Developer Account Provider: DJ.Uncle
 APP Icon Developer : 114
-APP ImageView Developer : Kia
-APP Frame Developer: Real Yang Zesheng, Eleven
+APP ImageView Developer : Kia, Eleven
+APP Frame Developer: Real Yang Zesheng
 APP Translation Developer: Dabria
-
 - About the Cost
-I promise that this platform will be a labor of love, all profit and loss, will not add any charging function, until one day the earth exploded, or I can not afford my living and not able to support the platform operation.
-You can _________ to support me, the amount is voluntary or you can only add five-star praise for me in the App Store, so that more people can know about this platform. "We are the ones who make a brighter day, so let's start giving".
+I promise that this platform will be a labor of love, all profit and loss, will not add any charging function, until one day the earth exploded, or I can not afford my living and not able to support the platform operation."We are the ones who make a brighter day, so let's start giving".
 Here are my production costs:
 1.Apple Developer Account $99,
-2.Google Firebase collects money according to the number of people and traffic. It is free at this stage. I will update it in the Develop Log when I need to collect money,
+2.Google Firebase collects money according to the number of people and traffic. It is free at this stage.
 3.One Starbucks per person in the group.
 
-- About the Difficulties at This Stage
-I don't have enough skills to develop Android apps and the Web (completely unable), so I need like-minded friends to help me! If you are also a programmer and music lover,and would like to work with us on a voluntary basis, please contact: [houmiao561@gmail.com](mailto:houmiao561@gmail.com).
-
-'It's true we'll make a better day, just you and me.’——MJ</mutableString>
+It's true we'll make a better day, just you and me.——MJ</mutableString>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -192,6 +189,9 @@ I don't have enough skills to develop Android apps and the Web (completely unabl
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SignUp" translatesAutoresizingMaskIntoConstraints="NO" id="VJd-zz-ww8">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="PiW-f5-JCB">
                                 <rect key="frame" x="35" y="163" width="360" height="120"/>
                                 <subviews>
@@ -236,8 +236,12 @@ I don't have enough skills to develop Android apps and the Web (completely unabl
                         <constraints>
                             <constraint firstItem="PiW-f5-JCB" firstAttribute="top" secondItem="PMz-g0-1WU" secondAttribute="top" constant="60" id="9Gg-6f-UaH"/>
                             <constraint firstItem="i7V-pq-OkU" firstAttribute="centerX" secondItem="ciQ-CL-N0j" secondAttribute="centerX" id="NRo-jU-lWC"/>
+                            <constraint firstAttribute="bottom" secondItem="VJd-zz-ww8" secondAttribute="bottom" id="OSK-Xt-pnZ"/>
                             <constraint firstItem="PMz-g0-1WU" firstAttribute="bottom" secondItem="i7V-pq-OkU" secondAttribute="bottom" constant="50" id="bmh-cM-Px5"/>
+                            <constraint firstItem="PMz-g0-1WU" firstAttribute="trailing" secondItem="VJd-zz-ww8" secondAttribute="trailing" id="dSG-YG-xEb"/>
                             <constraint firstItem="PiW-f5-JCB" firstAttribute="centerX" secondItem="ciQ-CL-N0j" secondAttribute="centerX" id="hCC-Fz-x0h"/>
+                            <constraint firstItem="VJd-zz-ww8" firstAttribute="top" secondItem="ciQ-CL-N0j" secondAttribute="top" id="n8a-eZ-bLp"/>
+                            <constraint firstItem="VJd-zz-ww8" firstAttribute="leading" secondItem="PMz-g0-1WU" secondAttribute="leading" id="wpQ-1d-ozt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="57n-Z0-rQO"/>
@@ -249,7 +253,7 @@ I don't have enough skills to develop Android apps and the Web (completely unabl
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRY-4L-CaC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="-76"/>
+            <point key="canvasLocation" x="1901.8604651162791" y="-76.60944206008584"/>
         </scene>
         <!--LogInViewController-->
         <scene sceneID="fFJ-dk-MDk">
@@ -259,6 +263,9 @@ I don't have enough skills to develop Android apps and the Web (completely unabl
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogIn" translatesAutoresizingMaskIntoConstraints="NO" id="lIa-o9-lr7">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="XoC-lj-5d0">
                                 <rect key="frame" x="35" y="163" width="360" height="120"/>
                                 <subviews>
@@ -301,7 +308,11 @@ I don't have enough skills to develop Android apps and the Web (completely unabl
                         <viewLayoutGuide key="safeArea" id="Kfd-9R-OwS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Kfd-9R-OwS" firstAttribute="trailing" secondItem="lIa-o9-lr7" secondAttribute="trailing" id="55d-kK-xzq"/>
+                            <constraint firstItem="lIa-o9-lr7" firstAttribute="top" secondItem="1yx-sR-rpV" secondAttribute="top" id="5yH-wo-YqH"/>
+                            <constraint firstAttribute="bottom" secondItem="lIa-o9-lr7" secondAttribute="bottom" id="6qM-kI-uVl"/>
                             <constraint firstItem="RaK-x5-V0V" firstAttribute="centerX" secondItem="1yx-sR-rpV" secondAttribute="centerX" id="PN5-b8-RRa"/>
+                            <constraint firstItem="lIa-o9-lr7" firstAttribute="leading" secondItem="Kfd-9R-OwS" secondAttribute="leading" id="g8r-VZ-mYt"/>
                             <constraint firstItem="XoC-lj-5d0" firstAttribute="top" secondItem="Kfd-9R-OwS" secondAttribute="top" constant="60" id="mZm-lw-xjq"/>
                             <constraint firstItem="XoC-lj-5d0" firstAttribute="centerX" secondItem="1yx-sR-rpV" secondAttribute="centerX" id="nCv-MR-Upz"/>
                             <constraint firstItem="Kfd-9R-OwS" firstAttribute="bottom" secondItem="RaK-x5-V0V" secondAttribute="bottom" constant="50" id="py2-cu-eUX"/>
@@ -316,7 +327,7 @@ I don't have enough skills to develop Android apps and the Web (completely unabl
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iss-vE-PnL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1904" y="633"/>
+            <point key="canvasLocation" x="1903.2558139534883" y="632.83261802575112"/>
         </scene>
         <!--Main0 View Controller-->
         <scene sceneID="jDK-W4-0gO">
@@ -464,6 +475,9 @@ I don't have enough skills to develop Android apps and the Web (completely unabl
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Earth" translatesAutoresizingMaskIntoConstraints="NO" id="a3C-AA-tcQ">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="m4u-f5-33D">
                                 <rect key="frame" x="35" y="163" width="360" height="200"/>
                                 <subviews>
@@ -541,6 +555,10 @@ I don't have enough skills to develop Android apps and the Web (completely unabl
                             <constraint firstItem="ehS-Ya-uw1" firstAttribute="centerX" secondItem="t3r-kK-cPq" secondAttribute="centerX" id="CvG-gt-Wlb"/>
                             <constraint firstItem="5Jf-HH-3IM" firstAttribute="centerX" secondItem="t3r-kK-cPq" secondAttribute="centerX" id="G8a-Hp-tae"/>
                             <constraint firstItem="7tL-CB-aeC" firstAttribute="bottom" secondItem="ehS-Ya-uw1" secondAttribute="bottom" constant="50" id="Hw2-ig-r0a"/>
+                            <constraint firstItem="7tL-CB-aeC" firstAttribute="trailing" secondItem="a3C-AA-tcQ" secondAttribute="trailing" id="KTh-0V-3Bl"/>
+                            <constraint firstAttribute="bottom" secondItem="a3C-AA-tcQ" secondAttribute="bottom" id="L7J-xd-QMo"/>
+                            <constraint firstItem="a3C-AA-tcQ" firstAttribute="leading" secondItem="7tL-CB-aeC" secondAttribute="leading" id="gD5-8J-9g3"/>
+                            <constraint firstItem="a3C-AA-tcQ" firstAttribute="top" secondItem="t3r-kK-cPq" secondAttribute="top" id="hda-l1-jsB"/>
                             <constraint firstItem="m4u-f5-33D" firstAttribute="centerX" secondItem="t3r-kK-cPq" secondAttribute="centerX" id="htf-wR-Mi4"/>
                         </constraints>
                     </view>
@@ -553,7 +571,7 @@ I don't have enough skills to develop Android apps and the Web (completely unabl
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlK-iF-unb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3765" y="-76"/>
+            <point key="canvasLocation" x="3764.6511627906975" y="-76.60944206008584"/>
         </scene>
         <!--Table Controller Vocal-->
         <scene sceneID="TCr-bX-IQL">
@@ -859,14 +877,18 @@ I don't have enough skills to develop Android apps and the Web (completely unabl
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="5pe-vc-1xg"/>
-        <segue reference="s8X-cK-j19"/>
+        <segue reference="dsS-1Y-olN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Bass" width="1180.3333740234375" height="1180.3333740234375"/>
         <image name="Drum" width="1180.3333740234375" height="1180.3333740234375"/>
+        <image name="Earth" width="215" height="465"/>
         <image name="Guitar" width="1180.3333740234375" height="1180.3333740234375"/>
         <image name="Keyboard" width="1180.3333740234375" height="1180.3333740234375"/>
+        <image name="LetsGo" width="215" height="465"/>
+        <image name="LogIn" width="214.66667175292969" height="465"/>
         <image name="Other" width="682.66668701171875" height="682.66668701171875"/>
+        <image name="SignUp" width="215" height="465"/>
         <image name="Vocal" width="1180.3333740234375" height="1180.3333740234375"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>

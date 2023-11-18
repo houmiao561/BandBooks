@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "IMG_6131.JPG",
+      "filename" : "1071a7183763f1aaf48f8e32c5bf2dcb.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,6 +12,7 @@
           "value" : "light"
         }
       ],
+      "filename" : "1071a7183763f1aaf48f8e32c5bf2dcb 1.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -22,10 +23,12 @@
           "value" : "dark"
         }
       ],
+      "filename" : "b350132610e5aa99c24915c96a8131c6.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "1071a7183763f1aaf48f8e32c5bf2dcb@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -36,6 +39,7 @@
           "value" : "light"
         }
       ],
+      "filename" : "1071a7183763f1aaf48f8e32c5bf2dcb@2x 1.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -46,10 +50,12 @@
           "value" : "dark"
         }
       ],
+      "filename" : "b350132610e5aa99c24915c96a8131c6@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "1071a7183763f1aaf48f8e32c5bf2dcb@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -60,6 +66,7 @@
           "value" : "light"
         }
       ],
+      "filename" : "1071a7183763f1aaf48f8e32c5bf2dcb@3x 1.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -70,6 +77,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "b350132610e5aa99c24915c96a8131c6@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }
