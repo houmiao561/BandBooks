@@ -488,17 +488,20 @@ It's true we'll make a better day, just you and me.——MJ</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LetsGo" translatesAutoresizingMaskIntoConstraints="NO" id="a3C-AA-tcQ">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="m4u-f5-33D">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="m4u-f5-33D">
                                 <rect key="frame" x="35" y="453" width="360" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Account Email : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kio-Ee-1Gb">
-                                        <rect key="frame" x="0.0" y="0.0" width="360" height="91"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="3SJ-dy-mBd"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" name="HMColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3K-av-tYi">
-                                        <rect key="frame" x="0.0" y="109" width="360" height="91"/>
+                                        <rect key="frame" x="0.0" y="50" width="360" height="150"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

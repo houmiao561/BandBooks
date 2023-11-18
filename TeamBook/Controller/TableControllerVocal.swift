@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import NVActivityIndicatorView
 
 class TableControllerVocal: UITableViewController{
     
@@ -15,6 +16,7 @@ class TableControllerVocal: UITableViewController{
     private let user = Auth.auth().currentUser
     private var selectCellEmail = 0
     lazy var buttonName: String = ""
+    var activityIndicatorView: NVActivityIndicatorView!
     
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -48,6 +50,13 @@ class TableControllerVocal: UITableViewController{
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
         tableView.addGestureRecognizer(tapGestureRecognizer)
+        
+        // 注册加载动画
+        activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), type: .lineScale, color: .systemYellow, padding: nil)
+        activityIndicatorView.center = view.center
+        activityIndicatorView.padding = 20
+        view.addSubview(activityIndicatorView)
+        activityIndicatorView.startAnimating()
     }
     
     
@@ -205,9 +214,9 @@ extension TableControllerVocal {
                                                          selfIntroduction: selfIntroduction,
                                                          allEmailText: someoneName)
                         self.firebaseDataArray.append(balabala)
+                        self.activityIndicatorView.stopAnimating()
                         DispatchQueue.main.async{
                             self.tableView.reloadData()
-                            //let indexPath = IndexPath(row: self.firebaseDataArray.count - 1, section: 0)
                         }
                     }
                 }
