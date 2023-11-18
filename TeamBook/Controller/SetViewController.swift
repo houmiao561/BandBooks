@@ -7,14 +7,21 @@
 
 import UIKit
 import FirebaseAuth
+import NVActivityIndicatorView
 
 class SetViewController: UIViewController {
 
     @IBOutlet weak var LogOutButtonIB: UIButton!
     @IBOutlet weak var emailLabel: UILabel!
-    private let user = Auth.auth().currentUser
+    var user = Auth.auth().currentUser
+    var activityIndicatorView: NVActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 注册加载动画
+        activityIndicatorView = NVActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 100, height: 100), type: .lineScale, color: .systemYellow, padding: nil)
+        activityIndicatorView.center = view.center
+        activityIndicatorView.padding = 20
+        view.addSubview(activityIndicatorView)
         if user == nil{
             emailLabel.text = "No Account Email Log In\nPlease Sign Up and Log In"
             LogOutButtonIB.titleLabel?.text = "Back to Main Page\nLog In"
@@ -29,10 +36,23 @@ class SetViewController: UIViewController {
     }
     
     @IBAction func LogOutButton(_ sender: Any) {
+        activityIndicatorView.startAnimating()
         do {
             if let navigationController = self.navigationController {
-            navigationController.popToRootViewController(animated: true)
-            try Auth.auth().signOut() // 登出当前用户
+                if user == nil{
+                    navigationController.popToRootViewController(animated: true)
+                }else{
+                    try Auth.auth().signOut() // 登出当前用户
+                    self.activityIndicatorView.stopAnimating()
+                    let alertController = UIAlertController(title: "Great!", message: "Log Out Succeed.", preferredStyle: .alert)
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                    // 延时两秒后自动关闭 UIAlertController
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        alertController.dismiss(animated: true, completion: nil)
+                        navigationController.popToRootViewController(animated: true)
+                    }
+                }
             }
         } catch { print("Error signing out") }
     }
@@ -42,19 +62,34 @@ class SetViewController: UIViewController {
     }
     
     @IBAction func deleteAccount(_ sender: Any) {
-        do {
-            if let navigationController = self.navigationController {
-                try Auth.auth().signOut() // 登出当前用户
-                user!.delete { (error) in
-                    if let error = error {
-                        print("Error deleting user: \(error.localizedDescription)")
-                    } else {
-                        print("User deleted successfully")
-                        navigationController.popToRootViewController(animated: true)
+        let alertController = UIAlertController(title: "Delete Account",message: "Are you sure you want to delete this Account?\nThis operation cannot be undone!!",preferredStyle: .alert)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
+            self.activityIndicatorView.startAnimating()
+            do {
+                if let navigationController = self.navigationController {
+                    try Auth.auth().signOut() // 登出当前用户
+                    self.user?.delete { (error) in
+                        if let error = error {
+                            print("Error deleting user: \(error.localizedDescription)")
+                            self.activityIndicatorView.stopAnimating()
+                        } else {
+                            self.activityIndicatorView.stopAnimating()
+                            let alertController = UIAlertController(title: "Great!", message: "Delete Account Succeed.", preferredStyle: .alert)
+                            self.present(alertController, animated: true, completion: nil)
+                            
+                            // 延时两秒后自动关闭 UIAlertController
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                alertController.dismiss(animated: true, completion: nil)
+                                navigationController.popToRootViewController(animated: true)
+                            }
+                        }
                     }
                 }
-            }
-        } catch { print("Error signing out") }
-    
+            } catch { print("Error signing out") }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(deleteAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }

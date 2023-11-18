@@ -134,11 +134,11 @@
 		93CD80882AB457E60007EB04 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				935883D92ABD3F8400359272 /* Main0ViewController.swift */,
 				93CD80712AB4559C0007EB04 /* ViewController.swift */,
 				9368FE672AC716580085130D /* SupportViewController.swift */,
 				93CD80842AB457C00007EB04 /* SignUpViewController.swift */,
 				93CD80862AB457E00007EB04 /* LogInViewController.swift */,
-				935883D92ABD3F8400359272 /* Main0ViewController.swift */,
 				931A09232AC2BD2A005FBA02 /* SetViewController.swift */,
 				935883DD2ABD868400359272 /* TableControllerVocal.swift */,
 				935303522AC1410000EDC4AE /* DetailViewController.swift */,

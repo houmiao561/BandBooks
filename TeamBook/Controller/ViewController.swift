@@ -15,9 +15,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if user != nil{
-            performSegue(withIdentifier: "WelcomeToMain0", sender: self)
-        }
     }
 
     @IBAction func signUpButton(_ sender: UIButton) {
@@ -28,8 +25,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func GuestModeButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "WelcomeToMain0", sender: self)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
+    @IBAction func account(_ sender: UIButton) {
+        performSegue(withIdentifier: "ViewToSet", sender: sender)
+    }
 }
 

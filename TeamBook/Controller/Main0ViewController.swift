@@ -23,7 +23,6 @@ class Main0ViewController: UIViewController {
         changeButtonStyle(drumButton)
         changeButtonStyle(keyboardButton)
         changeButtonStyle(otherInstrumentButton)
-        navigationController?.navigationBar.topItem?.hidesBackButton = true
         navigationItem.title = "BandBook"
     }
     
@@ -52,7 +51,7 @@ class Main0ViewController: UIViewController {
     }
     
     @IBAction func SetButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "Main0ToSet", sender: self)
+        performSegue(withIdentifier: "Main0ToView", sender: sender)
     }
     
     
