@@ -439,14 +439,28 @@ It's true we'll make a better day, just you and me.——MJ</string>
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PHD-K9-GCJ">
+                                <rect key="frame" x="20" y="857.66666666666663" width="390" height="20.333333333333371"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Select Your Instrument" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoD-vD-XhF">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KoD-0F-LDw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2lx-aZ-XO0" firstAttribute="leading" secondItem="KoD-0F-LDw" secondAttribute="leading" constant="20" id="LUc-tS-RY0"/>
+                            <constraint firstItem="KoD-0F-LDw" firstAttribute="trailing" secondItem="PHD-K9-GCJ" secondAttribute="trailing" constant="20" id="MZo-zE-l7x"/>
                             <constraint firstItem="KoD-0F-LDw" firstAttribute="trailing" secondItem="2lx-aZ-XO0" secondAttribute="trailing" constant="20" id="aeS-Bh-HWD"/>
+                            <constraint firstItem="PHD-K9-GCJ" firstAttribute="leading" secondItem="KoD-0F-LDw" secondAttribute="leading" constant="20" id="bxg-Kk-Ez2"/>
                             <constraint firstItem="2lx-aZ-XO0" firstAttribute="centerX" secondItem="oMz-Nl-v9e" secondAttribute="centerX" id="dft-KB-2GN"/>
                             <constraint firstItem="2lx-aZ-XO0" firstAttribute="top" secondItem="KoD-0F-LDw" secondAttribute="top" constant="20" id="hQx-ue-0HV"/>
+                            <constraint firstItem="KoD-0F-LDw" firstAttribute="bottom" secondItem="PHD-K9-GCJ" secondAttribute="bottom" constant="20" id="ygg-U5-Tzy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="BandBooks" id="KB8-8m-VMR">
@@ -491,17 +505,8 @@ It's true we'll make a better day, just you and me.——MJ</string>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="m4u-f5-33D">
                                 <rect key="frame" x="35" y="453" width="360" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Account Email : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kio-Ee-1Gb">
-                                        <rect key="frame" x="0.0" y="0.0" width="360" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="3SJ-dy-mBd"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" name="HMColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3K-av-tYi">
-                                        <rect key="frame" x="0.0" y="50" width="360" height="150"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="200"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -559,6 +564,17 @@ It's true we'll make a better day, just you and me.——MJ</string>
                                     <constraint firstAttribute="width" constant="200" id="71q-AH-6ab"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iB3-2M-NFr">
+                                <rect key="frame" x="102.33333333333333" y="203" width="225.66666666666669" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Account Email : " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kio-Ee-1Gb">
+                                        <rect key="frame" x="0.0" y="0.0" width="225.66666666666666" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" name="HMColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7tL-CB-aeC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -570,9 +586,11 @@ It's true we'll make a better day, just you and me.——MJ</string>
                             <constraint firstItem="7tL-CB-aeC" firstAttribute="bottom" secondItem="ehS-Ya-uw1" secondAttribute="bottom" constant="50" id="Hw2-ig-r0a"/>
                             <constraint firstItem="7tL-CB-aeC" firstAttribute="trailing" secondItem="a3C-AA-tcQ" secondAttribute="trailing" id="KTh-0V-3Bl"/>
                             <constraint firstAttribute="bottom" secondItem="a3C-AA-tcQ" secondAttribute="bottom" id="L7J-xd-QMo"/>
+                            <constraint firstItem="iB3-2M-NFr" firstAttribute="top" secondItem="7tL-CB-aeC" secondAttribute="top" constant="100" id="NrD-Af-2Gw"/>
                             <constraint firstItem="a3C-AA-tcQ" firstAttribute="leading" secondItem="7tL-CB-aeC" secondAttribute="leading" id="gD5-8J-9g3"/>
                             <constraint firstItem="a3C-AA-tcQ" firstAttribute="top" secondItem="t3r-kK-cPq" secondAttribute="top" id="hda-l1-jsB"/>
                             <constraint firstItem="m4u-f5-33D" firstAttribute="centerX" secondItem="t3r-kK-cPq" secondAttribute="centerX" id="htf-wR-Mi4"/>
+                            <constraint firstItem="iB3-2M-NFr" firstAttribute="centerX" secondItem="t3r-kK-cPq" secondAttribute="centerX" id="tiU-FK-OBu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yQ3-rj-uVn"/>

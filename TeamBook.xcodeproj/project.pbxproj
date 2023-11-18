@@ -92,6 +92,7 @@
 				93CD80732AB4559C0007EB04 /* Main.storyboard */,
 				935883CE2ABBB12700359272 /* Table0Cell.xib */,
 				935883D02ABBB19F00359272 /* Table0Cell.swift */,
+				93CD807B2AB4559D0007EB04 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -123,7 +124,6 @@
 				93893F212AB9CB6F009FCFED /* Model */,
 				93CD80882AB457E60007EB04 /* Controller */,
 				93CD80792AB4559D0007EB04 /* Assets.xcassets */,
-				93CD807B2AB4559D0007EB04 /* LaunchScreen.storyboard */,
 				93CD807E2AB4559D0007EB04 /* Info.plist */,
 				93CD80762AB4559C0007EB04 /* TeamBook.xcdatamodeld */,
 				93C7B9CD2AC3C69E00ECFC0E /* GoogleService-Info.plist */,

@@ -32,15 +32,23 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Suitable Band" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DW-ZF-zxM">
+                                <rect key="frame" x="74.333333333333329" y="239" width="244.33333333333337" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nt9-jN-Yjr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="8YK-qa-IBQ"/>
+                            <constraint firstItem="7DW-ZF-zxM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HvL-q5-AyN"/>
                             <constraint firstItem="WxI-Vj-crT" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Krv-9M-zkB"/>
                             <constraint firstItem="WxI-Vj-crT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="N2J-B3-IIa"/>
                             <constraint firstAttribute="bottom" secondItem="WxI-Vj-crT" secondAttribute="bottom" id="Tmz-GN-gYg"/>
                             <constraint firstItem="nt9-jN-Yjr" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Vkb-aF-zvi"/>
+                            <constraint firstItem="7DW-ZF-zxM" firstAttribute="top" secondItem="nt9-jN-Yjr" secondAttribute="bottom" constant="50" id="eTs-XJ-bgb"/>
                             <constraint firstItem="WxI-Vj-crT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hMe-NI-PwO"/>
                         </constraints>
                     </view>
