@@ -7,9 +7,11 @@
 
 import UIKit
 import FirebaseAuth
+import NVActivityIndicatorView
 
 class ViewController: UIViewController {
     private let user = Auth.auth().currentUser
+    var activityIndicatorView: NVActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
