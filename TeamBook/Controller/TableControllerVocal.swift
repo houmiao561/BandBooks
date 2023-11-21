@@ -76,6 +76,14 @@ class TableControllerVocal: UITableViewController{
         if segue.identifier == "VocalToAdd" {
             if let destinationVC = segue.destination as? AddViewController {
                 destinationVC.buttonName = self.buttonName
+                destinationVC.onDataReceived = { data in
+                    // 这里处理从 B 传递回来的数据
+                    print("Data from B: \(data)")
+                    self.firebaseDataArray.append(data as! FirebaseDataArray)
+                    self.tableView.reloadData()
+                    // 在闭包中执行 A 中的操作
+                    // 例如，更新 UI 或执行其他逻辑
+                }
             }
         }
         if segue.identifier == "VocalToDetail"{
@@ -145,14 +153,14 @@ extension TableControllerVocal: UIGestureRecognizerDelegate{
             if let indexPath = self.tableView.indexPathForRow(at: point) {
                 selectCellEmail = indexPath.row
                 if gestureRecognizer.state == .began {
-                    let selfIntroduction = self.firebaseDataArray[self.selectCellEmail].selfIntroduction
-                    if self.user!.email == self.firebaseDataArray[self.selectCellEmail].allEmailText && selfIntroduction == self.firebaseDataArray[self.selectCellEmail].selfIntroduction{
+                    var abc = self.firebaseDataArray
+                    let selfIntroduction = abc[self.selectCellEmail].selfIntroduction
+                    if self.user!.email == abc[self.selectCellEmail].allEmailText && selfIntroduction == abc[self.selectCellEmail].selfIntroduction{
                         let alertController = UIAlertController(title: "Delete Item",message: "Are you sure you want to delete this item?",preferredStyle: .alert)
                         let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
                             let ToDelete = selfIntroduction
                             self.deleteFromFirebase(SelfIntroduction: ToDelete)
                             self.firebaseDataArray.remove(at: indexPath.row)
-                            print(ToDelete)
                             self.tableView.reloadData()
                         }
                         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

@@ -21,8 +21,28 @@ class AddViewController: UIViewController {
     @IBOutlet weak var SelfIntroductionText: UITextView!
     
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    
+    var onDataReceived: ((FirebaseDataArray) -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        // 在 B 中的某个地方触发闭包，比如在用户完成某个任务时
+        
+    }
+    
+    func taskCompleted() {
+        var array = FirebaseDataArray(name: NameText.text ?? "",
+                                      musicStyle: MusicStyleText.text ?? "",
+                                      location: LocationText.text ?? "",
+                                      selfIntroduction: SelfIntroductionText.text ?? "",
+                                      allEmailText:"\(String(describing: self.user!.email))")
+        onDataReceived!(array)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
         
     }
     
@@ -33,7 +53,9 @@ class AddViewController: UIViewController {
                                          "MusicStyle":self.MusicStyleText!.text!,
                                          "SelfIntroduction":self.SelfIntroductionText!.text!,
                                          "sendTime":Date().timeIntervalSince1970,
-                                         "someoneName":String(user!.email!)] ) { _ in }
+                                         "someoneName":String(user!.email!)] ) { _ in
+            self.taskCompleted()
+        }
     }
     
     @IBAction func AddAllTextButton(_ sender: UIButton) {

@@ -140,8 +140,8 @@
 				93CD80842AB457C00007EB04 /* SignUpViewController.swift */,
 				93CD80862AB457E00007EB04 /* LogInViewController.swift */,
 				931A09232AC2BD2A005FBA02 /* SetViewController.swift */,
-				935883DD2ABD868400359272 /* TableControllerVocal.swift */,
 				935303522AC1410000EDC4AE /* DetailViewController.swift */,
+				935883DD2ABD868400359272 /* TableControllerVocal.swift */,
 				935883DF2ABDCDE700359272 /* AddViewController.swift */,
 			);
 			path = Controller;
