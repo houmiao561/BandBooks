@@ -77,12 +77,9 @@ class TableControllerVocal: UITableViewController{
             if let destinationVC = segue.destination as? AddViewController {
                 destinationVC.buttonName = self.buttonName
                 destinationVC.onDataReceived = { data in
-                    // 这里处理从 B 传递回来的数据
                     print("Data from B: \(data)")
-                    self.firebaseDataArray.append(data as! FirebaseDataArray)
+                    self.firebaseDataArray.append(data)
                     self.tableView.reloadData()
-                    // 在闭包中执行 A 中的操作
-                    // 例如，更新 UI 或执行其他逻辑
                 }
             }
         }

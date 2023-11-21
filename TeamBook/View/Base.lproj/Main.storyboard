@@ -110,7 +110,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="yk0-W2-fGH">
                         <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="Ua0-ha-2XB">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="xaH-YK-HFE">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="xaH-YK-HFE">
                                 <rect key="frame" x="268.33333333333331" y="5" width="141.66666666666669" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -141,7 +141,7 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yg8-gh-tRC">
                                 <rect key="frame" x="20" y="30" width="390" height="872"/>
-                                <mutableString key="text">Hello!
+                                <string key="text">Hello!
 I am HM. The developer of BandBook.
 Here I want to tell you a few things about this APP.
 
@@ -178,7 +178,7 @@ Here are my production costs:
 2.Google Firebase collects money according to the number of people and traffic. It is free at this stage.
 3.One Starbucks per person in the group.
 
-It's true we'll make a better day, just you and me.——MJ</mutableString>
+It's true we'll make a better day, just you and me.——MJ</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -475,7 +475,7 @@ It's true we'll make a better day, just you and me.——MJ</mutableString>
                                 <rect key="frame" x="355.66666666666669" y="4.6666666666666679" width="54.333333333333314" height="34.666666666666657"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system" title=" "/>
+                                <buttonConfiguration key="configuration" style="plain" image="person.crop.circle" catalog="system" title=" "/>
                                 <connections>
                                     <action selector="SetButton:" destination="b5J-uh-7JN" eventType="touchUpInside" id="npH-09-bd8"/>
                                 </connections>
@@ -922,7 +922,7 @@ It's true we'll make a better day, just you and me.——MJ</mutableString>
         <image name="Other" width="682.66668701171875" height="682.66668701171875"/>
         <image name="SignUp" width="215" height="465"/>
         <image name="Vocal" width="1180.3333740234375" height="1180.3333740234375"/>
-        <image name="info.circle" catalog="system" width="128" height="123"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="HMColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
